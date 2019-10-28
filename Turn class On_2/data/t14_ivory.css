@@ -1,0 +1,75 @@
+﻿/* ---- Clearfixes ---- */
+.irow:before,.irow:after,.clearfix:before,.clearfix:after{content:'';display:table}
+.irow:after,.clearfix:after{clear:both}
+.irow,.clearfix{zoom:1}
+
+/* ---- GRID Layout ---- */
+.grid *, 
+.g1140 *,
+.g1024 *,
+.g960 *
+{-ms-box-sizing:border-box; -moz-box-sizing:border-box; -webkit-box-sizing:border-box;box-sizing:border-box !important;}
+.grid{margin:0 auto; max-width:1200px; width:100%;} /* You can choose the grid 1200 or 1140 or 1024 or 960 as per your requirement */
+.g1140{margin:0 auto; max-width:1140px; width:100%;}
+.g1024{margin:0 auto; max-width:1024px; width:100%;}
+.g960{margin:0 auto; max-width:960px; width:100%;}
+.irow{width:100%; margin:0 auto;}
+.c1{width:8.33%;}
+.c2{width:16.66%;}
+.c3{width:25%;}
+.c4{width:33.33%;}
+.c5{width:41.66%;}
+.c6{width:50%;}
+.c7{width:58.33%;}
+.c8{width:66.66%;}
+.c9{width:75%;}
+.c10{width:83.33%;}
+.c11{width:91.66%;}
+.c12{width:100%; min-height:1px; float:left; position:relative;}
+.c1-5{width:20%;}/* This column can be used as a one fifth of the row */
+.c1-8{width:12.5%;}/* This column can be used as a one eigth of the row */ 
+.c1,.c2,.c3,.c4,.c5,.c6,.c7,.c8,.c9,.c10,.c11,.c1-5,.c1-8 {min-height:1px; float:left; padding-left:10px; padding-right:10px; position:relative;}
+.c1.first,.c2.first,.c3.first,.c4.first,.c5.first,.c6.first,.c7.first,.c8.first,.c9.first,.c10.first,.c11.first,.c1-5.first,.c1-8.first {
+	padding-left: 0; position:relative;
+}
+.c1.last,.c2.last,.c3.last,.c4.last,.c5.last,.c6.last,.c7.last,.c8.last,.c9.last,.c10.last,.c11.last,.c1-5.last,.c1-8.last {
+	padding-right: 0; position:relative;
+}
+
+/* ---- Alignments ---- */
+.centered{float: none; margin: auto;}
+.left {float: left;}
+.right {float: right;}
+.text-left {text-align: left;}
+.text-right {text-align: right;}
+.text-center {text-align: center;}
+.text-justify {text-align: justify;}
+.space-top {margin-top: 20px;}
+.space-bot {margin-bottom: 20px;}
+.space-htop {margin-top: 10px;}
+.space-hbot {margin-bottom: 10px;}
+
+/* ---- display tags ---- */
+.display-inline
+{
+    display: inline;
+}
+
+/* Media query for 960 Screens - sets nested grids to 100% */
+@media only screen and (max-width:960px){
+	.irow .irow .c1,.irow .irow .c2,.irow .irow .c3,.irow .irow .c4,.irow .irow .c5,.irow .irow .c6,.irow .irow .c7,.irow .irow .c8,.irow .irow .c9,.irow .irow .c10,.irow .irow .c11,.irow .irow .c12,.irow .irow .c1-5,.irow .irow .c1-8{width:100%;margin-bottom:20px;margin-left:0px;margin-right:0px; }
+	.irow .irow > div:last-child{margin-bottom:0 !important}
+}
+
+/* Media query for iPad and tablets */
+@media handheld, only screen and (max-width: 768px), only screen and (max-device-width: 768px) and (orientation:portrait){
+	body{font-size:90%}
+	.irow{margin-bottom:0!important}
+	.c1,.c2,.c3,.c4,.c5,.c6,.c7,.c8,.c9,.c10,.c11,.c12,.c1-5,.c1-8{width:100%;margin-right:0;margin-left:0;margin-bottom:20px; padding:0 10px;}
+	.c1.first,.c2.first,.c3.first,.c4.first,.c5.first,.c6.first,.c7.first,.c8.first,.c9.first,.c10.first,.c11.first,.c1-5.first,.c1-8.first {
+		padding-left: 10px; position:relative;
+	}
+	.c1.last,.c2.last,.c3.last,.c4.last,.c5.last,.c6.last,.c7.last,.c8.last,.c9.last,.c10.last,.c11.last,.c1-5.last,.c1-8.last {
+		padding-right: 10px; position:relative;
+	}
+}

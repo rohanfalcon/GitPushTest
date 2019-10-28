@@ -1,0 +1,792 @@
+﻿var officialClassScheduling = officialClassScheduling || {};
+
+(function(lib, $, $telerik, pageParameters) {    
+    var init,
+        changeSubjectStatus,
+        updateSubject,
+        trackAutoCompleteChanges,
+        onClientDropDownOpening,
+        onClientEntryAdding, 
+        onClientEntryAdded,
+        onClientEntryRemoved,        
+        getMetaDataForSubject,
+        update,
+        sendUpdateData,
+        sendSaveData,
+        getSubjectData,
+        setReadOnlyControls,
+        validatePageStateData,
+        setInputControls,
+        showEffectiveDateWindow,
+        closeToCancel,
+        closeToSave,
+        validateMTI,
+        validateArts,
+        pageState,
+        arrDiff,
+        isPageValid;
+
+    isPageValid = true;
+    init = function(args) {
+        pageState = args.pageState;   
+    }
+    
+    PageState = function(pageParameters) {
+        this.numericSchoolDbn = pageParameters.numericSchoolDbn;
+        this.schoolYear = pageParameters.schoolYear;
+        this.term = pageParameters.termId;
+        this.officialClass = pageParameters.officialClass;
+        this.isEdit = (pageParameters.isEdit.toLowerCase() === "true") ? true : false;
+        this.actions = [];
+        this.effectiveDate = null;
+    };
+
+    PageState.prototype.init = function() {
+        this.actions = [];
+    };
+
+    PageState.prototype.findAction = function(type, subjectId) {
+        var i = -1;
+
+        if (this.actions.length === 0) {
+            return -1;
+        }
+
+        for (i = 0; i < this.actions.length; i++) {
+            if (this.actions[i].action === type && this.actions[i].subjectId == subjectId) {
+                return i;
+            }
+        }
+        return -1;
+    };
+
+    PageState.prototype.findTeacherAction = function(type, subjectId, teacherPid) {
+        var i = -1;
+
+        if (this.actions.length === 0) {
+            return -1;
+        }
+
+        for (i = 0; i < this.actions.length; i++) {
+            if (this.actions[i].action === type 
+                && this.actions[i].subjectId == subjectId 
+                && this.actions[i].teacherPid == teacherPid) {
+                return i;
+            }
+        }
+        return -1;
+    };
+
+    PageState.prototype.removeSubjectActions = function(subjectId) {
+        var i, newActions;
+
+        newActions = [];
+        for (i = 0; i < this.actions.length; i++) {
+            subjectId = parseInt(subjectId);
+            if (this.actions[i].subjectId !== subjectId) {
+                newActions.push(this.actions[i]);
+            }
+        }
+
+        this.actions = newActions;        
+    };
+
+    PageState.prototype.findSubjectAction = function(subjectId) {
+        var i = -1;
+
+        if (this.actions.length === 0) {
+            return -1;
+        }
+        for (i = 0; i < this.actions.length; i++) {
+            if (this.actions[i].subjectId == subjectId) {
+                return i;
+            }
+        }
+        return -1;
+    };
+
+    PageState.prototype.removeAction = function(index) {
+        this.actions.splice(index, 1);
+    };
+
+    PageState.prototype.addAction = function(type, params) {
+        // implement AddTeacher, RemoveTeacher, ChangeSubjectStatus, UpdateSubjectRecord
+    };
+    
+    PageState.prototype.toString = function() {
+        return JSON.stringify(this);
+    };
+    
+    PageState.prototype.hasCriticalAction = function() {
+        var i;
+        for (i = 0; i < this.actions.length; i++) {
+            if (this.actions[i].reqEffectiveDate === true) {
+                return true;
+            }
+        }
+        return false;
+    };
+
+    changeSubjectStatus = function(statusCheckBox) {
+        var status, subjectid, subjectDiv, subjectName;
+
+        status = $(statusCheckBox).is(":checked");
+        subjectid = parseInt($(statusCheckBox).closest("div[subjectId]").attr("subjectId"));
+        subjectName = $(statusCheckBox).closest("div[subjectId]").find(".subject-name")[0].innerText;
+        subjectDiv = $(statusCheckBox).closest("div[subjectId]").get(0);
+
+        if (status === true) {
+            $(subjectDiv).find(".disablediv").fadeOut(400);
+            $("#StatusDiv" + subjectid).attr("class", "subject-indicator subject-on");
+        } else {
+            $(subjectDiv).find(".disablediv").fadeIn(400);
+            $("#StatusDiv" + subjectid).attr("class", "subject-indicator subject-off");
+        }
+
+        if (pageState) {
+            recordTemplate = {
+                action: "ChangeSubjectStatus",
+                subjectId: subjectid,
+                subjectName: subjectName,
+                value: status,
+                officialClassSubjectId: $(subjectDiv).attr("officialclasssubjectid"),
+                reqEffectiveDate: true
+            };
+
+            indexno = pageState.findAction("ChangeSubjectStatus", subjectid);
+            if (indexno === -1) {
+                pageState.actions.push(recordTemplate);
+            } else {
+                pageState.removeAction(indexno);
+            }
+        }
+    };
+
+    updateSubject = function(inputControl) {
+        var subjectid, subjectDiv, data, recordTemplate, indexno, subjectName;
+
+        subjectDiv = $(inputControl).closest("div[subjectId]").get(0);
+        subjectid = parseInt($(subjectDiv).attr("subjectId"));
+        subjectName = $(subjectDiv).find(".subject-name")[0].innerText;
+        data = getMetaDataForSubject(subjectDiv);
+
+        recordTemplate = {
+            action: "UpdateSubjectRecord",
+            subjectId: parseInt($(subjectDiv).attr("subjectId")),
+            subjectName: subjectName,
+            officialClassSubjectId: $(subjectDiv).attr("officialclasssubjectid"),
+            data: data
+        };
+        
+        if (pageState) {            
+            indexno = pageState.findAction("UpdateSubjectRecord", subjectid);
+            if (indexno === -1) {
+                pageState.actions.push(recordTemplate);
+            } else {
+                pageState.removeAction(indexno);
+                pageState.actions.push(recordTemplate);
+            }
+        }
+    };
+    
+    validateMTI = function (subjectNode, subjectMinutes, mtiMinutes) {
+        var mtiNode, mtimessage;
+
+        mtiNode = $(subjectNode).find("input[name*='MtiMinutesTextBox']");
+        mtimessage = $(mtiNode).closest('.subject-mti').find("span[id*='msg']");
+        var message3 = "MTI minutes per week must be less than or equal to the total number of PE minutes per week.";
+
+        $(mtiNode).closest('.subject-mti').find("span[id*='msg']").html("");
+
+        if ($(mtiNode).closest('.subject-mti').find("input[name*='MtiCheckBox']").is(":checked") && (!((mtiMinutes).trim()) || mtiMinutes == '' || undefined)) {
+            $(mtimessage).html("Enter value for MTI minutes per week.</br>");
+        }
+        else if (parseInt(mtiMinutes) < 1 || parseInt(mtiMinutes) > 40 || isNaN(mtiMinutes) || (!isNaN(mtiMinutes) && (mtiMinutes).toString().indexOf('.') != -1)) {
+            $(mtimessage).append("MTI minutes per week must be between 1 and 40.</br>");
+        }
+
+        if (parseInt(subjectMinutes) < parseInt(mtiMinutes)) {
+            $(mtimessage).append("MTI minutes per week must be less than or equal to the total number of PE minutes per week.</br>");
+        }
+
+        if (isNaN(parseInt(subjectMinutes)) && $(mtiNode).closest('.subject-mti').find("input[name*='MtiCheckBox']").is(":checked") && parseInt(mtiMinutes) > 0) {
+            if (($(mtimessage).text()).indexOf(message3) < 0) {
+                $(mtimessage).append("MTI minutes per week must be less than or equal to the total number of PE minutes per week.</br>");
+            }
+        }
+    };
+
+    validateArts = function (subjectNode, subjectMinutes, artsMinutes) {
+        var artsNode, artsmessage;
+
+        artsNode = $(subjectNode).find("input[name*='ArtsMinutesTextBox']");
+        artsmessage = $(artsNode).closest('.subject-arts').find("span[id*='msg1']");
+        var message3 = "Minutes per week delivered by CBO must be less than or equal to minutes per week for the class.";
+
+        $(artsNode).closest('.subject-arts').find("span[id*='msg1']").html("");
+
+        if ($(artsNode).closest('.subject-arts').find("input[name*='ArtsCheckBox']").is(":checked") && (!((artsMinutes).trim()) || artsMinutes == '' || undefined)) {
+            $(artsmessage).html("Enter minutes per week delivered by CBO.</br>");
+        }
+        else if (parseInt(artsMinutes) < 1 || parseInt(artsMinutes) > 999 || isNaN(artsMinutes) || (!isNaN(artsMinutes) && (artsMinutes).toString().indexOf('.') != -1)) {
+            $(artsmessage).append("Minutes per week delivered by CBO must be between 1 and 999.</br>");
+        }
+
+        if (parseInt(subjectMinutes) < parseInt(artsMinutes)) {
+            $(artsmessage).append("Minutes per week delivered by CBO must be less than or equal to minutes per week for the class.</br>");
+        }
+
+        if (isNaN(parseInt(subjectMinutes)) && $(artsNode).closest('.subject-arts').find("input[name*='ArtsCheckBox']").is(":checked") && parseInt(artsMinutes) > 1) {
+            if (($(artsmessage).text()).indexOf(message3) < 0) {
+                $(artsmessage).append("Minutes per week delivered by CBO must be less than or equal to minutes per week for the class.</br>");
+            }
+        }
+
+    };
+    getMetaDataForSubject = function(subjectNode) {
+        var data, subjectId, propertiesControl, minutesPerWeekInput, daysPerWeekInput;
+
+        subjectId = $(subjectNode).attr("subjectid");
+
+        data = {
+            minutesPerWeek: null,
+            daysPerWeek: null,
+            properties: {
+                ell: {
+                    esl: false,
+                    language: null,
+                    percentage: 100
+                },
+                specialEd: null,
+                otherProperties: {
+                    selection: [],
+                    aidsCount: 0
+                },
+                csForAll: {
+                    selection: [],
+                    otherValue: 0,
+                    csInsTime: 0
+                },
+                mti: {
+                    ismti: false,
+                    mtiminutes: null
+                },
+
+                arts: {
+                    isarts: false,
+                    artsminutes: null
+                }
+            }
+        };
+
+        minutesPerWeekInput = $(subjectNode).find("input[name*='MinutesPerWeek']");
+        data.minutesPerWeek = minutesPerWeekInput.val();
+
+
+        daysPerWeekInput = $(subjectNode).find("select[name*='DaysPerWeekDropDownList']");
+        data.daysPerWeek = daysPerWeekInput.val();
+
+        propertiesControl = new stars.SubjectProperties(subjectId);
+        data.properties = propertiesControl.getProperties(subjectId);
+        return data;
+    };
+
+    onClientDropDownOpening = function(sender, args) {
+        var limit = 5;
+        if (sender.get_entries().get_count() >= limit) {
+            toastmessage("warn", "You can only select a maximum of 5 teachers for each subject");
+            args.set_cancel(true);
+        }
+    };
+
+    onClientEntryAdding = function(sender, args) {
+        for (var i = 0; i < sender.get_entries().get_count(); i++) {
+            if (sender.get_entries().getEntry(i).get_value() === args.get_entry().get_value()) {
+                toastmessage("warn", "You cannot select the same teacher again");
+                args.set_cancel(true);
+            }
+        }
+    };
+
+    trackAutoCompleteChanges = function(subjectDiv, args) {
+        var changes, originalValues;
+        originalValues = subjectDiv.find("input[name*='originalTeacherValues']");
+        changes = {
+            oldValues: (originalValues.val()) ? originalValues.val().split(",") : [],
+            newValues: args.newValues
+        };
+
+        if (changes.oldValues.length > changes.newValues.length) {
+            changes.action = "remove";
+        } else if (changes.oldValues.length < changes.newValues.length) {
+            changes.action = "add";
+        }
+
+        changes.changedValues = arrDiff(changes.newValues, changes.oldValues);
+                
+        originalValues.val(args.newValues.join(","));
+
+        return changes;
+    };
+
+    arrDiff = function(a1, a2) {
+        var a=[], diff=[];
+        for(var i=0;i<a1.length;i++)
+            a[a1[i]]=true;
+        for(var i=0;i<a2.length;i++)
+            if(a[a2[i]]) delete a[a2[i]];
+            else a[a2[i]]=true;
+        for(var k in a)
+            diff.push(k);
+        return diff;
+    };
+
+    onClientEntryAdded = function(subjectDiv, args) {
+        var subjectId, addActionTemplate, teacherPid, officialClassSubjectId, indexadd, indexremove, subjectName;;
+
+        subjectId = subjectDiv.attr("subjectId");
+        subjectName = subjectDiv.find(".subject-name")[0].innerText;
+        officialClassSubjectId = subjectDiv.attr("officialclasssubjectid");
+        teacherPid = args.changedValues[0];
+
+        addActionTemplate = {
+            action: "AddTeacher",
+            subjectId: parseInt(subjectId),
+            subjectName: subjectName,
+            teacherPid: parseInt(teacherPid),
+            officialClassSubjectId: parseInt(officialClassSubjectId),
+            reqEffectiveDate: true
+        };
+
+        indexadd = pageState.findTeacherAction("AddTeacher", subjectId, teacherPid);
+        indexremove = pageState.findTeacherAction("RemoveTeacher", subjectId, teacherPid);
+        if (indexadd === -1 && indexremove === -1) {
+            pageState.actions.push(addActionTemplate);
+        } else if (indexremove !== -1) {
+            pageState.actions.splice(indexremove, 1);
+        }
+
+        return { error: false, msg: "" };
+    };
+
+    onClientEntryRemoved = function(subjectDiv, args) {
+        var subjectId, officialClassSubjectId, teacherPid, removeActionTemplate, indexno, subjectName;
+
+        subjectId = subjectDiv.attr("subjectId");
+        subjectName = subjectDiv.find(".subject-name")[0].innerText;
+        officialClassSubjectId = subjectDiv.attr("officialclasssubjectid");
+        teacherPid = args.changedValues[0];
+
+        removeActionTemplate = {
+            action: "RemoveTeacher",
+            subjectId: parseInt(subjectId),
+            subjectName: subjectDiv.find(".subject-name")[0].innerText,
+            teacherPid: parseInt(teacherPid),
+            officialClassSubjectId: parseInt(officialClassSubjectId),
+            reqEffectiveDate: true
+        };
+
+        indexno = pageState.findTeacherAction("AddTeacher", subjectId, teacherPid);
+        if (indexno !== -1) {
+            pageState.actions.splice(indexno, 1);
+        } else if (indexno === -1) {
+            pageState.actions.push(removeActionTemplate);
+        }
+    };
+
+    update = function(buttonControl) {
+        var subjectDiv, canceledsubjectid, canceledsubjectDiv;
+
+        if (buttonControl.value === "Edit") {
+            buttonControl.value = "Cancel";
+            subjectDiv = $(buttonControl).closest("div[subjectId]").get(0);
+
+            var artsNode = $(subjectDiv).find("input[name*='ArtsMinutesTextBox']");
+            $(artsNode).closest('.subject-arts').find("span[id*='msg1']").html("");
+
+            $(subjectDiv).find(".subjectdisplaydiv").hide();
+            $(subjectDiv).find(".subject-details").show();
+        } else if (buttonControl.value === "Cancel") {            
+            buttonControl.value = "Edit";
+
+            canceledsubjectDiv = $(buttonControl).closest("div[subjectId]").get(0);
+            canceledsubjectid = $(canceledsubjectDiv).attr("subjectid");
+            
+            pageState.removeSubjectActions(canceledsubjectid);
+
+            var artsNode = $(canceledsubjectDiv).find("input[name*='ArtsMinutesTextBox']");
+            $('.subject-mti').find("span[id*='msg']").html("");          
+            $(artsNode).closest('.subject-arts').find("span[id*='msg1']").html("");
+
+            if (pageState) {
+                pageState.removeSubjectActions(canceledsubjectid);
+            }
+
+            getSubjectData(
+                canceledsubjectid,
+                canceledsubjectDiv,
+                function(canceledsubjectid, canceledsubjectDiv, result) {
+                    if (!jQuery.isEmptyObject(result)) {
+                        toastmessage("success", result.Message);
+                        setReadOnlyControls(canceledsubjectDiv, result);
+                        setInputControls(canceledsubjectDiv, result);
+                        hideLoad();
+                    }
+                });
+        }
+
+        return false;
+    };
+
+    sendUpdateData = function () {
+        isPageValid = true;
+        validatePageStateData(pageState);
+             $.ajax({
+                    cache: false,
+                    type: "POST",
+                    contentType: "application/json; charset=utf-8",
+                    dataType: "json",
+                    data: JSON.stringify({
+                        jsonData: pageState.toString()
+                    }),
+                    url: $service_url + "/OfficialClassScheduling/UpdateOfficialClassScheduling",
+                    beforeSend: function () {
+                        showLoad();
+                    },
+                    success: function (result) {
+                        if(!$.isEmptyObject(result)) {
+                            toastmessage("success", result.Message);
+                            pageState.init();
+                            hideLoad();
+                        }
+                    },
+                    error: function (xhr, ajaxOptions, thrownError) {
+                        if(xhr.status == 500) {
+                            toastmessage("error", pageParameters.saveCriticalErrorMessage);
+                        } else {
+                            var errorJson = JSON.parse(xhr.responseText);
+
+                            toastmessage("warn", errorJson.Message);
+                        }
+
+                        hideLoad();
+                    }
+                });
+    };
+
+
+    sendSaveData = function () {
+        isPageValid = true;
+        validatePageStateData(pageState);
+                        $.ajax({
+                            cache: false,
+                            type: "POST",
+                            contentType: "application/json; charset=utf-8",
+                            dataType: "json",
+                            data: JSON.stringify({
+                                jsonData: pageState.toString()
+                            }),
+                            url: $service_url + "/OfficialClassScheduling/CreateOfficialClassScheduling",
+                            beforeSend: function () {
+                                showLoad();
+                            },
+                            success: function (result) {
+                                if(!$.isEmptyObject(result)) {
+                                    //toastmessage("success", result.Message);
+                                    //pageState.init();
+                                    //pageState.isEdit = true;
+                                    //hideLoad();
+                                    if (result.Status === 0) {
+                                        toastmessage("warn", result.Message);
+                                        pageState.isEdit = false;
+                                        hideLoad();
+                                    }
+                                    else {
+                                        toastmessage("success", result.Message);
+                                        pageState.isEdit = true;
+                                        pageState.init();
+                                        hideLoad();
+                                    }
+                                }
+                            },
+                            error: function (xhr, ajaxOptions, thrownError) {
+                                if(xhr.status == 500) {
+                                    toastmessage("error", pageParameters.saveCriticalErrorMessage);
+                                } else {
+                                    var errorJson = JSON.parse(xhr.responseText);
+
+                                    toastmessage("warn", errorJson.Message);
+                                }
+
+                                hideLoad();
+                            }
+                        });
+    };
+
+    getSubjectData = function(canceledsubjectid, canceledsubjectDiv, callback) {
+        $.ajax({
+            cache: false,
+            type: "GET",
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            data: {
+                numericSchoolDbn: pageParameters.numericSchoolDbn,
+                schoolYear: pageParameters.schoolYear,
+                termId: pageParameters.termId,
+                officialClassName: pageParameters.officialClass,
+                subjectId: canceledsubjectid
+            },
+            url: $service_url + "/OfficialClassScheduling/GetOfficialClassSchedulingSubject",
+            beforeSend: function() {
+                showLoad();
+            },
+            success: function(result) {
+                callback(canceledsubjectid, canceledsubjectDiv, result);                
+            },
+            error: function(xhr, ajaxOptions, thrownError) {
+                if (xhr.status == 500) {
+                    toastmessage("error", pageParameters.saveCriticalErrorMessage);
+                } else {
+                    var errorJson = JSON.parse(xhr.responseText);
+
+                    toastmessage("warn", errorJson.Message);
+                }
+
+                hideLoad();
+            }
+        });
+    };
+
+    validatePageStateData = function (pageState) {
+        $.each(pageState.actions, function (x, y) {          
+            if (y.subjectId === 442 && y.action==='UpdateSubjectRecord' && y.data.properties.mti.ismti) {
+                $('.subject-mti').find("span[id*='msg']").html("");
+                if (y.data.properties.mti.ismti) {
+                    if (y.data.properties.mti.mtiminutes === '' || undefined) {
+                        $('.subject-mti').find("span[id*='msg']").html("Enter value for MTI minutes per week.</br>");
+                        isPageValid = false;
+                    }
+
+                    if (parseInt(y.data.properties.mti.mtiminutes) < 1 || parseInt(y.data.properties.mti.mtiminutes) > 40 || isNaN(y.data.properties.mti.mtiminutes) || (!isNaN(y.data.properties.mti.mtiminutes) && (y.data.properties.mti.mtiminutes).toString().indexOf('.') != - 1)) {
+                        $('.subject-mti').find("span[id*='msg']").append("MTI minutes per week must be between 1 and 40.</br>");
+                        isPageValid = false;
+                    }
+
+                    if ((parseInt(y.data.properties.mti.mtiminutes) > parseInt(y.data.minutesPerWeek)) && !isNaN(y.data.properties.mti.mtiminutes)) {
+                        $('.subject-mti').find("span[id*='msg']").append("MTI minutes per week must be less than or equal to the total number of PE minutes per week.</br>");
+                        isPageValid = false;
+                    }
+
+                    if (parseInt(y.data.properties.mti.mtiminutes) > 0 && parseInt(y.data.properties.mti.mtiminutes) <= 40 && y.data.minutesPerWeek === '' || undefined) {
+                        $('.subject-mti').find("span[id*='msg']").append("MTI minutes per week must be less than or equal to the total number of PE minutes per week.</br>");
+                        isPageValid = false;
+                    }
+
+                }
+            }                    
+
+            if ((parseInt(y.subjectId) === 438 || parseInt(y.subjectId) === 439 || parseInt(y.subjectId) === 440 || parseInt(y.subjectId) === 441) && (y.action === 'UpdateSubjectRecord') && (y.data.properties.arts.isarts)) {
+                
+
+                var artsNode = $('.subject[subjectid="' + parseInt(y.subjectId) + '"]').find("input[name*='ArtsMinutesTextBox']");
+                $(artsNode).closest('.subject-arts').find("span[id*='msg1']").html("");
+
+                if (y.data.properties.arts.isarts) {                    
+                    if (y.data.properties.arts.artsminutes === '' || undefined) {                 
+                        $(artsNode).closest('.subject-arts').find("span[id*='msg1']").html("Enter minutes per week delivered by CBO.</br>");
+                        isPageValid = false;
+                    } 
+                    if (parseInt(y.data.properties.arts.artsminutes) < 1 || parseInt(y.data.properties.arts.artsminutes) > 999 || isNaN(y.data.properties.arts.artsminutes) || (!isNaN(y.data.properties.arts.artsminutes) && (y.data.properties.arts.artsminutes).toString().indexOf('.') != -1)) {
+
+                        $(artsNode).closest('.subject-arts').find("span[id*='msg1']").append("Minutes per week delivered by CBO must be between 1 and 999.</br>");
+                        isPageValid = false;
+                    }
+                    
+                    if ((parseInt(y.data.properties.arts.artsminutes) > parseInt(y.data.minutesPerWeek)) && !isNaN(y.data.properties.arts.artsminutes)) {
+                        $(artsNode).closest('.subject-arts').find("span[id*='msg1']").append("Minutes per week delivered by CBO must be less than or equal to minutes per week for the class.</br>");
+                        isPageValid = false;
+                    }
+
+                    if (parseInt(y.data.properties.arts.artsminutes) > 1 && parseInt(y.data.properties.arts.artsminutes) <= 999 && y.data.minutesPerWeek === '' || undefined) {
+                        $(artsNode).closest('.subject-arts').find("span[id*='msg1']").append("Minutes per week delivered by CBO must be less than or equal to minutes per week for the class.</br>");
+                        isPageValid = false;
+                    }
+
+                }
+            }
+
+        });
+    };
+    setReadOnlyControls = function(canceledsubjectDiv, result) {
+        $(canceledsubjectDiv).find(".subjectdisplaydiv").show();
+        $(canceledsubjectDiv).find(".subject-details").hide();
+        var thisdiv = $(canceledsubjectDiv).find(".subjectdisplaydiv");
+
+        var minutesPerWeekInputLbl = $(thisdiv).find("span[id*='MinutesPerWeekLabel']");
+        minutesPerWeekInputLbl.html(result[0].MinutesPerWeek === -1 ? "NA" : result[0].MinutesPerWeek);
+
+        var daysPerWeekLbl = $(thisdiv).find("span[id*='DaysPerWeekLabel']");
+        daysPerWeekLbl.html(result[0].DaysPerWeek);
+
+        var subjecteacherLbl = $(thisdiv).find("span[id*='SubjectTeachersLabel']");        
+        var teacherDisplayText = result[0].DisplayTeacherList === "0" ? "NA" : result[0].DisplayTeacherList.replace(/[\d+|]/g, "").replace(/;/g, "; ");
+        subjecteacherLbl.html(teacherDisplayText);
+
+        var englishasSecondLangLbl = $(thisdiv).find("span[id*='EnglishasSecondLangLabel']");
+        englishasSecondLangLbl.html(result[0].EnglishAsSecondLanguage);
+
+        var percentageLbl = $(thisdiv).find("span[id*='PercentageLabel']");
+        percentageLbl.html(result[0].EnglishLanguagePercentage === 0 ? "NA" : result[0].EnglishLanguagePercentage+'%');
+
+        var otherPropertiesLbl = $(thisdiv).find("span[id*='OtherPropertiesLabel']");
+        otherPropertiesLbl.html(result[0].OtherProperties);
+
+        var hivClassesCountLbl = $(thisdiv).find("span[id*='HIVClassesCountLabel']");
+        hivClassesCountLbl.html(result[0].HIVCount === 0 ? "NA" : result[0].HIVCount);
+
+        var languageLbl = $(thisdiv).find("span[id*='LanguageLabel']");
+        languageLbl.html(result[0].LanguageName);
+
+        var specialEducationModelLbl = $(thisdiv).find("span[id*='SpecialEducationModelLabel']")
+        specialEducationModelLbl.html(result[0].SpecialEdName);
+
+        var csForAllOtherLbl = $(thisdiv).find("span[id*='CSForAllOtherLabel']")
+        csForAllOtherLbl.html(result[0].CSForAllOtherTopic === 0 ? "NA" : result[0].CSForAllOtherTopic);
+
+        var csForAllLbl = $(thisdiv).find("span[id*='CSForAllLabel']")
+        csForAllLbl.html(result[0].CSForAll);
+
+        var csInstTimeLbl = $(thisdiv).find("span[id*='CSInstTimeLabel']")
+        csInstTimeLbl.html(result[0].CSForAllInstTime);
+
+        var mtiLbl = $(thisdiv).find("span[id*='MTILabel']")
+        mtiLbl.html((result[0].IsMTI) ===true ? "Yes" : "No");
+
+        var mtiMinutesLbl = $(thisdiv).find("span[id*='MTIMinutesLabel']")
+        mtiMinutesLbl.html(result[0].MTIMinutes === 0 ? "" : result[0].MTIMinutes);
+
+        var artsLbl = $(thisdiv).find("span[id*='ARTSLabel']")
+        artsLbl.html(result[0].IsARTS === true ? "Yes" : "No");
+
+        var artsMinutesLbl = $(thisdiv).find("span[id*='ARTSMinutesLabel']")
+        artsMinutesLbl.html(result[0].ARTSMinutes === 0 ? "" : result[0].ARTSMinutes);
+    };
+
+    setInputControls = function(subjectNode, result) {
+        var data, subjectId, propertiesControl, minutesPerWeekInput, teacherSelect, teacherPids;
+
+        subjectId = $(subjectNode).attr("subjectid");
+
+        data = {
+            minutesPerWeek: null,
+            daysPerWeek: null,
+            properties: {
+                ell: {
+                    esl: result[0].EnglishAsSecondLanguage,
+                    language: (result[0].LanguageId > 0) ? result[0].LanguageId : 1,
+                    percentage: result[0].EnglishLanguagePercentage
+                },
+                specialEd: result[0].SpecialEdId,
+                otherProperties: {
+                    selection: result[0].OtherPropertiesCommaDelimited.split(","),
+                    aidsCount: result[0].HIVCount
+                },
+                csForAll: {
+                    selection: result[0].CSForAllCommaDelimited.split(","),
+                    otherValue: result[0].CSForAllOtherTopic,
+                    csInsTime: result[0].CSForAllInstTimeId
+                },
+                mti: {
+                    ismti: result[0].IsMTI,
+                    mtiminutes: result[0].MTIMinutes
+                },
+                arts: {
+                    isarts: result[0].IsARTS,
+                    artsminutes: result[0].ARTSMinutes
+                }
+
+            }
+        };
+
+        teacherSelect = $(subjectNode).find("select.teachers-autocomplete").data("kendoMultiSelect");
+
+        // pull all pids out of the teacher display list
+        teacherPids = result[0].DisplayTeacherList.match(/\d+/g);
+        teacherSelect.value(teacherPids);
+
+        minutesPerWeekInput = $(subjectNode).find("input[name*='MinutesPerWeek']");
+        minutesPerWeekInput.val((result[0].MinutesPerWeek >= 0) ? result[0].MinutesPerWeek : "");
+
+        daysPerWeekInput = $(subjectNode).find("select[name*='DaysPerWeekDropDownList']");
+        daysPerWeekInput.val(result[0].DaysPerWeek);
+
+        propertiesControl = new stars.SubjectProperties(subjectId);
+        propertiesControl.setProperties(data.properties);
+    };
+
+    showEffectiveDateWindow = function () {
+        var ownd;
+        if (pageState.actions.length <= 0) {
+            toastmessage("warn", "There are no changes.");
+        } else {
+            if (pageState.isEdit) {
+                if (pageState.hasCriticalAction()) {
+                    ownd = $find(pageParameters.effectiveDateWindowClientID);
+                    ownd.show();
+                } else {
+                    sendUpdateData();
+                }
+            } else {
+                ownd = $find(pageParameters.effectiveDateWindowClientID);
+                ownd.show();
+            }
+        }
+    };
+
+    closeToCancel = function() {
+        var ownd = $find(pageParameters.effectiveDateWindowClientID);
+        ownd.close();
+    };
+    
+    closeToSave = function() {
+        var ownd = $find(pageParameters.effectiveDateWindowClientID);
+
+        var radPickerDate = $find(pageParameters.effectiveDateRadDatePickerClientID).get_selectedDate();
+        if (radPickerDate == null) {
+            radalert("Please enter an Effective date");
+        } else {
+            pageState.effectiveDate = radPickerDate.format("yyyy/MM/dd");
+             
+            if (pageState.isEdit) {
+                sendUpdateData();
+            } else {
+                sendSaveData();
+            }
+
+            ownd.close();
+        }
+    };
+    
+    lib.PageState = PageState;
+    lib.init = init;
+    lib.changeSubjectStatus = changeSubjectStatus;
+    lib.updateSubject = updateSubject;
+    lib.getMetaDataForSubject = getMetaDataForSubject;
+    lib.trackAutoCompleteChanges = trackAutoCompleteChanges;
+    lib.onClientDropDownOpening = onClientDropDownOpening;
+    lib.onClientEntryAdding = onClientEntryAdding;
+    lib.onClientEntryAdded = onClientEntryAdded;
+    lib.onClientEntryRemoved = onClientEntryRemoved;
+    lib.update = update;
+    lib.sendUpdateData = sendUpdateData;
+    lib.sendSaveData = sendSaveData;
+    lib.getSubjectData = getSubjectData;
+    lib.setInputControls = setInputControls;
+    lib.setReadOnlyControls = setReadOnlyControls;
+    lib.validatePageStateData = validatePageStateData;
+    lib.showEffectiveDateWindow = showEffectiveDateWindow;
+    lib.closeToCancel = closeToCancel;
+    lib.closeToSave = closeToSave;
+    lib.validateMTI = validateMTI;
+    lib.validateArts = validateArts;
+} (officialClassScheduling, jQuery, $telerik, pageParameters));

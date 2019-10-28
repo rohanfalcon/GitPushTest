@@ -1,0 +1,11 @@
+[t28]
+FileName1=t28.html
+URL1=https://es00vqweb15.qa.appdev/starsclassroom/starsapi/OfficialClassScheduling/CreateOfficialClassScheduling
+Total=1
+RequestHeaderFile=t28_RequestHeader.txt
+RequestBodyFile=t28_RequestBody.txt
+ResponseHeaderFile=t28_ResponseHeader.txt
+ContentType=application/json
+SnapshotXmlFile=snapshot_28.xml
+[ProtocolInfo]
+ProtocolId=QTWeb

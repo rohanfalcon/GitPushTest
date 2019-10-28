@@ -1,0 +1,9 @@
+-+
+-DCCI
+-D_IDA_XL
+-DWINNT
+-IU:\Turn class On_2
+-IC:\Program Files (x86)\HP\LoadRunner\include
+-eu:\turn class on_2\\logfile.log
+u:\turn class on_2\\combined_Turn class On_2.c
+u:\turn class on_2\\pre_cci.c

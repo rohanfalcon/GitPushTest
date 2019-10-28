@@ -1,0 +1,7 @@
+"{\"jsonData\":\"{\\\"numericSchoolDbn\\\":1010015,\\\"schoolYear\\\":2017,\\\"term\\\":1,\\\"o"
+"fficialClass\\\":\\\"002\\\",\\\"isEdit\\\":true,\\\"actions\\\":[{\\\"action\\\":\\\"ChangeSu"
+"bjectStatus\\\",\\\"subjectId\\\":424,\\\"subjectName\\\":\\\"English Language Arts (Overall) "
+"  \\\",\\\"value\\\":true,\\\"officialClassSubjectId\\\":\\\"889345\\\",\\\"reqEffectiveDate\\"
+"\":true},{\\\"action\\\":\\\"AddTeacher\\\",\\\"subjectId\\\":424,\\\"subjectName\\\":\\\"Engl"
+"ish Language Arts (Overall)   \\\",\\\"teacherPid\\\":370053,\\\"officialClassSubjectId\\\":88"
+"9345,\\\"reqEffectiveDate\\\":true}],\\\"effectiveDate\\\":\\\"2017/09/08\\\"}\"}"

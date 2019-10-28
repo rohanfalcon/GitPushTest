@@ -1,0 +1,20 @@
+﻿var hasDataChanges = false;
+
+window.onbeforeunload = function (event) {
+    if (!hasDataChanges) {
+        return;
+    } else {
+        return "You have unsaved changes on this page.  If you wish to save these changes, stay on the current page.";
+    }
+}
+
+$(document).ready(function () {
+    $(".trackfield").change(function (event) {
+        hasDataChanges = true;
+        $(event.currentTarget).addClass(' modified');
+    });
+
+    $(".tracksave").click(function () {
+        hasDataChanges = false;
+    });
+});

@@ -1,0 +1,11 @@
+[t20]
+FileName1=t20.htm
+URL1=https://es00vqweb15.qa.appdev/starsclassroom/SchoolAdmin/ElementarySchoolProgramming.aspx
+Total=1
+RequestHeaderFile=t20_RequestHeader.txt
+RequestBodyFile=NONE
+ResponseHeaderFile=t20_ResponseHeader.txt
+ContentType=text/html
+SnapshotXmlFile=snapshot_20.xml
+[ProtocolInfo]
+ProtocolId=QTWeb

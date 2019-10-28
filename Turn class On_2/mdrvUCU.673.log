@@ -1,0 +1,4 @@
+Error: CCI compilation error -C:\Program Files (x86)\HP\LoadRunner\bin\cci.exe: can't read `c:\users\rgordon17\appdata\local\temp\5\brr_iaf.778\global_dir\10997262\pre_cci.c'.	[MsgId: MERR-19799]
+Error: Vuser compilation failed. Please set CCIDebug to Off in CCI section of mdrv.dat file.	[MsgId: MERR-19797]
+Warning: Extension cciext.dll reports error -19797 on call to function ExtPerProcessInitialize	[MsgId: MWAR-10485]
+Error: Thread Context: Call to service of the driver failed, reason - thread context wasn't initialized on this thread.	[MsgId: MERR-10176]

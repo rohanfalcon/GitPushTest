@@ -1,0 +1,17 @@
+[StartRecordingGMT]
+StartRecordingGMT_1=2017/08/29 20:47:01
+StartRecordingIsDst_1=1
+StartRecordingGMT_2=2017/08/30 13:40:11
+StartRecordingIsDst_2=1
+StartRecordingGMT_3=2017/08/30 13:59:39
+StartRecordingIsDst_3=1
+StartRecordingGMT_4=2017/08/30 14:42:49
+StartRecordingIsDst_4=1
+StartRecordingGMT_5=2017/08/30 15:00:24
+StartRecordingIsDst_5=1
+[UserHomePage]
+UserHomePage=http://yahoo.com/
+[User-Agent]
+User-Agent=Mozilla/5.0 (Windows NT 6.1; Win64; x64; Trident/7.0; rv:11.0) like Gecko
+[Security]
+UsingPersistForAuthentication=1

@@ -1,0 +1,11 @@
+[t65]
+FileName1=t65.htm
+URL1=https://es00vqweb15.qa.appdev/starsclassroom/Login.aspx?ReturnUrl=%2fstarsclassroom%2fSchoolAdmin%2fOfficialClassScheduling.aspx%3fOffClass%3d002
+Total=1
+RequestHeaderFile=t65_RequestHeader.txt
+RequestBodyFile=NONE
+ResponseHeaderFile=t65_ResponseHeader.txt
+ContentType=text/html
+SnapshotXmlFile=snapshot_65.xml
+[ProtocolInfo]
+ProtocolId=QTWeb

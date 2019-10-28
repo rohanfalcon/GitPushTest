@@ -1,0 +1,23 @@
+<rules version="25">
+  <emie>
+    <domain exclude="false">servicecenter.nycenet.edu</domain>
+    <domain exclude="false">authoringportal.nycboe.net<path exclude="false">/default.htm</path></domain>
+    <domain exclude="false">intranetdev.nycboe.net</domain>
+    <domain exclude="false">intranetqa.nycboe.net</domain>
+    <domain exclude="false">intranetstg.nycboe.net</domain>
+    <domain exclude="false">schoolsdev.nycenet.edu</domain>
+    <domain exclude="false">schoolsqa.nycenet.edu</domain>
+    <domain exclude="false">authoring.nycboe.net</domain>
+    <domain exclude="false">authoring.nycenet.edu</domain>
+    <domain exclude="false">10.2.55.219<path exclude="false">/NR/</path></domain>
+    <domain exclude="false">10.2.54.42<path exclude="false">/NR/</path></domain>
+    <domain exclude="false">10.2.22.218<path exclude="false">/NR/</path></domain>
+    <domain exclude="false">10.2.54.41<path exclude="false">/NR/</path></domain>
+    <domain exclude="false">denisonsurveys.com</domain>
+    <domain exclude="false">10.2.54.242:8080<path exclude="false">/qcbin/start_a.jsp</path></domain>
+  </emie>
+  <docMode>
+    <domain docMode="edge">forms.office.com</domain>
+    <domain docMode="edge">sesis.nycenet.edu</domain>
+  </docMode>
+</rules>

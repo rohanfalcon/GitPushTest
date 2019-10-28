@@ -1,0 +1,466 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head><title>
+	Push-In/Pull-Out Instruction
+</title><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><link id="CheckBoxSliderCss" rel="stylesheet" type="text/css" href="/ui/apps/sites/stars_classroom/checkboxSlider.css?ver=2.31.1.2" /><link id="IvoryCss" rel="stylesheet" type="text/css" href="/ui/apps/sites/stars_classroom/ivory.css?ver=2.31.1.2" /><link id="ElementarySchoolSchedulingCss" rel="stylesheet" type="text/css" href="/ui/apps/sites/stars_classroom/elementaryschoolscheduling.css?ver=2.31.1.2" /><link id="KendoCommonCss" rel="stylesheet" href="/ui/apps/sites/stars_classroom/kendo/kendo.common.css?ver=2.31.1.2" /><link id="KendoDefaultCss" rel="stylesheet" href="/ui/apps/sites/stars_classroom/kendo/kendo.default.css?ver=2.31.1.2" /><link id="KendoMetroCss" rel="stylesheet" href="/ui/apps/sites/stars_classroom/kendo/kendo.metro.min.css?ver=2.31.1.2" /><link rel="stylesheet" type="text/css" href="../Content/toastr.css" /><link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic" /><link rel="stylesheet" href="/ui/apps/resources/font-awesome/css/font-awesome.min.css" type="text/css" /><link id="MainCss" rel="stylesheet" type="text/css" href="/ui/apps/sites/stars_classroom/main.css?ver=2.31.1.2" />
+
+    <!--[if lte IE 8]>
+    <link id="Ie8Css" rel="stylesheet" type="text/css" href="/ui/apps/sites/stars_classroom/ie8.css?ver=2.31.1.2" />    
+    <![endif]-->
+
+    <script src="/starsclassroom/Scripts/kendo/jquery.min.js?ver=2.31.1.2" type="text/javascript"></script>
+    <script src="/starsclassroom/Scripts/kendo/kendo.all.min.js?ver=2.31.1.2" type="text/javascript"></script>
+    <script src="/starsclassroom/Scripts/toastr.min.js?ver=2.31.1.2" type="text/javascript"></script>
+    <script src="/starsclassroom/Scripts/unsavedconfirmation.js?ver=2.31.1.2" type="text/javascript"></script>
+
+    <!--[if lte IE 8]>
+    <script src="/starsclassroom/Scripts/ie8Fallback.js?ver=2.31.1.2" type="text/javascript"></script>
+    <![endif]-->
+
+    <script src="/starsclassroom/Scripts/validate.min.js?ver=2.31.1.2" type="text/javascript"></script>
+
+    
+<link href="/starsclassroom/WebResource.axd?d=urCACUaUZeT6oPoIZXShbq9LQ-yh1b8NC-tNAmxvuvUdIcqG1G5NlhoWuIGHfYhg6IhYGBLUNCdZDlRs29Bl_u7K1YmY93EZGW5g4sZPSZdwtoEH0&amp;t=636360589564367603" type="text/css" rel="stylesheet" class="Telerik_stylesheet" /><link href="/starsclassroom/WebResource.axd?d=aupLorz3w8A80OJEEKIwoIYcJ2VYR7pVPrfDpRhKy7SjsVZBb19sY6rmGQMhK9sL_xRBWGAVqrhHmW-AOsxlQ8ScpDiOrC7dPSDlJBoAmdbOLXe-Lic-39qbKV4fNsnNU5WebQ2&amp;t=636360589559077603" type="text/css" rel="stylesheet" class="Telerik_stylesheet" /><link href="/starsclassroom/WebResource.axd?d=fqCPrKvoPJVc1rV7IcjHjS7yQitrJRg2-0QSvzbhFrIEhbO2RPGSTEJHd-wYi7Xt71ziaK5LAa0IMfKJSYsAsT_cpBN_cZuw5rOk2fTWJj-cNFpXhBSqGdo5_wA_h6XzJjqNzw2&amp;t=636360589564367603" type="text/css" rel="stylesheet" class="Telerik_stylesheet" /><link href="/starsclassroom/WebResource.axd?d=ky_jE1xuiI59Kb0KHVxKOpLm6rAStKPfYMyxPxGC8gPwtT-020xvreEDtuOI4-YEZ0yBwu1NMlc_w6CasJfcBv_qZSz7rg66CCaMwESV-nXxUH0ZwmG06TT6jyi18hm3L4cE7p8JgFP4nfTBZRfqgUX7WdY1&amp;t=636360589559077603" type="text/css" rel="stylesheet" class="Telerik_stylesheet" /><link href="/starsclassroom/WebResource.axd?d=b8adWYak0tImLef4A3fc9YbMuHl5U24Vx_qdtgXvcS2mkCXi9XsQILRC_Mb5ICDEkth1wbGP5f8aj3Bw7vN-R47AQ6mJ0WUQw7aua42mWRjBMLCFtkZZJZVb4qjCRe5TWkWnpQ2&amp;t=636360589564367603" type="text/css" rel="stylesheet" class="Telerik_stylesheet" /><link href="/starsclassroom/WebResource.axd?d=94lzd0yyvC89JsV9N54NtSPq0_uPd3ihFpZxMijbUPabB4iO-RFJjpudyX5MLUnOzE_3D_Jy7TILYmvalrgO7hDKMd-MxSocF6kkFh1avemIWqnryTNsbWwFjlgoRDMZJQG2VvymFuyk2JwbxMgD1OWR6vQ1&amp;t=636360589559077603" type="text/css" rel="stylesheet" class="Telerik_stylesheet" /><link href="/starsclassroom/WebResource.axd?d=Nhf6TpUj19KZ9rhEj2xtdf8uhCnDZI3V3l5yUFSrKIr2yaQ2_X5RNErFW9yJUiTvVc4MA9QGL53-pRVQXQ_SPN394h5KwsxUpWjM1EK3Ixz5ymxF0&amp;t=636360589564367603" type="text/css" rel="stylesheet" class="Telerik_stylesheet" /><link href="/starsclassroom/WebResource.axd?d=tAs1PzD6X_1ylbCNgK9s1aPVhlgPQ83qt13vWZ4-Fr7mmo8gTmaGMttxgcwMWFivFsb8wDL1VPbJA8EVWtBNjh1r39H5ObGeSviCzVMYlqVbD-WJfLhcyR_yip7_pCBRKuXI-g2&amp;t=636360589559077603" type="text/css" rel="stylesheet" class="Telerik_stylesheet" /></head>
+<body>
+    <div id="loadingdiv">
+    </div>
+
+    <form method="post" action="./PIPOList.aspx" onsubmit="javascript:return WebForm_OnSubmit();" id="ctl01">
+<div class="aspNetHidden">
+<input type="hidden" name="RadScriptManager1_TSM" id="RadScriptManager1_TSM" value="" />
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="lRrt3QE5ooQnsGnZ4Xl+Xjz2tmccQ29COez3YQ7zW/97wGfb0Y05MMoZOfo5L1Ys4pAh1tO1i1bm6PeB6jg4wmKsBo2AAAMiVWX+RA+Mho0HwGqr8yokTj9GdTNCQWlt991/Cpu1+vnc72TB6GZVe2U3DJ5MPiMIjpgF6gBCL5qP8QSZ5/+Mazu25zcjAXH0s0v3HTIhmTjonH4coSl3J74ZKZTcs3l6e2dFRqmmzx7xTBkxqLJ2rCm4nMoHsUBUahVIHliFygxdU+8WtyOHKeY1Y4elsNI1qXSjCbDfg6V5deIWmnYXqisyy0a+NfZy5HlUuYF+MJHtUOoT6NRwpJr91LrV3IOIijvzmM41xrYJ8SK2ZpSdGwcRosGQept1+rVY7j/O7K3wvtaamSVveTc+SlLFQ1uF4WivwdY2Uj4KHiQDqmeHy1cOq9sRNib4Rb03u6h3ipaDdiNfFTykOQHBUtUyw/6Bxwyl2Yb8zkFDo9EcCNwEvG4xm0HyxrARzAcCWrZ1zVF1ysQkl74ceca5PPLlqxfvUhccX43GaUsmZQS8tFhS5HvN7bi/f4oPtUv9fjvocEiYQf6KO9d3mvWAW2UE2pYd8mkvzPGA8waEfMb+QNNXJ1PGSrTevCJVI1uzjrwfzvtOU479yWIg+R41FxOckM+PqYRggvVdxHBBZwJDRzSjIVXh1uP75EwuwOX1XRRX6cSPD7Xk2WvCgG1DVsx+CY5+rE99GvSjYt9TZnLsbDBrPgsKu7w06aTQgc3l3yarFTHtqnOlFlFBZkcGAEx6G2H1VWf6FlLwKJyfLk+LaZI1CIkvtoNQCypj49YUjAnhfVcV1LUhnk2WSca0Y1E5i7cet3usW5BWDmyarXHZvzVRJeW970hmjbPdnwgHQBeIq71Kv4+vKsyMFVhvkmNWxgIKVnF/x2fUUfEzuhsNeR2dsRMkm24jZb04DwkYTbf5fiXYnAEl1V3HCHALMMdOxFyFIYxhLtQjaexA46GOlQi/INgzjrZNtinmxr4aHxV5w8MQYW9LngEyMV+A3D41aBTILq8IaETzqT8AY+NP/YhG4qC056WreVWTYCG+3UC+yp0tqYEnSmT4EplWScuTJHCkxzAZ0UoAocr3VvO0BSq8arHgLdCmwIzUhhr95mfk9cR7Py4xXjgYrC5f1Bmmx3lIKlhifms2zl+/Bu/Kkl0nGzYCmE/Cn+SNjzf0lJhOW2KbieXLRZ2N+xAZThwlWNra+GwYYle6swGLIgBFte+jHKMBc5/RTJ7/21uJA1OvYymRd/qTCHyF6zMF/0bFGEguG/Vj1ePbA7X4kTUY6y1ZXlvyxcDF2umfEy1tyuxOl7PUYPQGpRvIzNJdWY3sx158t/K4EEAA5bQO8a9qgPyqyMxMSi/WR3CPsbbCoEMJTJQ/I3KKeJ6PG722EHPhTkz9qI5ldjN2lR8RHxg5Yz/6z1pNY+LJY/cLPhm54Owzi17fGqhHrB3vbbYX6N6tzizuIRs7HlvWH0cxJkjrek2AABI0IP8NoAUvNnByQusgY+B39lXfVtdO32DPS+5fUvwjuAi7u1FyGMjel3FZhLb5khV0LcX8PVeRKnrSx/mN/pBb6kjZeFuNdFo4xc7A8YpuH3r5y+xj59wQfnNi79Dv1giXrrpA/shn4fZrGyq0D8D8qr1EfxXnq7vID9OCOYtid5UxMgHkQGYdoJfVEODxSVKJN9n9qHqojdbS1ggNFutdrPAswmI7uY/byi/TVyLijDdijfY6DO2a2Pb72SRUkR87LJgvIIG7s2umxgpRj4dZPoQrQBiki2Lp38rZ227uin+862v06vhyjgrL0g6v95t1XvCiO7mOKr2FrwakK66fmMSGWIcLSgBKIxp7pwokelKZgwa7LIK5hj5DH5xzLMB2Ll7wtANqb8W4Ffpv2o1srHBE4OVSwvO5PURWHwUKdTGbf+TooSrbnmv8QbDDdSVFTFbIvcwxfLZSGRIRJElBZVKmg1qDhYgr3Ki/UISddqefNs6t/dGM2rhN3rxiy5VgXPGw5WbkHDHMwmRgKB8oEOMDQS39RL7q+NJf9MUW3Wc7lWl5lwQvRv+Can2vVlB2uDM9kp9UWLxItjLaQhwCCeB9d6jdujG3X69ATW6/lwcXTxpHd73VMFP5PEyGznfgRG9zJeZBYPZl8xDQRVA4OTaD6obyw+bCXDuJz4pJx7hSwk4mi73JMSnlem2MnGD2A6nyXOQ2HyRaGuPpyH7u9IhD8U5vHnl9qsZCY/hoC/rZaHMcVqJzGs71scPkqqyjtRL+UqHPBFSTkBXYfd5XAF8vtoB7Rk8PWsgDbLxQ3qgInPiBQr1cOCtErQ3THSRcjB1Y02iRoNiCkCB2wqGkwgIM20DqhlB2qeuGg6i1yMV1icGGKRgwZhu9R8g1wweB1HDagxSgKysZwrJ7zhF0b+sVTw/p88ell4EHk2ECXI4Dgf5u+79ThzmevMCqtS8u/1ULr0OxDNmxo8tPfmkpDgkVqCHBg9m5s3whHFU6Z7P2PwC46rEqPfBVCvMDmMWy5UjP4RmCWxVmDY9UwxZrTu8FMYbhXZcBpHrbBgo9fbSc07mRKEaiRqVEJXgwmCS1B8VNie4XF/rxvu0dbGmxVouXb91z5e5M+IcLy5b8GGevohzxqFQWz/aBd1Yf6sbivCO4kxOUTgYkrU59MfstrjPCsNz/gBQ0tief+KZJKlyQSxVLxl5xB8j39yf820DKLzVGpPaZMHvk6DyZc4HpDv0e/EQQVUsyFLf8It4wW8rVKuOV5J7PJGMzOdxRYOUDJRQ98DkGkotHCpf5ktMDNOOMnIxaLHVOLysm2Y+sPyKhT7Vn/qM+efs5Smt/n+uEwjB+Cuyd7bJLQqVjmHSVOTwYz8w10Zw4aCvv5D76qgFUQT2C962SFpSdO5SBNexee0n5yajDkXxLeeUfQZizyKjSsQEF14Ok6MY2vElwopMPu04oQyt7OsO7eB5kx7W6e3bA41c8XPD6BhGsRqdlRVPmMGqhBGd8pG58awCcNCvKs5FYCNFGZsE7APwZYqu5lkq9WFR5MKyD2Fu0HvAAtACobVw85BrYOlf4mBVWNiMS1oX3jMctM2yS3O//ne2UuMXzhQ0vZRypHVOw/HFPzrT3jo7z9oLhxmb80WUM7NoxigidPqmfg31YnvumlBGitfV+Vu3UqqPC1ASQve893OoJjlJH72Le0Hf0YDiWf+QBe9UNBr/xR/Uua4hi8jaAXwUeWcADUf6hXxeEWVMBiQTVsOI8iDNoM2SSC8jYyk9yw5Q1x9Bt+fQ9Igq3ypAiV9YPYC7jfk3B5dU11v/e+MiilnZIPVU8rRQ/rhvY24eTkpAAitU4l+NEdOPO5L/5Y/kxW74/AuR14f8GHj70VXtRf7gc/CXaNgxUkXhJoranBUXdfXhBXq/M94P2PHd0ccKe9tEBZIoDvpGu4mK/1iqhebSc9eQhG0f33OM6sT45kI1GW6dyUT4l4Xp0yvpPYP5c2yK6QckxvWUgc5BbyS9+47PnIBXSYKYfNUOoGc1LG6fjaxBQzYossrwKvRKR1fty2PZdF63EenKDCBs+n7Z6W348muO/OEYEoMBiX1DMGKqntF9yWmrGDwF+Vpif2XiiA3luYJcCpKz4WsxEsCDJdUBK3v03m+IIJ0J4YvckBdqClZoxSgKVb0dwuW6Dg2N9bOar2b/KB6mWSbAlXN6m9GSyHUp/g9QT+fFgDoftIlAgXMjMD9PHxzgoXdvVhEbTGRVTqlt77x6CzDecTcdkozMfEb8d/d8xB/RBRBz0mq5Smv6/VNL5/eceq0RSnMYXaiBeGbqtet/XkgEb16PNrsuu2yM2LjE2SahOehodjOL+E/KbvVildW5H4tX3zuteix3sKp7Djj8WeX0szkJ5pVAmuoaUaDWHDVZ+ivtpnmZzqSoNq94kwSrNiBA5hH+3jMAv9CT7liaBQitt9RrT7fB3p11GSLmyCJ4bbovybMeqzzPZok7ILZrWI2BNvpx+IIfzyZWX102X4SMaJLk7qU0vVDviciFr0CfkObGCO1ZtxH7sHhBpEhGdioj7fSXtFW2lhm7VwzTMapFFKeMj7RU+LDK8hF09d8e9GVTkAdDXf61jLiq7NHrxgL827PmvlC+mYLx6DvThFSe0hR4tDEHLBD9tTLhgi/NNwwyuE1RNe0k+IsM/0LTm6GYOSlhRLwWmU0pp7mh6b5TJXBLh2DHkkRDg60SuJrCBze0EAPVyP1XUqO/pFeMrmYXG9bVRObNTQ1FL7lGUiP9yOlwp0ozBWJ8zaQl0QDrFpmYWYa7PaG41qxzl+aPwLmjAOqbmx9TsGH0mockSbIkEkcvre2ED62EdLZaWBDN8OFZmJFSpdo0R6Omks18K9O4MBnxDugiA4AzzywxO/98ofrsaEauq32C3QXZnEwRT9VP2jB0o1PTi69urMH+ZxDMjERWjra93IXP257sTnl0Oc1GbbOemmrNinagJOayntEuY5guPZQwZ2WtpQsDrj+Whr0o3V+YmlH/5/pgUYviqOit0zak9dDZUL5rt7umsb1bJySNReFguJhmzHlC5XF5OWyj8yiHQiJkz0GaU93P/wjh7UR2OWdFLlUVtBIYxjHj2tKygbGtGk/0puNMBaKDNtGfMw9obfwDy/5KOSrY65AWC99RUwRX6/iAWxlb7oQMDSkGOKxBv96kCIAUERdktVNjrGltVB7aJ29AfZO8S0XDYZaU1EblgVueN+C4W2bXgvEZfnT5aJX8RKaaN4WeMrGEt523jsbviQhoEErCf7n4WSiibpQde3EdlJIbP2IlWVO+U/dDvO/16uGEgnH+UibGU8dnmUbPpOXVtyS7eBZ97806D+h7fb80qc1CLaOG9wrLTDh+HJZW/xeA2ZpdPOQmMdBvy31WMP6J9dZyKGeoBI4ayWepWa+0DjszUzd+a3UI70z5Q4lVQZznEBOcqs+px82fGgni52Ze06j7VnncpjjdjYvYjlAyZHJ5HQ/Wo1d+YNLDJUPdxGnr8ieg6kSwlkVgf4+dN3NviTqDHwiKQetGSh864u7P6DmUmTbFwWyqXeQKdH+JH/c+Txf5wPe0lTnueZ9vzy44Xj9/gK2MgH1nLrCHG/gm55T5h0JRB9zObE+i33JlgCw2rJf0sJuUi6ysYhI8Ln3mJcINRVYOArF1IyipFdiiYjmV8QIXZ+FqVrrHBA4hq+mBRDNDMdJqpCeaZc7uxJ03J5KJToIt8u3nN5CI+4lyBqGFkXy6vfo6av8lC5fh1QSXL9kvCOU7jL/6egCbwep5nC+zGITDsGbgpimEaXG8vuQeXOMXkwUhqi620AyufU6gjMxYyd47m1ov2w0npguX+pcmL/9QPj3YYOFd7SykWOvLOSV7Su9rWi7/y2R68XJmIbuasyLL152asnOlPhiI4m7IIi73kEI7u8icfZid06YzH+g9tmcYfbQM8fUVceHQLOpc0HHOCiREheA4dgRnqLhrDO3gpsqgH6xa2cuvphFq5vh6rrUkBfuqCnVj2zZbYrbhE4ZL/G4DAh1TQnrwClsJSktUUcJJ/N5k/aUDhcwMGX7ZicawKI7rZdmv0e8kuGlu4rGJJQ6lGFO2S9FUHNcSzwXx8ZYfRul7SRS67fy62UryWzjDP6Ts/DeYbi23ZcEfiYqPgMqkbQGZMrq6nW8AIyqW7gOmJjxt0e0pV5XQumsGN8wtL2BgfUGtDQR5n2MFDiTv9Xxeb72oHbI1ayp27B7CexMuuj/PW2tkmMwQy3jNcvJhc3UoWJUpEyvfSXLW0OD/0rEmGZ/3Iolewu91kcqocMuJSiO1x+IkE3Ov+GwvNtFWi6A0CZtgsFWeOP3k2pPu/djklW+qHIJQkIWhwbCLLKDUB9O2XOMI2bGb1rfeTIIJaGjnGeOwLW8roxQJ7REjBT+1VSX6h23At6MQdphLh/E7O9MRO58y6GE46KCpsztPFp+TyGiT4ccLjNqtusXbcoCPXj4bmmdwgEduPHZc1YAFSmZKIsiOHpSL0Mwaz4zFvgObaTVZIFv5u57FRn30H+5ENziRSCoudewL33+Mw2RAIP2ixo5aFzC36VCiy95fk6vqiN/cUv1Lu01f5boBdIW1r369EH6DavP+elE5ED8bqOowmpliKmijP+NM1pOLS3LgVf6Lndf3i78ABGy57yS4xGiRxJNfiwfAwNXCpWuQwttNwdOsLxLvwne7YvoLzfQHOAuk7PUQxW5ufRGgMaYlkD5Krk+qh/j4c1AWn3J8OtI8IyCaHtDZlMlZk3CyWpQF7PkOqxf+z55BMgx0m3a1lfcJ05oMGHHO+BFn3yC7o8aNaleH5ZFKcdbc0+qi1GXncBecCyRamqWbHAISfaFR67RNAtW9vuoGiOMiroUyMYrK8v73S04ukmLLAexw+1haoLjBntVqtVzxs3XSm0JRV+nu0oC20EdZrhxdG7PmHSMGA6TREixB5eyKLvmEL65sqy4I+pcG0LqqoI9xrJBZ0AY646ChDIbN5i+ZzzpSnZei/U4hwzzBHcKNiYztlG0u8xdK+jWl1wXe7Uy0Y83vYqlDZoaDj0EWe7FXUJEGJ1giWu5xEfQ3bfCx2QxZO+F+HyGSPb0lGd0lQeGn4GRZexMqAd1hNpQlcOcHjXKgsYiNFqmU1OLPmaL8eqAHjOWIxsLMv5db5Y+yms3MaNl/1BL5/LCTwkrVQ0oZNE+oOT1Qf3m7/31mYB17xz+LnccJCAzAQxiFpIk+4gIcKt4B4hELqGQfpy0LQGMQ+nVBlXwlmf9cNydwqXQIKrod+vC0JLkjA97BV4ZdEz8OdlwWPYAZEAiHGtL89qhlDevYHYjkzXV9YzTU7h5Je8tqS6FG51j1jGhAMQS5QHrKvV/wAJ+oQfDc6ZSV9PtS6k3o4o5NaSOMlOyzwRlT9RqDfVmw0gSR6MQwN7hc5CGHA1VOPihbCJhKaGRlQGWZN/hPdAzWK6zk4dgvvTLEhzGoBk+uP1nYNfh2uHSDixVXtTcFoapGEg1MCXMWFYv5mONAY8F0I2qrdzTPJkseioqwbKAuOLjg16vj5wqojCvQs70QMIWPu+yRTv3/Tx+QnhhEG1BKdEdupuIaXIDifjpH/M78YzfbzYoqqldsnlKS0nO8YggBSN07HouK9TDS2hC8fuZ+EQEV9mGO0QhitKR+JmTzc97WzaHmWJs2ZNHoH3fgCZRn11YWHe1T+3iQVaSZRbGBH3OdaIsj9IGvz/zo6+AOn/YMcdCDM+gwclIhfPzGKfk+0EZHnTnmM+g241+yl/qpBAKvW7I2MEaHtRT/dSiakEtxfQoABkGCKnMjSp5E+X4vS1oXDZJ10ybLMxaDm5ESZ6B69VPmIofQ2vCd0QJfOWwo5Wwk1oAkSAw/NGleux+2Ze1PFe+YXTh/zdQHtq2koc8alPEc0onnmjagNS0p3PNzSOdZCpRG9hT2uGJactl7lI/SnPhCQmjn1kYn5qRCCKfZ5G6tOHVwWa/Aa8mlK8nkBnBYYFv1OCDGgjrd9TETwhN0lAVEhw6/WgHDxlbYWvphGXiZ97FYSbblogFltJLX+FIU0BG3s6Vqpks2FVL3QUtHPdTAWZyPszNF2GS8oT5mLLLGWOO+g3YMpSl6mDVnIAj7HK7rNiaK3iFDHG82zB0KEiEgEcoG5ooPqO5A5fFUcEFz1s98TYaDdd4MXYXynTi7hmJzAVW7ysquyeFP/Ld3GLnW1TU0iVDy8maGIGJ+nofY06XXOrSJ13oOk2MTFAEmvryZg9v685QiH5kvTEDlnZ1gR07Dbz+f5RYMJFM2POwPzMNl4EtlkLH4Un9aj8tQTJiKXfKe73NfFVqm+oaEB3NRpsJMnws1uZONIH/C2qZ/01t6F0IvnsOP1WZkh24WdIhpxf8PA/Zu2s0Nj3dPDz3O0Ai3wCUdAU0p9Tu8Zf6wDj/YMlldVHoNOvbIGHIMViM40by8gevE4Ua9ntkNdoi8ORRp0Ly42YiTCkDJHF/uk3PCLvYFmAR5/p41YTzvWEnDXUNEq42YwxPWuW+DD84frs5FCqRzc/+pje06saUvIW9Ts8P4VOCgfxUZ5GmNwMZ62ymK46e9Ro8AmvrSN0oUGzmDKdwsDgBNOcTbykvB6V91QvC54lNKwy1WZETujyi4Mr+OJbulRGY3sAO3xML9/zJICu1JiZve7l1ptbsKK9RipSCkhU+1ZFBPhkoKkvVfKyU77PnrYO8vA0KLdtnpIxAUVA4cG6c59hkGbbMctdfGvN7M9+s7pY/Onso28wWHXnP96PLAQHVbDxAkz7/xP+MPCs0W8DcLaEZGUTnssnhIt0nf3lVqUC6Oeiq1jfoOy8ZNJywjXinWT+zJBVuX6dzNeQEOkr8w/+cNiqKq9u3SlAuFbRkC7KNOxTaskYYZPJwFnmaChIl+iiMehBl0yFIKjNVlnz8r4GZAAXw/euuvoqWC1sMgaIEpsaUzFYTLThOhjPe2GmbZZbi3oiGLn9hfpzzZV4Y7xuJQqsHGkR+Y8A9FQQ+nt5GMjHNMh+0nfGz5l92Fbeg+YybpyALem4KBfJe6do94L4J8co8jZyBpf+Kng883m5XwMCyMmFVUahIiKM+hyCQCgGIR5NJDzi4lQ5NRRzEgzkHFyHQ8LO8WqcyDeivso8eI8UaUrgNpHbm0vP2ARfqxYt+1q2fOcnN16P+7vqDZAi/ufSAODHfJqaQ6mrG3re+3fz8xkGxaa02p4osKtvQt2G7D4P0yRIyeo+TFl+nNi7svcgrIS49A9mbvVCtdhIaVs/38yZQBr9Y7rFCHgAqcsPYeHtAztp40nX85p/WgJor8e6hCHHX1GfO6Mk+032tg3PqMaTZZWs4jDutk3kxgZ+pMCuwz0axqCEZ6eIfGUTLsR1Pk1ZGBPZbWyzVBNGAQIxkrdvqp82v1o5Ixed2gpYVw7qR/a2jtnIJQHgAyYAAhnAOchHIuVmo53XQ34yBm0wnCKqjpNhe5NSOACtCBJWY+82bWDjPGAAAh+3/NUmlk2iK7uHSNUdk9UGjjSUpscEyRUmIQVr7JzSckyjVgDZMj8qLbFFBp5M1K9zg55lVrIciNF0zYIdeJpJ3XKZJnHBf9jAzA61hjOnUpcsGIgNbkmKDCf9ULBYP6YIpO8KF7MKdYaLuw5iq3guCoJfAhczgI9O34gusQ51CazERpCJGvHwSqSeZJ8CD3rTqmSef4wXo17LD7Ejb1gDM8z/0R0QQyiHav9FmPqCz0XiaYNoQ186FWQybtW/0VE2S1GGFadZO9Y2ViwQdlKuDpqOFcfQxn28RXX7xfTb36ENqKikGsazgrkOn6WkKhv0SM+XYGecBZ20JFv4/kp8QVsriIZT3dc37p37a7ofD+EN5+kNA4aP52U0mnzGm7Wht6PBKU=" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['ctl01'];
+if (!theForm) {
+    theForm = document.ctl01;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/starsclassroom/WebResource.axd?d=pynGkmcFUV13He1Qd6_TZItUc7uOXVQ_JJSF3nqWHTssVf86I8T6DdUK_rt6gpBWQGLL6g2&amp;t=636160664560000000" type="text/javascript"></script>
+
+
+<script src="/starsclassroom/ScriptResource.axd?d=1HpV3OVB0CaEXoaafcqmhqJZa2bebF8z_FF0-EldwBH21IaxfGlAbaVjDF2unh6RE80xJSul3t-rb8c97YYqwPNFk2NeUGa5nusJgONIncVk7O-3fGq9Cs5R_JP4mzB8Vp9sSQ2&amp;t=ffffffffbc20153d" type="text/javascript"></script>
+<script src="/starsclassroom/Telerik.Web.UI.WebResource.axd?_TSM_HiddenField_=RadScriptManager1_TSM&amp;compress=1&amp;_TSM_CombinedScripts_=%3b%3bSystem.Web.Extensions%2c+Version%3d4.0.0.0%2c+Culture%3dneutral%2c+PublicKeyToken%3d31bf3856ad364e35%3aen-US%3a4bd8faf8-554d-46be-b2ff-c9d57adb612c%3aea597d4b%3ab25378d2" type="text/javascript"></script>
+<script src="https://d2i2wahzwrm1n5.cloudfront.net/ajaxz/2017.2.621/Common/Core.js" type="text/javascript"></script>
+<script src="https://d2i2wahzwrm1n5.cloudfront.net/ajaxz/2017.2.621/Ajax/Ajax.js" type="text/javascript"></script>
+<script src="https://d2i2wahzwrm1n5.cloudfront.net/ajaxz/2017.2.621/Common/jQuery.js" type="text/javascript"></script>
+<script src="https://d2i2wahzwrm1n5.cloudfront.net/ajaxz/2017.2.621/Common/Navigation/OverlayScript.js" type="text/javascript"></script>
+<script src="https://d2i2wahzwrm1n5.cloudfront.net/ajaxz/2017.2.621/Common/MaterialRipple/MaterialRippleScripts.js" type="text/javascript"></script>
+<script src="https://d2i2wahzwrm1n5.cloudfront.net/ajaxz/2017.2.621/Common/jQueryPlugins.js" type="text/javascript"></script>
+<script src="https://d2i2wahzwrm1n5.cloudfront.net/ajaxz/2017.2.621/Common/AnimationFramework/AnimationFramework.js" type="text/javascript"></script>
+<script src="https://d2i2wahzwrm1n5.cloudfront.net/ajaxz/2017.2.621/Common/Navigation/NavigationScripts.js" type="text/javascript"></script>
+<script src="https://d2i2wahzwrm1n5.cloudfront.net/ajaxz/2017.2.621/Common/TouchScrollExtender.js" type="text/javascript"></script>
+<script src="https://d2i2wahzwrm1n5.cloudfront.net/ajaxz/2017.2.621/DropDownList/RadDropDownListScripts.js" type="text/javascript"></script>
+<script src="https://d2i2wahzwrm1n5.cloudfront.net/ajaxz/2017.2.621/Common/Navigation/OData/OData.js" type="text/javascript"></script>
+<script src="https://d2i2wahzwrm1n5.cloudfront.net/ajaxz/2017.2.621/ComboBox/RadComboBoxScripts.js" type="text/javascript"></script>
+<script src="https://d2i2wahzwrm1n5.cloudfront.net/ajaxz/2017.2.621/ComboBox/Views/ClassicView.js" type="text/javascript"></script>
+<script src="https://d2i2wahzwrm1n5.cloudfront.net/ajaxz/2017.2.621/Grid/RadGridScripts.js" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+function WebForm_OnSubmit() {
+if (typeof(ValidatorOnSubmit) == "function" && ValidatorOnSubmit() == false) return false;
+return true;
+}
+//]]>
+</script>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="76F6521B" />
+	<input type="hidden" name="__SCROLLPOSITIONX" id="__SCROLLPOSITIONX" value="0" />
+	<input type="hidden" name="__SCROLLPOSITIONY" id="__SCROLLPOSITIONY" value="0" />
+</div>
+        <script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ctl00$RadScriptManager1', 'ctl01', ['tctl00$RadAjaxManager1SU','RadAjaxManager1SU'], [], [], 90, 'ctl00');
+//]]>
+</script>
+
+
+        <!-- 2017.2.621.45 --><div id="RadAjaxManager1SU">
+	<span id="ctl00_RadAjaxManager1" style="display:none;"></span>
+</div>
+
+        <div id="RadAjaxLoadingPanel1" class="RadAjax RadAjax_Metro" style="display:none;">
+	<div class="raDiv">
+
+	</div><div class="raColor raTransp">
+
+	</div>
+</div>
+
+        <!-- Begin Container -->
+        <div id="container">
+            <!-- Begin Header -->
+            <div id="header">
+                <div class="left">
+                </div>
+                <div class="right">
+                </div>
+            </div>
+            <!-- End Header -->
+            <!-- Begin Header Nav -->
+            <div id="headernav">
+                <!-- Begin Header Nav-right -->
+                <div class="right">
+                    <!-- Begin Userlogin -->
+                    <div id="userroles">
+                        &nbsp;<a id="LogOffLinkButton" href="javascript:__doPostBack(&#39;ctl00$LogOffLinkButton&#39;,&#39;&#39;)">Log Off</a>
+                    </div>
+                    <div id="userstatus">
+                        <span id="LoginName1">Welcome, cmsuser1</span>
+                    </div>
+                    <!-- End Userlogin -->
+                </div>
+            </div>
+            <!-- End Header Nav -->
+            <!-- Begin Application Area -->
+            <div id="apparea">
+                
+    
+                    <div class="breadcrumbs top">
+                        <a id="MainContent_LoginViewTop_HomeLinkTop" href="../default.aspx">Home</a>
+                        <a id="MainContent_LoginViewTop_AdminLinkTop" href="default.aspx">> School Administrator</a>
+                        <span>&gt; Push-In/Pull-Out Instruction</span>
+                    </div>
+                
+    
+
+<h2 class="help">
+    <a href='https://wiki.nycenet.edu/display/HSST/STARS+Classroom+Push-In+Supports+Pull-Out+Instruction' target="_blank">
+        <img src="/ui/doe/images/spacer.gif" width="24" height="23" alt="" />
+    </a>
+</h2>
+<h2 class="contact">
+    <a href="#" onclick="return openWindow('/starsclassroom/ContactUs.aspx');">
+        <img src="/ui/apps/sites/stars_classroom/images/contactus_ico.png" />
+    </a>
+</h2>
+
+    <div class="clear">
+    </div>
+    <div>
+        <h1>
+            Push-In/Pull-Out Instruction
+        </h1>
+        
+<div class="teacher-list filters">
+    <div class="filter school">
+        
+        
+        <span id="MainContent_SelectControl_rfvSchool" class="required" style="display:none;"><br/>Select a School</span>
+        <div id="ctl00_MainContent_SelectControl_SchoolDbnRadComboBox" class="RadComboBox RadComboBox_Metro RadComboBoxWithLabel school-selection-radcombobox" style="font-size:12px;">
+	<label for="ctl00_MainContent_SelectControl_SchoolDbnRadComboBox_Input" class="rcbLabel school-selection-label">School</label><table summary="combobox" style="border-width:0;border-collapse:collapse;table-layout:fixed;width:160px">
+		<tr>
+			<td class="rcbInputCell rcbInputCellLeft" style="margin-top:-1px;margin-bottom:-1px;width:100%;"><input name="ctl00$MainContent$SelectControl$SchoolDbnRadComboBox" type="text" class="rcbInput radPreventDecorate" id="ctl00_MainContent_SelectControl_SchoolDbnRadComboBox_Input" value="01M015 - P.S. 015 ROBERTO CLEMENTE" style="display:block;font-size:12px;" /></td><td class="rcbArrowCell rcbArrowCellRight" style="margin-top:-1px;margin-bottom:-1px;"><a id="ctl00_MainContent_SelectControl_SchoolDbnRadComboBox_Arrow" style="overflow: hidden;display: block;position: relative;outline: none;">select</a></td>
+		</tr>
+	</table><div class="rcbSlide" style="z-index:6000;display:none;"><div id="ctl00_MainContent_SelectControl_SchoolDbnRadComboBox_DropDown" class="RadComboBoxDropDown RadComboBoxDropDown_Metro " style="float:left;"><div class="rcbScroll rcbWidth"></div><div class="rcbMoreResults" id="ctl00_MainContent_SelectControl_SchoolDbnRadComboBox_MoreResultsBox"><a id="ctl00_MainContent_SelectControl_SchoolDbnRadComboBox_MoreResultsBoxImage" title="Show more results"><span class="p-icon p-i-arrow-60-down"></span></a><span></span></div></div></div><input id="ctl00_MainContent_SelectControl_SchoolDbnRadComboBox_ClientState" name="ctl00_MainContent_SelectControl_SchoolDbnRadComboBox_ClientState" type="hidden" />
+</div>
+        <span id="MainContent_SelectControl_rfvSchool1" class="required" style="display:none;"><br/>Select a School</span>
+    </div>
+    <div class="filter">
+        <label for="ctl00_MainContent_SelectControl_SchoolYearRadDropDownList" class="selection-label">Year</label>
+        <div id="ctl00_MainContent_SelectControl_SchoolYearRadDropDownList" class="RadDropDownList RadDropDownList_Metro year-raddropdownlist">
+	<span class="rddlInner"><span class="rddlFakeInput">2017 (current)</span><span class="rddlIcon"><!-- &nbsp; --></span></span><div class="rddlSlide" id="ctl00_MainContent_SelectControl_SchoolYearRadDropDownList_DropDown" style="display:none;">
+		<div class="rddlPopup rddlPopup_Metro">
+			<ul class="rddlList">
+				<li class="rddlItem">2015</li><li class="rddlItem">2016</li><li class="rddlItem  rddlItemSelected">2017 (current)</li>
+			</ul>
+		</div>
+	</div><input id="ctl00_MainContent_SelectControl_SchoolYearRadDropDownList_ClientState" name="ctl00_MainContent_SelectControl_SchoolYearRadDropDownList_ClientState" type="hidden" />
+</div>
+        <span id="MainContent_SelectControl_rfvYear" class="required" style="display:none;"><br/>Select a Year</span>
+    </div>
+    <div class="filter">
+        <label for="ctl00_MainContent_SelectControl_SchoolTermRadDropDownList" id="MainContent_SelectControl_TermLabel" class="selection-label">Term</label>
+        <div id="ctl00_MainContent_SelectControl_SchoolTermRadDropDownList" class="RadDropDownList RadDropDownList_Metro term-raddropdownlist">
+	<span class="rddlInner"><span class="rddlFakeInput">1 : Sep 8-Jun 28 (current)</span><span class="rddlIcon"><!-- &nbsp; --></span></span><div class="rddlSlide" id="ctl00_MainContent_SelectControl_SchoolTermRadDropDownList_DropDown" style="display:none;">
+		<div class="rddlPopup rddlPopup_Metro">
+			<ul class="rddlList">
+				<li class="rddlItem  rddlItemSelected">1 : Sep 8-Jun 28 (current)</li>
+			</ul>
+		</div>
+	</div><input id="ctl00_MainContent_SelectControl_SchoolTermRadDropDownList_ClientState" name="ctl00_MainContent_SelectControl_SchoolTermRadDropDownList_ClientState" type="hidden" />
+</div>
+        <span id="MainContent_SelectControl_rfvTerm" class="required" style="display:none;"><br/>Select a Term</span>
+    </div>
+</div>
+
+<input type="submit" name="ctl00$MainContent$SelectControl$chromeEnterIssueButton" value="" id="MainContent_SelectControl_chromeEnterIssueButton" class="hidden" />
+
+
+
+
+
+
+
+        <div id="marknote">
+            <p>Add a new student record by clicking ‘Add Student Record’</p>
+            <p>To modify existing records click on the ‘Edit’ link</p>
+        </div>
+        
+<div class="pipoadmin">
+    <div class="radbutton">
+        <input type="submit" name="ctl00$MainContent$PIPOListControl$TopAddScheduling" value="Add Student Record" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$MainContent$PIPOListControl$TopAddScheduling&quot;, &quot;&quot;, true, &quot;FormValidationGroup&quot;, &quot;&quot;, false, false))" id="MainContent_PIPOListControl_TopAddScheduling" title="Add Student Record" class="loginbutton" />
+    </div>
+    <div class="clear">
+    </div>
+    <div class="filters">
+        <div id="ctl00_MainContent_PIPOListControl_ddlStudent" class="RadComboBox RadComboBox_Metro RadComboBoxWithLabel">
+	<label for="ctl00_MainContent_PIPOListControl_ddlStudent_Input" class="rcbLabel pipofilter">Student</label><table summary="combobox" style="border-width:0;border-collapse:collapse;table-layout:fixed;width:150px">
+		<tr class="rcbReadOnly">
+			<td class="rcbInputCell rcbInputCellLeft" style="margin-top:-1px;margin-bottom:-1px;width:100%;"><input name="ctl00$MainContent$PIPOListControl$ddlStudent" type="text" class="rcbInput radPreventDecorate" id="ctl00_MainContent_PIPOListControl_ddlStudent_Input" value="All" style="display: block;" readonly="readonly" /></td><td class="rcbArrowCell rcbArrowCellRight" style="margin-top:-1px;margin-bottom:-1px;"><a id="ctl00_MainContent_PIPOListControl_ddlStudent_Arrow" style="overflow: hidden;display: block;position: relative;outline: none;">select</a></td>
+		</tr>
+	</table><div class="rcbSlide" style="z-index:6000;display:none;"><div id="ctl00_MainContent_PIPOListControl_ddlStudent_DropDown" class="RadComboBoxDropDown RadComboBoxDropDown_Metro " style="float:left;"><div class="rcbScroll rcbWidth"><ul class="rcbList"><li class="rcbItem">All</li></ul></div></div></div><input id="ctl00_MainContent_PIPOListControl_ddlStudent_ClientState" name="ctl00_MainContent_PIPOListControl_ddlStudent_ClientState" type="hidden" />
+</div>
+        <div id="ctl00_MainContent_PIPOListControl_ddlTeacher" class="RadComboBox RadComboBox_Metro RadComboBoxWithLabel">
+	<label for="ctl00_MainContent_PIPOListControl_ddlTeacher_Input" class="rcbLabel pipofilter">Teacher</label><table summary="combobox" style="border-width:0;border-collapse:collapse;table-layout:fixed;width:150px">
+		<tr class="rcbReadOnly">
+			<td class="rcbInputCell rcbInputCellLeft" style="margin-top:-1px;margin-bottom:-1px;width:100%;"><input name="ctl00$MainContent$PIPOListControl$ddlTeacher" type="text" class="rcbInput radPreventDecorate" id="ctl00_MainContent_PIPOListControl_ddlTeacher_Input" value="All" style="display: block;" readonly="readonly" /></td><td class="rcbArrowCell rcbArrowCellRight" style="margin-top:-1px;margin-bottom:-1px;"><a id="ctl00_MainContent_PIPOListControl_ddlTeacher_Arrow" style="overflow: hidden;display: block;position: relative;outline: none;">select</a></td>
+		</tr>
+	</table><div class="rcbSlide" style="z-index:6000;display:none;"><div id="ctl00_MainContent_PIPOListControl_ddlTeacher_DropDown" class="RadComboBoxDropDown RadComboBoxDropDown_Metro " style="float:left;"><div class="rcbScroll rcbWidth"><ul class="rcbList"><li class="rcbItem">All</li></ul></div></div></div><input id="ctl00_MainContent_PIPOListControl_ddlTeacher_ClientState" name="ctl00_MainContent_PIPOListControl_ddlTeacher_ClientState" type="hidden" />
+</div>
+        <div id="ctl00_MainContent_PIPOListControl_ddlCourseCode" class="RadComboBox RadComboBox_Metro RadComboBoxWithLabel">
+	<label for="ctl00_MainContent_PIPOListControl_ddlCourseCode_Input" class="rcbLabel pipofilter">CourseCode</label><table summary="combobox" style="border-width:0;border-collapse:collapse;table-layout:fixed;width:100px">
+		<tr class="rcbReadOnly">
+			<td class="rcbInputCell rcbInputCellLeft" style="margin-top:-1px;margin-bottom:-1px;width:100%;"><input name="ctl00$MainContent$PIPOListControl$ddlCourseCode" type="text" class="rcbInput radPreventDecorate" id="ctl00_MainContent_PIPOListControl_ddlCourseCode_Input" value="All" style="display: block;" readonly="readonly" /></td><td class="rcbArrowCell rcbArrowCellRight" style="margin-top:-1px;margin-bottom:-1px;"><a id="ctl00_MainContent_PIPOListControl_ddlCourseCode_Arrow" style="overflow: hidden;display: block;position: relative;outline: none;">select</a></td>
+		</tr>
+	</table><div class="rcbSlide" style="z-index:6000;display:none;"><div id="ctl00_MainContent_PIPOListControl_ddlCourseCode_DropDown" class="RadComboBoxDropDown RadComboBoxDropDown_Metro " style="float:left;"><div class="rcbScroll rcbWidth"><ul class="rcbList"><li class="rcbItem">All</li></ul></div></div></div><input id="ctl00_MainContent_PIPOListControl_ddlCourseCode_ClientState" name="ctl00_MainContent_PIPOListControl_ddlCourseCode_ClientState" type="hidden" />
+</div>
+        <input type="submit" name="ctl00$MainContent$PIPOListControl$btnReset" value="Reset" id="MainContent_PIPOListControl_btnReset" />
+    </div>
+    <div class="clear">
+    </div>
+    <div id="ctl00_MainContent_PIPOListControl_PIPOListGrid" class="RadGrid RadGrid_Metro">
+
+<table cellspacing="0" class="rgMasterTable" id="ctl00_MainContent_PIPOListControl_PIPOListGrid_ctl00" style="width:100%;table-layout:auto;empty-cells:show;">
+	<colgroup>
+		<col style="width:110px" />
+		<col  />
+		<col  />
+		<col  />
+		<col  />
+		<col  />
+		<col  />
+		<col  />
+		<col  />
+		<col  />
+		<col  />
+	</colgroup>
+<thead>
+		<tr class="rgCommandRow">
+			<td class="rgCommandCell" colspan="11"><table class="rgCommandTable" summary="Command item for additional functionalities for the grid like adding a new record and exporting." style="width:100%;">
+				<caption>
+					<span style='display: none'>Command item</span>
+				</caption><thead>
+					<tr>
+						<th scope="col">Command item</th>
+					</tr>
+				</thead><tbody>
+					<tr>
+						<td align="left">&nbsp;</td><td align="right"><a id="ctl00_MainContent_PIPOListControl_PIPOListGrid_ctl00_ctl02_ctl00_RebindGridButton" href="javascript:__doPostBack(&#39;ctl00$MainContent$PIPOListControl$PIPOListGrid$ctl00$ctl02$ctl00$RebindGridButton&#39;,&#39;&#39;)"><img style="border:0px" alt="" src="/starsclassroom/Images/Refresh1.png" /> Refresh</a></td>
+					</tr>
+				</tbody>
+			</table></td>
+		</tr><tr>
+			<th scope="col" class="rgHeader"><a onclick="Telerik.Web.UI.Grid.Sort($find(&#39;ctl00_MainContent_PIPOListControl_PIPOListGrid_ctl00&#39;), &#39;ServiceType&#39;); return false;" title="Click here to sort" href="javascript:__doPostBack(&#39;ctl00$MainContent$PIPOListControl$PIPOListGrid$ctl00$ctl02$ctl02$ctl00&#39;,&#39;&#39;)">Service</a></th><th scope="col" class="rgHeader">Student Name</th><th scope="col" class="rgHeader">Course</th><th scope="col" class="rgHeader">Teacher</th><th scope="col" class="rgHeader">Start Date</th><th scope="col" class="rgHeader">End Date</th><th scope="col" class="rgHeader">Minutes Per Week</th><th scope="col" class="rgHeader">Meet Time</th><th scope="col" class="rgHeader">Room</th><th scope="col" class="rgHeader">Delete</th><th scope="col" class="rgHeader">Modify</th>
+		</tr>
+	</thead><tbody>
+	<tr class="rgNoRecords">
+		<td colspan="11" style="text-align:left;">
+                <div class="norecordsingrid">
+                    No records to display. Verify that a school is selected.
+                </div>
+            </td>
+	</tr>
+	</tbody>
+
+</table><div id="ctl00_MainContent_PIPOListControl_PIPOListGrid_SharedCalendarContainer" style="display:none;">
+
+</div><input id="ctl00_MainContent_PIPOListControl_PIPOListGrid_ClientState" name="ctl00_MainContent_PIPOListControl_PIPOListGrid_ClientState" type="hidden" />	</div>
+
+    <br />
+    <div class="radbutton">
+        <input type="submit" name="ctl00$MainContent$PIPOListControl$BottomAddScheduling" value="Add Student Record" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$MainContent$PIPOListControl$BottomAddScheduling&quot;, &quot;&quot;, true, &quot;FormValidationGroup&quot;, &quot;&quot;, false, false))" id="MainContent_PIPOListControl_BottomAddScheduling" title="Add Student Record" class="loginbutton" />
+    </div>
+</div>
+
+
+    </div>
+    
+                    <div class="breadcrumbs bottom">
+                        <a id="MainContent_LoginViewBottom_HomeLinkBottom" href="../default.aspx">Home</a>
+                        <a id="MainContent_LoginViewBottom_AdminLinkBottom" href="default.aspx">> School Administrator</a>
+                        <span>&gt; Push-In/Pull-Out Instruction</span>
+                    </div>
+                
+
+            </div>
+
+            <!-- End Application Area -->
+            <!-- Begin Footer -->
+            <div id="footer">
+                <div class="left">
+                    &copy; 2013 The New York City Department of Education
+                </div>
+                <div class="right">
+                    Privacy Policy and Terms of Use
+                </div>
+            </div>
+
+            <div class="clear space-bot">&nbsp;</div>
+            <!-- End Footer -->
+        </div>
+        <!-- End Container -->
+
+        
+            <script src="/starsclassroom/Scripts/MasterPageFunctions.js" type="text/javascript">        
+            </script>
+        
+
+        <script type="text/javascript">
+           
+            // Web API URL part 
+            $service_url = '/starsclassroom/starsapi';
+           
+            (function (i, s, o, g, r, a, m) {
+                i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                    (i[r].q = i[r].q || []).push(arguments)
+                }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+            })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+            ga('create', 'UA-40262604-1', 'nycenet.edu');
+            ga('send', 'pageview');
+        </script>
+    
+<script type="text/javascript">
+//<![CDATA[
+var Page_Validators =  new Array(document.getElementById("MainContent_SelectControl_rfvSchool"), document.getElementById("MainContent_SelectControl_rfvSchool1"), document.getElementById("MainContent_SelectControl_rfvYear"), document.getElementById("MainContent_SelectControl_rfvTerm"));
+//]]>
+</script>
+
+<script type="text/javascript">
+//<![CDATA[
+var MainContent_SelectControl_rfvSchool = document.all ? document.all["MainContent_SelectControl_rfvSchool"] : document.getElementById("MainContent_SelectControl_rfvSchool");
+MainContent_SelectControl_rfvSchool.controltovalidate = "ctl00_MainContent_SelectControl_SchoolDbnRadDropDownList";
+MainContent_SelectControl_rfvSchool.errormessage = "<br/>Select a School";
+MainContent_SelectControl_rfvSchool.display = "Dynamic";
+MainContent_SelectControl_rfvSchool.validationGroup = "FormValidationGroup";
+MainContent_SelectControl_rfvSchool.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+MainContent_SelectControl_rfvSchool.initialvalue = "";
+var MainContent_SelectControl_rfvSchool1 = document.all ? document.all["MainContent_SelectControl_rfvSchool1"] : document.getElementById("MainContent_SelectControl_rfvSchool1");
+MainContent_SelectControl_rfvSchool1.controltovalidate = "ctl00_MainContent_SelectControl_SchoolDbnRadComboBox";
+MainContent_SelectControl_rfvSchool1.errormessage = "<br/>Select a School";
+MainContent_SelectControl_rfvSchool1.display = "Dynamic";
+MainContent_SelectControl_rfvSchool1.validationGroup = "FormValidationGroup";
+MainContent_SelectControl_rfvSchool1.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+MainContent_SelectControl_rfvSchool1.initialvalue = "";
+var MainContent_SelectControl_rfvYear = document.all ? document.all["MainContent_SelectControl_rfvYear"] : document.getElementById("MainContent_SelectControl_rfvYear");
+MainContent_SelectControl_rfvYear.controltovalidate = "ctl00_MainContent_SelectControl_SchoolDbnRadComboBox";
+MainContent_SelectControl_rfvYear.errormessage = "<br/>Select a Year";
+MainContent_SelectControl_rfvYear.display = "Dynamic";
+MainContent_SelectControl_rfvYear.validationGroup = "FormValidationGroup";
+MainContent_SelectControl_rfvYear.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+MainContent_SelectControl_rfvYear.initialvalue = "";
+var MainContent_SelectControl_rfvTerm = document.all ? document.all["MainContent_SelectControl_rfvTerm"] : document.getElementById("MainContent_SelectControl_rfvTerm");
+MainContent_SelectControl_rfvTerm.controltovalidate = "ctl00_MainContent_SelectControl_SchoolTermRadDropDownList";
+MainContent_SelectControl_rfvTerm.errormessage = "<br/>Select a Term";
+MainContent_SelectControl_rfvTerm.display = "Dynamic";
+MainContent_SelectControl_rfvTerm.validationGroup = "FormValidationGroup";
+MainContent_SelectControl_rfvTerm.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+MainContent_SelectControl_rfvTerm.initialvalue = "";
+//]]>
+</script>
+
+
+<script type="text/javascript">
+//<![CDATA[
+
+var Page_ValidationActive = false;
+if (typeof(ValidatorOnLoad) == "function") {
+    ValidatorOnLoad();
+}
+
+function ValidatorOnSubmit() {
+    if (Page_ValidationActive) {
+        return ValidatorCommonOnSubmit();
+    }
+    else {
+        return true;
+    }
+}
+        
+theForm.oldSubmit = theForm.submit;
+theForm.submit = WebForm_SaveScrollPositionSubmit;
+
+theForm.oldOnSubmit = theForm.onsubmit;
+theForm.onsubmit = WebForm_SaveScrollPositionOnSubmit;
+
+theForm.oldOnLoad = window.onload;
+window.onload = WebForm_RestoreScrollPosition;
+Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.RadAjaxManager, {"_updatePanels":"","ajaxSettings":[],"clientEvents":{OnRequestStart:"",OnResponseEnd:""},"defaultLoadingPanelID":"RadAjaxLoadingPanel1","enableAJAX":true,"enableHistory":false,"links":[],"styles":[],"uniqueID":"ctl00$RadAjaxManager1","updatePanelsRenderMode":0}, null, null, $get("ctl00_RadAjaxManager1"));
+});
+Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.RadAjaxLoadingPanel, {"initialDelayTime":0,"isSticky":false,"minDisplayTime":0,"skin":"Metro","uniqueID":"ctl00$RadAjaxLoadingPanel1","zIndex":90000}, null, null, $get("RadAjaxLoadingPanel1"));
+});
+
+document.getElementById('MainContent_SelectControl_rfvSchool').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('MainContent_SelectControl_rfvSchool'));
+}
+
+var callBackFrameUrl='/starsclassroom/WebResource.axd?d=beToSAE3vdsL1QUQUxjWdazpXtzL4Fcp1QSXeCTuWlytPatutrhdGUwwGmKAc66qUqKoYQ2&t=636160664560000000';
+WebForm_InitCallback();Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.RadComboBox, {"_dropDownAutoWidth":1,"_dropDownWidth":0,"_height":0,"_lodIsAutomatic":true,"_postBackReference":"__doPostBack(\u0027ctl00$MainContent$SelectControl$SchoolDbnRadComboBox\u0027,\u0027arguments\u0027)","_showMoreResultsBox":true,"_skin":"Metro","_text":"01M015 - P.S. 015 ROBERTO CLEMENTE","_uniqueId":"ctl00$MainContent$SelectControl$SchoolDbnRadComboBox","_value":"1010015","_virtualScroll":true,"clientStateFieldID":"ctl00_MainContent_SelectControl_SchoolDbnRadComboBox_ClientState","collapseAnimation":"{\"duration\":450}","emptyMessage":"-- Type a School --","enableLoadOnDemand":true,"expandAnimation":"{\"duration\":450}","filter":1,"itemData":[],"itemRequestTimeout":200,"localization":"{\"AllItemsCheckedString\":\"All items checked\",\"ItemsCheckedString\":\"items checked\",\"CheckAllString\":\"Check All\"}","markFirstMatch":true}, null, null, $get("ctl00_MainContent_SelectControl_SchoolDbnRadComboBox"));
+});
+
+document.getElementById('MainContent_SelectControl_rfvSchool1').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('MainContent_SelectControl_rfvSchool1'));
+}
+Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.RadDropDownList, {"_postBackReference":"__doPostBack(\u0027ctl00$MainContent$SelectControl$SchoolYearRadDropDownList\u0027,\u0027arguments\u0027)","_selectedIndex":2,"_selectedText":"2017 (current)","_selectedValue":"2017","_uniqueId":"ctl00$MainContent$SelectControl$SchoolYearRadDropDownList","autoPostBack":true,"clientStateFieldID":"ctl00_MainContent_SelectControl_SchoolYearRadDropDownList_ClientState","defaultMessage":"-- Select a Year --","itemData":[{"value":"2015"},{"value":"2016"},{"value":"2017","selected":true}]}, null, null, $get("ctl00_MainContent_SelectControl_SchoolYearRadDropDownList"));
+});
+
+document.getElementById('MainContent_SelectControl_rfvYear').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('MainContent_SelectControl_rfvYear'));
+}
+Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.RadDropDownList, {"_postBackReference":"__doPostBack(\u0027ctl00$MainContent$SelectControl$SchoolTermRadDropDownList\u0027,\u0027arguments\u0027)","_selectedIndex":0,"_selectedText":"1 : Sep 8-Jun 28 (current)","_selectedValue":"1","_uniqueId":"ctl00$MainContent$SelectControl$SchoolTermRadDropDownList","autoPostBack":true,"clientStateFieldID":"ctl00_MainContent_SelectControl_SchoolTermRadDropDownList_ClientState","defaultMessage":"-- Select a Term --","dropDownWidth":"15em","itemData":[{"value":"1","selected":true}]}, null, null, $get("ctl00_MainContent_SelectControl_SchoolTermRadDropDownList"));
+});
+
+document.getElementById('MainContent_SelectControl_rfvTerm').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('MainContent_SelectControl_rfvTerm'));
+}
+Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.RadComboBox, {"_dropDownWidth":0,"_height":150,"_postBackReference":"__doPostBack(\u0027ctl00$MainContent$PIPOListControl$ddlStudent\u0027,\u0027arguments\u0027)","_skin":"Metro","_text":"All","_uniqueId":"ctl00$MainContent$PIPOListControl$ddlStudent","clientStateFieldID":"ctl00_MainContent_PIPOListControl_ddlStudent_ClientState","collapseAnimation":"{\"duration\":450}","emptyMessage":"All","expandAnimation":"{\"duration\":450}","itemData":[{}],"localization":"{\"AllItemsCheckedString\":\"All items checked\",\"ItemsCheckedString\":\"items checked\",\"CheckAllString\":\"Check All\"}"}, null, null, $get("ctl00_MainContent_PIPOListControl_ddlStudent"));
+});
+Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.RadComboBox, {"_dropDownWidth":0,"_height":150,"_postBackReference":"__doPostBack(\u0027ctl00$MainContent$PIPOListControl$ddlTeacher\u0027,\u0027arguments\u0027)","_skin":"Metro","_text":"All","_uniqueId":"ctl00$MainContent$PIPOListControl$ddlTeacher","clientStateFieldID":"ctl00_MainContent_PIPOListControl_ddlTeacher_ClientState","collapseAnimation":"{\"duration\":450}","emptyMessage":"All","expandAnimation":"{\"duration\":450}","itemData":[{}],"localization":"{\"AllItemsCheckedString\":\"All items checked\",\"ItemsCheckedString\":\"items checked\",\"CheckAllString\":\"Check All\"}"}, null, null, $get("ctl00_MainContent_PIPOListControl_ddlTeacher"));
+});
+Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.RadComboBox, {"_dropDownWidth":0,"_height":150,"_postBackReference":"__doPostBack(\u0027ctl00$MainContent$PIPOListControl$ddlCourseCode\u0027,\u0027arguments\u0027)","_skin":"Metro","_text":"All","_uniqueId":"ctl00$MainContent$PIPOListControl$ddlCourseCode","clientStateFieldID":"ctl00_MainContent_PIPOListControl_ddlCourseCode_ClientState","collapseAnimation":"{\"duration\":450}","emptyMessage":"All","expandAnimation":"{\"duration\":450}","itemData":[{}],"localization":"{\"AllItemsCheckedString\":\"All items checked\",\"ItemsCheckedString\":\"items checked\",\"CheckAllString\":\"Check All\"}"}, null, null, $get("ctl00_MainContent_PIPOListControl_ddlCourseCode"));
+});
+Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.RadGrid, {"ClientID":"ctl00_MainContent_PIPOListControl_PIPOListGrid","ClientSettings":{"AllowAutoScrollOnDragDrop":true,"ShouldCreateRows":true,"DataBinding":{},"Selecting":{"CellSelectionMode":0},"Scrolling":{},"Resizing":{},"ClientMessages":{},"KeyboardNavigationSettings":{"AllowActiveRowCycle":false,"EnableKeyboardShortcuts":true,"FocusKey":89,"InitInsertKey":73,"RebindKey":82,"ExitEditInsertModeKey":27,"UpdateInsertItemKey":13,"DeleteActiveRow":127,"ExpandDetailTableKey":39,"CollapseDetailTableKey":37,"MoveDownKey":40,"MoveUpKey":38,"SaveChangesKey":85,"CancelChangesKey":81},"Animation":{},"Virtualization":{}},"Skin":"Metro","SortingSettings":{"SortToolTip":"Click here to sort","SortedAscToolTip":"Sorted asc","SortedDescToolTip":"Sorted desc","SortedBackColor":{"R":0,"G":0,"B":0,"A":0,"IsKnownColor":false,"IsEmpty":true,"IsNamedColor":false,"IsSystemColor":false,"Name":"0"},"EnableSkinSortStyles":true,"ViewState":{}},"UniqueID":"ctl00$MainContent$PIPOListControl$PIPOListGrid","_activeRowIndex":"","_controlToFocus":"","_currentPageIndex":0,"_defaultDateTimeFormat":"M/d/yyyy h:mm:ss tt","_editIndexes":"[]","_embeddedSkin":true,"_freezeText":"Freeze","_gridTableViewsData":"[{\"ClientID\":\"ctl00_MainContent_PIPOListControl_PIPOListGrid_ctl00\",\"UniqueID\":\"ctl00$MainContent$PIPOListControl$PIPOListGrid$ctl00\",\"PageSize\":20,\"PageCount\":1,\"EditMode\":\"EditForms\",\"AllowPaging\":true,\"CurrentPageIndex\":0,\"VirtualItemCount\":0,\"AllowMultiColumnSorting\":false,\"AllowNaturalSort\":true,\"AllowFilteringByColumn\":false,\"PageButtonCount\":10,\"HasDetailTables\":false,\"HasMultiHeaders\":false,\"CheckListWebServicePath\":\"\",\"GroupLoadMode\":\"Server\",\"PagerAlwaysVisible\":false,\"IsItemInserted\":false,\"clientDataKeyNames\":[],\"hasDetailItemTemplate\":false,\"_dataBindTemplates\":false,\"_selectedItemStyle\":\"\",\"_selectedItemStyleClass\":\"rgSelectedRow\",\"_columnsData\":[{\"UniqueName\":\"ServiceType\",\"Resizable\":true,\"Reorderable\":true,\"Selectable\":true,\"Groupable\":true,\"ColumnType\":\"GridBoundColumn\",\"ColumnGroupName\":\"\",\"Editable\":true,\"SortExpression\":\"ServiceType\",\"DataTypeName\":\"System.String\",\"DataField\":\"ServiceType\",\"Display\":true},{\"UniqueName\":\"StudentName\",\"Resizable\":true,\"Reorderable\":true,\"Selectable\":true,\"Groupable\":true,\"ColumnType\":\"GridBoundColumn\",\"ColumnGroupName\":\"\",\"Editable\":true,\"DataTypeName\":\"System.String\",\"DataField\":\"StudentName\",\"Display\":true},{\"UniqueName\":\"CourseName\",\"Resizable\":true,\"Reorderable\":true,\"Selectable\":true,\"Groupable\":true,\"ColumnType\":\"GridBoundColumn\",\"ColumnGroupName\":\"\",\"Editable\":true,\"DataTypeName\":\"System.String\",\"DataField\":\"CourseName\",\"Display\":true},{\"UniqueName\":\"TeacherName\",\"Resizable\":true,\"Reorderable\":true,\"Selectable\":true,\"Groupable\":true,\"ColumnType\":\"GridBoundColumn\",\"ColumnGroupName\":\"\",\"Editable\":true,\"DataTypeName\":\"System.String\",\"DataField\":\"TeacherName\",\"Display\":true},{\"UniqueName\":\"StartDate\",\"Resizable\":true,\"Reorderable\":true,\"Selectable\":true,\"Groupable\":true,\"ColumnType\":\"GridBoundColumn\",\"ColumnGroupName\":\"\",\"Editable\":true,\"DataTypeName\":\"System.DateTime\",\"DataField\":\"StartDate\",\"DataFormatString\":\"{0:MM/dd/yyyy}\",\"Display\":true},{\"UniqueName\":\"EndDate\",\"Resizable\":true,\"Reorderable\":true,\"Selectable\":true,\"Groupable\":true,\"ColumnType\":\"GridBoundColumn\",\"ColumnGroupName\":\"\",\"Editable\":true,\"DataTypeName\":\"System.DateTime\",\"DataField\":\"EndDate\",\"DataFormatString\":\"{0:MM/dd/yyyy}\",\"Display\":true},{\"UniqueName\":\"MinutesPerWeek\",\"Resizable\":true,\"Reorderable\":true,\"Selectable\":true,\"Groupable\":true,\"ColumnType\":\"GridBoundColumn\",\"ColumnGroupName\":\"\",\"Editable\":true,\"DataTypeName\":\"System.Int32\",\"DataField\":\"MinutesPerWeek\",\"Display\":true},{\"UniqueName\":\"MeetTime\",\"Resizable\":true,\"Reorderable\":true,\"Selectable\":true,\"Groupable\":true,\"ColumnType\":\"GridBoundColumn\",\"ColumnGroupName\":\"\",\"Editable\":true,\"DataTypeName\":\"System.String\",\"DataField\":\"MeetTime\",\"Display\":true},{\"UniqueName\":\"Room\",\"Resizable\":true,\"Reorderable\":true,\"Selectable\":true,\"Groupable\":true,\"ColumnType\":\"GridBoundColumn\",\"ColumnGroupName\":\"\",\"Editable\":true,\"DataTypeName\":\"System.String\",\"DataField\":\"Room\",\"Display\":true},{\"UniqueName\":\"column\",\"Resizable\":true,\"Reorderable\":true,\"Selectable\":false,\"Groupable\":false,\"ColumnType\":\"GridButtonColumn\",\"ColumnGroupName\":\"\",\"Editable\":false,\"DataTypeName\":\"System.String\",\"ButtonType\":\"LinkButton\",\"CommandName\":\"Delete\",\"CommandArgument\":\"\",\"Text\":\"Delete\",\"DataTextField\":\"\",\"DataTextFormatString\":\"\",\"ImageUrl\":\"/starsclassroom/WebResource.axd?d=-ZXQ-IrTtehVErMRXTZtvaT2iFKT1QizgoN4w8IZDfEG2HH_nNKSeW0e5GCPFjDMmp6GAZ-VDywXpdgv4jndUDAcE_qNIpPKd-GucaoAXUUGCTr53dpLt3u3KhOOKnlq66pb3uc2LwlXdwhSHWblGcvm7Cw1\\u0026t=636360589559077603\",\"Display\":true},{\"UniqueName\":\"ViewCourseSection\",\"Resizable\":true,\"Reorderable\":true,\"Selectable\":true,\"Groupable\":true,\"ColumnType\":\"GridHyperLinkColumn\",\"ColumnGroupName\":\"\",\"Editable\":false,\"DataTypeName\":\"System.Int64\",\"DataTextField\":\"Id\",\"DataTextFormatString\":\"Edit\",\"DataNavigateUrlFields\":[\"Id\",\"School\",\"Year\",\"Term\"],\"DataNavigateUrlFormatString\":\"/starsclassroom/SchoolAdmin/PIPOAssignment.aspx?id={0}\\u0026School={1}\\u0026Year={2}\\u0026Term={3}\",\"Display\":true}]}]","_loadingText":"Loading...","_masterClientID":"ctl00_MainContent_PIPOListControl_PIPOListGrid_ctl00","_readyText":"Ready","_shouldFocusOnPage":false,"_statusLabelID":"ctl00_MainContent_PIPOListControl_PIPOListGrid_ctl00_ctl03_ctl01_statusPanel","_unfreezeText":"Unfreeze","allowMultiRowSelection":false,"clientStateFieldID":"ctl00_MainContent_PIPOListControl_PIPOListGrid_ClientState","renderMode":1}, null, null, $get("ctl00_MainContent_PIPOListControl_PIPOListGrid"));
+});
+//]]>
+</script>
+</form>
+</body>
+</html>

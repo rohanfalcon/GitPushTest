@@ -1,0 +1,11 @@
+POST /starsclassroom/Login.aspx?ReturnUrl=%2fstarsclassroom HTTP/1.1
+Content-Type: application/x-www-form-urlencoded
+Referer: https://es00vqweb15.qa.appdev/starsclassroom/Login.aspx?ReturnUrl=%2fstarsclassroom
+User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64; Trident/7.0; rv:11.0) like Gecko
+Accept-Encoding: gzip, deflate
+Accept-Language: en-US
+Accept: */*
+Connection: Keep-Alive
+Host: es00vqweb15.qa.appdev
+Content-Length: 2222
+

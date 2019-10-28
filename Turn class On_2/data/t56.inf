@@ -1,0 +1,11 @@
+[t56]
+FileName1=t56.htm
+URL1=https://es00vqweb15.qa.appdev/starsclassroom/SchoolAdmin/default.aspx
+Total=1
+RequestHeaderFile=t56_RequestHeader.txt
+RequestBodyFile=NONE
+ResponseHeaderFile=t56_ResponseHeader.txt
+ContentType=text/html
+SnapshotXmlFile=snapshot_56.xml
+[ProtocolInfo]
+ProtocolId=QTWeb

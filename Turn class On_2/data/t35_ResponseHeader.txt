@@ -1,0 +1,12 @@
+HTTP/1.1 200 OK
+Proxy-Connection: Keep-Alive
+Connection: Keep-Alive
+Content-Length: 300
+Via: 1.1 ES00VCPRXY03
+Age: 669
+Date: Wed, 30 Aug 2017 14:31:53 GMT
+Content-Type: image/x-icon
+Cache-Control: public, max-age=15552000
+Last-Modified: Sat, 26 Aug 2017 10:14:03 GMT
+Vary: Accept-Encoding
+

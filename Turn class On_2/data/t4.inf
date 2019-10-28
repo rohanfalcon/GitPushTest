@@ -1,0 +1,11 @@
+[t4]
+FileName1=t4_eMList.xml
+URL1=http://schools.nyc.gov/documents/ie11/eMList.xml
+Total=1
+ContentType=text/xml
+SnapshotXmlFile=snapshot_4.xml
+RequestHeaderFile=t4_RequestHeader.txt
+RequestBodyFile=NONE
+ResponseHeaderFile=t4_ResponseHeader.txt
+[ProtocolInfo]
+ProtocolId=QTWeb

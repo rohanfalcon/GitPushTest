@@ -1,0 +1,15 @@
+[t44]
+FileName1=t44.htm
+URL1=https://es00vqweb15.qa.appdev/starsclassroom/SchoolAdmin/OfficialClassScheduleSelection.aspx
+Total=3
+RequestHeaderFile=t44_RequestHeader.txt
+RequestBodyFile=NONE
+ResponseHeaderFile=t44_ResponseHeader.txt
+ContentType=text/html
+SnapshotXmlFile=snapshot_44.xml
+FileName2=t44_RadGridScripts.html
+URL2=https://d2i2wahzwrm1n5.cloudfront.net/ajaxz/2017.2.621/Grid/RadGridScripts.js
+FileName3=t44_WebResource.gif
+URL3=https://es00vqweb15.qa.appdev/starsclassroom/WebResource.axd?d=ifcjPV8aj2vMt9az-6wWm04E3ELGvkqBN_E_-uj6vwk3AguTrVulp8kFcbTARYgrOow8ujxmwI3fxTCNW3pIdp9YvtMSYj6Rse-R-vRNmzXyFDvRTXZRbRYMKxQG_RrCE1Mx5CMWHkwFtl8IZHHQrVsMXN01&t=636360589559077603
+[ProtocolInfo]
+ProtocolId=QTWeb

@@ -1,0 +1,3490 @@
+body {
+    font-size: 100%;
+    color: #444444;
+    background: url(/ui/apps/sites/stars_classroom/images/grid_bkg.gif);
+    font-family: "PT Sans", sans-serif, Arial, Helvetica;
+    line-height: 1.5;
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+.TODO {
+    color: Green;
+}
+
+.hidden {
+    display: none;
+}
+
+.aspNetDisabled {
+    /*color:#9da6ae !important;*/
+    cursor: default !important;
+    opacity: 0.7;
+}
+
+.align-left {
+    text-align: left;
+}
+
+.hide {
+    display: none;
+}
+
+.large-text {
+    font-size: large;
+}
+
+label.bold {
+    font-size: 100%;
+    font-weight: bold;
+}
+
+label.small-label {
+    font-size: 60%;
+    font-weight: bold;
+}
+
+label.required-field {
+    font-size: 100%;
+    font-weight: bold;
+}
+
+    label.required-field:after {
+        content: "*";
+        color: red;
+        font-weight: bold;
+    }
+
+.pad {
+    padding: 1em;
+}
+
+#breadcrumbs, .breadcrumbs {
+    display: table;
+    clear: both;
+    height: 20px;
+    font-size: .7em;
+    width: 75%;
+    float: left;
+    margin: 0;
+}
+
+    #breadcrumbs a {
+        text-decoration: none !important;
+    }
+
+    .breadcrumbs.bottom {
+        position: absolute;
+        bottom: 0;
+    }
+
+#loadingdiv {
+    display: none;
+    background: black url(/ui/apps/sites/stars_classroom/images/loading.gif) no-repeat center center;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    opacity: .50;
+}
+
+.space-top {
+    margin-top: 0.5em;
+}
+
+.LoginformHolder .loginbutton,
+.RadButton_Default .rbSkinnedButton,
+.loginbutton {
+    background: url(/ui/apps/sites/stars_classroom/images/button_bg.png) repeat-x;
+    border: 0;
+    font-family: "PT Sans", sans-serif, Arial, Helvetica;
+    font-size: 18px;
+    color: #fff4ff;
+    text-transform: capitalize;
+    font-weight: 700;
+    height: 32px;
+    line-height: 32px;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    border-radius: 7px;
+    margin: 2px 3px 10px 20px;
+    padding: 0 10px 5px;
+}
+
+.greenbutton {
+    background: url(/ui/apps/sites/stars_classroom/images/button_bg.png) repeat-x;
+    border: 0;
+    font-family: "PT Sans", sans-serif, Arial, Helvetica;
+    font-size: 18px;
+    color: #fff4ff;
+    text-transform: capitalize;
+    font-weight: 700;
+    height: 32px;
+    line-height: 32px;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    border-radius: 7px;
+    padding: 0 10px 5px;
+}
+
+.purplebutton {
+    background: url(/ui/apps/sites/stars_classroom/images/button_bg_purple.png) repeat-x;
+    border: 0;
+    font-family: "PT Sans", sans-serif, Arial, Helvetica;
+    font-size: 18px;
+    color: #fff4ff;
+    text-transform: capitalize;
+    font-weight: 700;
+    height: 32px;
+    line-height: 32px;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    border-radius: 7px;
+    margin: 2px 3px 10px 20px;
+    padding: 0 10px 5px;
+}
+
+.purpledownloadUploadbutton {
+    background: url(/ui/apps/sites/stars_classroom/images/button_bg_purple.png) repeat-x;
+    border: 0;
+    font-family: "PT Sans", sans-serif, Arial, Helvetica;
+    font-size: 18px;
+    color: #fff4ff;
+    text-transform: capitalize;
+    font-weight: 700;
+    height: 32px;
+    line-height: 32px;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    border-radius: 7px;
+    margin: 0px;
+    padding: 0 10px 5px;
+}
+
+.toggle {
+    background: url(/ui/apps/sites/stars_classroom/images/toggle_btn_bg.png) repeat-x;
+    margin: 2px 3px 10px 0;
+}
+
+.smallgreenbutton {
+    background: url(/ui/apps/sites/stars_classroom/images/button_bg.png) repeat-x;
+    border: 0;
+    color: #fff4ff;
+    text-transform: capitalize;
+    font-weight: 700;
+    height: 28px;
+    border-radius: 7px;
+}
+
+.smallbluebutton {
+    background: url(/ui/apps/sites/stars_classroom/images/toggle_btn_bg.png) repeat-x;
+    border: 0;
+    color: #fff4ff;
+    text-transform: capitalize;
+    font-weight: 700;
+    height: 28px;
+    border-radius: 7px;
+}
+
+#homeimg {
+    background: url(/ui/apps/sites/stars_classroom/images/home_img.jpg);
+    width: 969px;
+    height: 394px;
+    overflow: hidden;
+    margin: 0 0 -42px -12px;
+}
+
+.homebutton {
+    width: 100px !important;
+    margin-left: 40px !important;
+}
+
+.LoginformHolder {
+    width: 400px;
+    height: 300px;
+    background: #afd5e6;
+    float: left;
+    margin: -15px 0 0 -12px;
+}
+
+    .LoginformHolder h1, h1 {
+        font-weight: 700;
+        font-size: 18px;
+        color: #1f768c;
+        text-align: center;
+        margin-bottom: 5px;
+    }
+
+    .LoginformHolder h2, h2 {
+        font-weight: 700;
+        font-size: 16px;
+        color: #1f768c;
+        text-align: left;
+        margin: 0 0 0 40px;
+    }
+
+h3 {
+    font-size: 15px;
+    color: #1f768c;
+}
+
+.LoginformHolder .forgottenPass {
+    clear: both;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    margin-left: 40px;
+}
+
+    .LoginformHolder .forgottenPass a {
+        font-size: 14px;
+        font-weight: 700;
+        color: #138e0c;
+        text-decoration: none;
+        text-align: left;
+    }
+
+        .LoginformHolder .forgottenPass a:visited {
+            color: #138e0c;
+            text-decoration: none;
+            text-align: left;
+        }
+
+        .LoginformHolder .forgottenPass a:hover {
+            color: #138e0c;
+            text-decoration: underline;
+            text-align: left;
+        }
+
+.LoginformHolder input {
+    width: 300px;
+    height: 35px;
+    border: 1px solid #b6b6b6;
+    background: #fff;
+    border-radius: 7px;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    font-size: 12px;
+    color: #777;
+    float: left;
+    line-height: 32px;
+    margin: 2px 5px 0px 40px;
+    padding: 0 10px;
+}
+
+.LoginformHolder .loginbutton {
+    margin-top: 12px;
+    margin-bottom: 5px;
+}
+
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 1000px white inset;
+}
+
+.LoginformHolder input#password {
+    line-height: 2.5em;
+    font-size: 100%;
+}
+
+.failureNotification ul {
+    margin-top: -8px;
+    margin-bottom: -3px;
+}
+
+.failureNotification li, .loginerror, .errormessage {
+    font-size: 75%;
+    color: red;
+    line-height: 1em;
+    list-style-type: none;
+}
+
+.loginerror {
+    clear: both;
+    text-align: center;
+    margin-top: -3px !important;
+}
+
+#terms {
+    background-color: white;
+    border: 1px solid #999999;
+    display: none;
+    position: fixed;
+    width: 50em;
+    top: 10%;
+    left: 50%;
+    margin-left: -25em;
+    z-index: 9000;
+}
+
+    #terms .terms-body {
+        margin: 1em;
+    }
+
+#Announcements {
+    width: 50%;
+    float: left;
+    font-size: 14px;
+    line-height: 26px;
+    border: none;
+    margin: 0 15px;
+    padding: 0 10px 0 3px;
+}
+
+    #Announcements h1 {
+        font-weight: 700;
+        font-size: 18px;
+        color: #70b625;
+        text-align: center;
+    }
+
+#container {
+    width: 970px;
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.dtable {
+    display: table !important;
+}
+
+html body #container a {
+    cursor: pointer !important;
+    text-decoration: none;
+}
+
+    html body #container a:hover {
+        cursor: pointer;
+        text-decoration: underline;
+    }
+
+html body #container input {
+    cursor: pointer !important;
+    font-family: "PT Sans", sans-serif, Arial, Helvetica;
+}
+
+#apparea roleassignment {
+    font-family: "PT Sans", sans-serif, Arial, Helvetica;
+    color: #444 !important;
+}
+
+.clear {
+    clear: both;
+    width: 100%;
+}
+
+.clear-after:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.data-details {
+    height: 35px;
+    width: auto;
+    font-weight: 400;
+    color: #444444;
+    margin: 0;
+    padding: 0;
+}
+
+table {
+    width: 100%;
+}
+
+#info {
+    font-size: 14px;
+    width: auto;
+    text-align: center;
+    font-weight: 700;
+    color: #d51602;
+    background-color: #fadf8f;
+    padding: 6px;
+}
+
+#header {
+    width: 100%;
+    height: 50px;
+}
+
+    #header .left {
+        width: 307px;
+        height: 58px;
+        float: left;
+        background: url(/ui/apps/sites/stars_classroom/images/DOE_Logo.png) no-repeat;
+        position: relative;
+        top: 10px;
+    }
+
+    #header .right {
+        width: 232px;
+        height: 61px;
+        float: right;
+        background: url(/ui/apps/sites/stars_classroom/images/stars_classroom_logo.png) no-repeat;
+        overflow: hidden;
+    }
+
+#headernav {
+    display: table;
+    width: 100%;
+    height: 18px !important;
+    margin: 0;
+    padding: 0;
+}
+
+    #headernav .RadMenu_Metro {
+        position: relative !important;
+        top: 15px !important;
+    }
+
+    #headernav .right {
+        float: right;
+        width: auto;
+        margin: 0 0 2px;
+        padding: 0;
+    }
+
+#apparea {
+    position: relative;
+    clear: none;
+    border: 1px solid #e1e1e1;
+    min-height: 600px;
+    background-color: #FFF;
+    padding: 15px 12px 35px;
+}
+
+.ml {
+    margin-left: 20px;
+}
+
+.mr {
+    margin-right: 20px;
+}
+
+.mt {
+    margin-top: 20px;
+}
+
+#container a, .commenttable a {
+    text-decoration: none;
+    font-weight: 400;
+    color: #2393C8;
+}
+
+    #container a:hover, .commenttable a:hover {
+        text-decoration: underline;
+        font-weight: 400;
+        color: #2f708f;
+    }
+
+.button {
+    background: url(/ui/apps/sites/stars_classroom/images/button_bg.png) repeat-x;
+    border: 0;
+    color: #fff4ff;
+    text-transform: capitalize;
+    font-weight: 700;
+    height: 28px;
+    border-radius: 7px;
+}
+
+.selections {
+    clear: both;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+
+    .selections h2 {
+        font: bold 14px "PT Sans", sans-serif, Arial, Helvetica;
+        color: #70b625;
+        float: left;
+        margin: 5px 3px 0 0;
+    }
+
+    .selections .varmp {
+        width: 180px;
+        float: left;
+    }
+
+        .selections .varmp select {
+            width: 120px;
+            font-size: 80%;
+        }
+
+    .selections h2.year {
+        width: 82px;
+    }
+
+    .selections h2.assessment {
+        width: 81px;
+    }
+
+    .selections h2.assessmenttype {
+        width: 110px;
+    }
+
+    .selections .var {
+        float: left;
+        width: auto;
+        font-size: 79%;
+        margin: 5px 20px 0 3px;
+        padding: 0;
+    }
+
+h2.help {
+    background: url(/ui/apps/sites/stars_classroom/images/help_ico.png) no-repeat right;
+    width: 24px;
+    height: 23px;
+    border: none;
+    float: right;
+    margin-top: 2px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    padding: 0;
+}
+
+h2.contact {
+    width: 29px;
+    height: 25px;
+    border: none !important;
+    float: right;
+    margin-top: 0;
+    margin-bottom: 10px;
+    padding: 0;
+}
+
+h2.questions {
+    font-size: 10pt;
+    position: relative;
+    width: auto;
+    height: 25px;
+    border: none !important;
+    float: right;
+    margin-top: 0;
+    margin-bottom: 10px;
+    padding: 0;
+    left: 7.9em;
+    top: 1.9em;
+}
+
+.selections .s4 {
+    background: url(/ui/apps/sites/stars_classroom/images/magnify.png) no-repeat 120px 6px #fafafa;
+    height: 27px;
+    overflow: hidden;
+    border: 1px solid #aaa;
+    border-radius: 6px;
+}
+
+    .selections .s1 select, .selections .s2 select, .selections .s3 select, .selections .s4 input {
+        background: transparent;
+        overflow: hidden;
+        -webkit-appearance: none;
+        border: none;
+        padding: 2px;
+    }
+
+.selections .s1, .selections .s1 select {
+    width: 80px;
+}
+
+.selections .s2, .selections .s2 select {
+    width: 320px;
+}
+
+.selections .s4, .selections .s4 select {
+    width: 140px;
+}
+
+.selections .s1, .selections .s2, .selections .s3 {
+    margin-right: 14px;
+    float: left;
+}
+
+.s4 {
+    margin-right: 0;
+    float: left;
+}
+
+.selections roleassignment .rddlInner {
+    margin-left: 4px;
+}
+
+div.course {
+    position: relative;
+    float: left;
+    background: url(/ui/apps/sites/stars_classroom/images/course_button.png) no-repeat;
+    width: 180px;
+    min-height: 96px;
+    margin-right: 5px;
+    margin-top: 0;
+    margin-bottom: 20px;
+    padding: 0 0 3px 0;
+    z-index: 1;
+}
+
+    div.course:hover {
+        background: url(/ui/apps/sites/stars_classroom/images/course_button_hover.png) no-repeat;
+        z-index: 2;
+    }
+
+div.offclass {
+    position: relative;
+    float: left;
+    background: url(/ui/apps/sites/stars_classroom/images/class_button.png) no-repeat;
+    width: 180px;
+    height: 96px;
+    margin-right: 9px;
+    margin-top: 0;
+    margin-bottom: 20px;
+    padding: 0;
+    z-index: 1;
+}
+
+    div.offclass:hover {
+        background: url(/ui/apps/sites/stars_classroom/images/class_button_hover.png) no-repeat;
+        z-index: 2;
+    }
+
+.gt, .cte, .se, .ell, .wbl {
+    width: 28px;
+    height: 18px;
+    float: right;
+    cursor: pointer;
+    margin: 0 0 2px 1px;
+}
+
+.coteacher {
+    width: 24px;
+    height: 18px;
+    float: right;
+    background: url(/ui/apps/sites/stars_classroom/images/coteachers.png) no-repeat;
+    margin: 0 2px 2px 0;
+}
+
+.gt {
+    background: url(/ui/apps/sites/stars_classroom/images/gt.png) no-repeat;
+}
+
+.cte {
+    background: url(/ui/apps/sites/stars_classroom/images/cte.png) no-repeat;
+}
+
+.se {
+    background: url(/ui/apps/sites/stars_classroom/images/se.png) no-repeat -2px 0px;
+}
+
+.ell {
+    background: url(/ui/apps/sites/stars_classroom/images/ell.png) no-repeat -2px 0px;
+}
+
+.wbl {
+    background: url(/ui/apps/sites/stars_classroom/images/wbl.png) no-repeat;
+}
+
+.directions {
+    text-align: center;
+    clear: both;
+    width: 100%;
+    z-index: 1;
+    margin: 0;
+    padding: 0;
+}
+
+    .directions h1 {
+        color: #907c01;
+        font-size: 150%;
+        text-align: center;
+    }
+
+div.class_desc {
+    position: absolute;
+    /*top: 80px !important; please do not put important it reflect CSS in teachersclasses.aspx*/
+    top: 106px;
+    left: 0;
+    display: none;
+    z-index: 2;
+    padding: 10px 10px 0;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    width: 310px;
+    /*min-height: 252px; - removed because of unneccessary blank space*/
+    background: #e4eff8;
+    color: #444;
+    font-size: .9em;
+    line-height: 1.2em;
+    border: 1px solid rgba(0,0,0,.2);
+    box-shadow: 0 5px 10px rgba(0,0,0,.2);
+    -moz-box-shadow: 0 5px 10px rgba(0,0,0,.2);
+    -webkit-box-shadow: 0 5px 10px rgba(0,0,0,.2);
+    /*
+    border: 1px solid #c5dbf1;
+    box-shadow: 0 0 80px 5px #333;
+    -moz-box-shadow: 0 0 80px 5px #333;
+    -webkit-box-shadow: 0 0 80px #333; */
+}
+
+    div.class_desc li {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+
+        div.class_desc li.noicon {
+            margin-left: 34px;
+        }
+
+    div.class_desc img {
+        width: 28px;
+        height: 16px;
+        float: left;
+        margin-right: 6px;
+    }
+
+.simple_overlay .close {
+    background-image: url(/media/img/overlay/close.png);
+    position: absolute;
+    right: -15px;
+    top: -15px;
+    cursor: pointer;
+    height: 35px;
+    width: 35px;
+}
+
+div.class_desc div.bottom {
+    background: #FFF;
+    /*min-height: 131px; - removed because of unneccessary blank space*/
+    border-bottom-left-radius: 8px;
+    -webkit-border-bottom-left-radius: 8px;
+    -moz-border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    -webkit-border-bottom-right-radius: 8px;
+    -moz-border-bottom-right-radius: 8px;
+    margin: 10px -10px -20px;
+    padding: 10px 10px 0 10px;
+}
+
+    div.class_desc div.bottom div {
+        margin-left: 33px;
+    }
+
+    div.class_desc div.bottom .iconAbs .meetings, div.class_desc div.bottom .iconAbs .period, div.class_desc div.bottom .iconAbs .room {
+        overflow: hidden;
+        display: inline-block;
+        margin: 0;
+    }
+
+div.class_desc .bottom .iconAbs .meetings {
+    width: 108px;
+}
+
+div.class_desc div.bottom .iconAbs .period {
+    width: 65px;
+}
+
+div.class_desc div.bottom .iconAbs .room {
+    width: 85px;
+}
+
+.required, .red {
+    color: #F00;
+}
+
+.validation {
+    color: #F00 !important;
+    width: auto !important;
+    margin: 5px 0 !important;
+    padding: 8px 10px 7px 18px;
+}
+
+.marks-entered {
+    color: Green;
+    font-weight: bolder;
+    position: relative;
+    float: right;
+}
+
+.RadToolTip .studentpopup, td.rtWrapperContent {
+    width: 390px !important;
+    height: 246px !important;
+}
+
+.stu {
+    color: #444444;
+    padding: 10px 10px 20px;
+}
+
+.par {
+    background: #e8f5fb;
+    padding: 10px 10px 20px;
+}
+
+    .par h1 {
+        font-size: 18px;
+        text-align: left;
+        margin: 0 !important;
+        padding: 0;
+    }
+
+    .stu h2, .par h2 {
+        color: #016690;
+        font-size: 16px;
+        text-transform: capitalize !important;
+        margin: 0 0 8px;
+    }
+
+.stu_image {
+    display: table;
+    float: right;
+    width: 170px;
+    text-align: right;
+    margin: 0 10px 10px 0;
+}
+
+.popup-row {
+    font-size: 14px;
+}
+
+.SpanDates {
+    clear: both;
+}
+
+div.RadToolTip_Default table.rtShadow {
+    margin: 0 !important;
+    padding: 0;
+}
+
+.parent-details .field, .student-details .field {
+    margin: .5em;
+}
+
+    .parent-details .field .label, .student-details .field .label {
+        width: 8em;
+        font-weight: 700;
+        display: inline-block;
+    }
+
+.contact {
+    overflow: hidden;
+    padding: 20px 40px;
+}
+
+    .contact h1 {
+        text-align: left;
+        font-size: 110%;
+        color: #70b625;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    .contact p {
+        font-size: 85%;
+        margin: 10px 0;
+    }
+
+    .contact .textarea {
+        border-radius: 8px;
+        border-color: #aaa;
+    }
+
+.cfn_cont {
+    width: 700px;
+    margin-left: 85px;
+    padding: 10px;
+}
+
+    .cfn_cont h3 {
+        float: left;
+        font-size: 110%;
+        margin: 5px 10px 0;
+    }
+
+    .cfn_cont .tbox {
+        height: 32px;
+        line-height: 32px;
+        border-radius: 8px;
+        float: left;
+        padding-left: 5px;
+        border-color: #c9cfcf !important;
+        border-width: 1px;
+    }
+
+    .cfn_cont #btnLogin {
+        background: url(/ui/apps/sites/stars_classroom/images/button_bg.png) repeat-x !important;
+    }
+
+.cfn_login {
+    width: 730px;
+    margin-left: 0;
+    background: #b0d5e7;
+    border: 1px solid #bdc4cc;
+    height: 35px;
+    padding: 20px 10px;
+}
+
+p.inst {
+    font-size: 80%;
+    width: 730px;
+}
+
+div.RadTabStrip div.rtsLevel {
+    position: relative !important;
+    z-index: 1 !important;
+    height: 32px !important;
+    margin-bottom: -1px;
+}
+
+div.RadTabStrip ul.rtsUL, div.RadTabStrip .rtsLevel ul.rtsUL li {
+    height: 32px !important;
+}
+
+div.RadTabStrip div.rtsLevel .rtsSelected .rtsIn, rtsOut, .rtsText {
+    background: #FFF !important;
+    border-top: green !important;
+}
+
+div.RadTabStrip .rtsLevel .rtsSelected {
+    border-top: 1px solid #d5dce4 !important;
+    border-left: 1px solid #d5dce4 !important;
+    border-right: 1px solid #d5dce4 !important;
+}
+
+.commenttable .RadComboBox_Default, #apparea .commenttable .RadInput_Default, .commenttable .RadToolTip .rtWrapper td.rtWrapperContent {
+    font-family: "PT Sans", sans-serif, Arial, Helvetica !important;
+}
+
+.RadToolTip .rtWrapper td.rtWrapperContent .commenttable td {
+    font: normal 13px "PT Sans", sans-serif, Arial, Helvetica !important;
+}
+
+table.commenttable h2 {
+    margin-left: 0;
+    font-size: 140%;
+    color: #6db702;
+}
+
+.commenttable .searchsteps .RadComboBoxWithLabel .rcbLabel {
+    padding-left: 10px;
+}
+
+.RadToolTip .rtCloseButton:hover {
+    background-position: 0 -270px;
+}
+
+.RadComboBox .rcbInput {
+    border-radius: 4px;
+}
+
+.searchstepstable td {
+    padding: 5px;
+}
+
+.searchstepstable .riTextBox, .searchstepstable .riEmpty {
+    margin: 5px;
+}
+
+.AllCommentsTable {
+    font-size: 80%;
+    background: #FFF;
+    border: none;
+}
+
+    .AllCommentsTable td, .AllCommentsTable th {
+        border: 1px solid #abd5e1;
+        padding: 3px;
+    }
+
+    .AllCommentsTable th {
+        background: url(images/grid_top_bkg.gif) repeat-x #b1cedc !important;
+        text-align: left;
+    }
+
+.RadListBox_Default .rlbTemplateContainer {
+    border-color: #d5dce4 !important;
+}
+
+.RadTabStrip_Vista {
+    color: 0 !important;
+    font-family: "PT Sans", sans-serif, Arial, Helvetica !important;
+    line-height: 34px !important;
+}
+
+    .RadTabStrip_Vista .rtsGhostTab {
+        border-radius: 0 !important;
+        color: black;
+        background-color: #ddd;
+        border-color: #e3e9ef;
+    }
+
+    .RadTabStrip_Vista .rtsLI, .RadTabStrip_Vista .rtsLink {
+        color: #0e688a !important;
+        font: bold 14px/32px "PT Sans", sans-serif, Helvetica, Arial !important;
+    }
+
+    .RadTabStrip_Vista .rtsDisabled {
+        color: #aaa;
+    }
+
+.RadTabStripTop_Vista .rtsLevel {
+    background-color: transparent;
+}
+
+.RadTabStripLeft_Vista .rtsLink, .RadTabStripRight_Vista .rtsLink {
+    background-image: url(WebResource.axd?d=bIjo23iZqIzwypMaW1yIynFup9n3BGGXYQMCGnb1CfDL9F9xIr6xEXPkGwH6nGYhF0uKyVGJB5VRNjeyrq72hH0YXRsTm7b2qG0qKYhLcAyLQjleUjuDBrpn2TqmHKZhNiyvp-JqkKcvxh8RdKa-AR_w1y1LFM8poXTYUEmVS46Be24jouVrZ2wRy5l3IMKc0&t=635034392015107921);
+}
+
+.RadTabStripLeft_Vista .rtsLast .rtsLink, .RadTabStripRight_Vista .rtsLast .rtsLink {
+    border-bottom: 1px solid #FFFFFF !important;
+}
+
+.RadTabStripTop_Vista .rtsLink:hover {
+    background-position: 0 -52px;
+}
+
+    .RadTabStripTop_Vista .rtsLink:hover .rtsOut {
+        background-position: 100% -52px;
+    }
+
+.RadTabStripTop_Vista_Baseline .rtsLevel {
+    background-position: 0 100%;
+    background-repeat: repeat-x;
+}
+
+.RadTabStripBottom_Vista .rtsLink:hover {
+    background-position: 0 -130px;
+}
+
+    .RadTabStripBottom_Vista .rtsLink:hover .rtsOut {
+        background-position: 100% -130px;
+    }
+
+.RadTabStripBottom_Vista .rtsSelected, .RadTabStripBottom_Vista .rtsSelected:hover {
+    background-position: 0 -156px;
+}
+
+    .RadTabStripBottom_Vista .rtsSelected .rtsOut, .RadTabStripBottom_Vista .rtsSelected:hover .rtsOut {
+        background-position: 100% -156px;
+    }
+
+.RadTabStripBottom_Vista_Baseline .rtsLevel {
+    background-position: 0 -599px;
+    background-repeat: repeat-x;
+}
+
+.RadTabStripRight_Vista .rtsUL .rtsLink, .RadTabStripRight_Vista .rtsUL .rtsLI .rtsDisabled:hover {
+    background-position: 100% 0;
+    text-align: left;
+}
+
+.RadTabStrip_Vista_SimpleSubItems .rtsLevel2, .RadTabStrip_Vista_SimpleSubItems .rtsLevel3, .RadTabStrip_Vista_SimpleSubItems .rtsLevel4 {
+    background: #fff;
+}
+
+    .RadTabStrip_Vista_SimpleSubItems .rtsLevel2 .rtsSelected, .RadTabStrip_Vista_SimpleSubItems .rtsLevel3 .rtsSelected, .RadTabStrip_Vista_SimpleSubItems .rtsLevel4 .rtsSelected {
+        text-decoration: underline;
+    }
+
+    .RadTabStrip_Vista_SimpleSubItems .rtsLevel2 .rtsLink, .RadTabStrip_Vista_SimpleSubItems .rtsLevel2 .rtsOut, .RadTabStrip_Vista_SimpleSubItems .rtsLevel2 .rtsIn, .RadTabStrip_Vista_SimpleSubItems .rtsLevel3 .rtsLink, .RadTabStrip_Vista_SimpleSubItems .rtsLevel3 .rtsOut, .RadTabStrip_Vista_SimpleSubItems .rtsLevel3 .rtsIn, .RadTabStrip_Vista_SimpleSubItems .rtsLevel4 .rtsLink, .RadTabStrip_Vista_SimpleSubItems .rtsLevel4 .rtsOut, .RadTabStrip_Vista_SimpleSubItems .rtsLevel4 .rtsIn {
+        background: 0;
+    }
+
+.rtsDropClue_Vista {
+    background-image: url(WebResource.axd?d=E-Kr08qc2zfkhgTA6eXFRrcnFFL6iL7cQvXNJKeLj2ANSDq0elVcFCb22btrOfsYKIgKNtswH1o15wWxy7doFIoLJsfZ0Igd1vvrJulyGWAHlnD4LLsY1kgU2oOWzpS1seGS3MxFW0c_fOtqcGA2YcWUsLiQUn9hxBoi4UXOC6sojau-Z2-jbo320ok0BEXR0&t=635034392015107921);
+}
+
+.rtsDropClueTop_Vista {
+    background-position: 0 -20px;
+}
+
+.rtsDropClueRight_Vista {
+    background-position: 0 -30px;
+}
+
+.rtsDropClueLeft_Vista {
+    background-position: 0 -10px;
+}
+
+#footer {
+    width: 100%;
+    border-top: none;
+    font-size: 11px;
+    font-weight: 400;
+    color: #4a76a7;
+    padding-bottom: 30px;
+    margin-top: 8px;
+}
+
+    #footer .right {
+        float: right;
+        display: inline-block;
+        margin-right: 0;
+        text-align: right;
+        width: 200px;
+        color: #6D7D8D;
+        padding: 0;
+    }
+
+    #footer .left {
+        width: 500px;
+        height: 14px;
+        float: left;
+        color: #6D7D8D;
+    }
+
+.studenticon {
+    float: left;
+    margin: 2.5px 8px 0 4px;
+    background: transparent url('./images/student_info_ico.png') no-repeat scroll left;
+    padding-left: 20px;
+}
+
+.studentname {
+    line-height: 1.6em;
+}
+
+#container a.bnavlink_f, #container a.bnavlink_p {
+    padding-left: 20px;
+    text-decoration: none;
+    font-weight: 700;
+    color: #3785a9;
+    font-size: 14px;
+}
+
+#container a.bnavlink_n, #container a.bnavlink_l {
+    padding-right: 20px;
+    text-decoration: none;
+    font-weight: 700;
+    color: #3785a9;
+    font-size: 14px;
+}
+
+#container a.bnavlink_f {
+    background: url(images/double_arrow_back.png) 0 4px no-repeat;
+}
+
+#container a.bnavlink_p {
+    background: url(images/back_arrow.png) 6px 4px no-repeat;
+    margin-right: 5px;
+}
+
+#container a.bnavlink_n {
+    background: url(images/next_arrow.png) no-repeat;
+    background-position: right;
+    padding-right: 14px;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+#container a.bnavlink_l {
+    background: url(images/double_arrow_next.png) right no-repeat;
+}
+
+#container a.bnavletter {
+    width: 18px;
+    height: 18px;
+    display: inline-block;
+    text-decoration: none;
+    font-weight: 700;
+    margin-right: -2px;
+    line-height: 1.5em;
+    background: #69aac6;
+    color: #FFF;
+    padding: 0;
+}
+
+.mmbuttons, .mmbuttons input {
+    border: medium none;
+    border-radius: 10px 10px 10px 10px;
+    float: left;
+    font-size: 20px;
+    font-weight: 700;
+    height: 80px;
+    margin-right: 10px;
+    opacity: 0.8;
+    white-space: normal;
+    width: 200px;
+}
+
+.reportcard {
+    border: 1px solid #ABD2E1;
+    margin-bottom: 12px;
+}
+
+    .reportcard input:active, .reportcard textarea:active, .tcreport input:active, .tcreport textarea:active, .tcreport select:active {
+        background-color: #fcf7c0;
+    }
+
+.Savebtn {
+    margin-bottom: 15px;
+    clear: both;
+}
+
+.reportcard input, .reportcard textarea {
+    background-color: #F9F9F9;
+    border: 1px solid #CDCDCD;
+    color: #000000;
+    padding: 3px;
+}
+
+.cm input, .row .nr .cmr input {
+    background: none;
+    border: none;
+}
+
+h2.vrcf {
+    height: 35px;
+    width: 60%;
+    float: left;
+    clear: left;
+    font-weight: 400;
+    color: #444444;
+    margin: 0;
+    padding: 0;
+}
+
+#markperiod {
+    height: 35px;
+    width: 30%;
+    clear: right;
+    float: right;
+    text-align: right;
+    font-weight: 700;
+    color: #444444;
+    margin: 0;
+    padding: 0;
+}
+
+#marknote, .marknote {
+    background-color: #f5eeb8;
+    font-family: Arial, Helvetica, sans-serif !important;
+    font-size: 10.5pt !important;
+    width: auto;
+    clear: both;
+    font-weight: 700;
+    text-align: center;
+    color: #907c0a;
+    display: block;
+    border-radius: 7px;
+    margin: 20px auto 25px;
+    padding: 2px 15px;
+}
+
+    #marknote p, .marknote p {
+        margin: .2em;
+        padding: .2em;
+    }
+
+.hdr {
+    display: table;
+    clear: both;
+    width: 100%;
+    background: url(/ui/apps/sites/stars_classroom/images/grid_top_bkg.gif) repeat-x scroll 0 0 #B1CEDC !important;
+    height: 34px !important;
+}
+
+    .hdr .col {
+        display: block;
+        float: left;
+        color: #444444;
+        font-size: 16px;
+        font-weight: 700;
+        padding: 10px;
+    }
+
+        .hdr .col a {
+            font-weight: 700 !important;
+        }
+
+.row {
+    border: 1px solid #ABD2E1;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+    width: 922px;
+    display: table;
+    font-weight: 700;
+    color: #444444;
+    background-color: #f5fcfe;
+    margin: -1px 0 0;
+    padding: 10px;
+}
+
+.hdr .sc {
+    width: 438px;
+}
+
+.hdr .mk {
+    width: auto;
+    margin: 0 0 0 18px;
+}
+
+.hdr .nr {
+    width: 368px;
+}
+
+.row .nr {
+    width: 388px;
+    font-weight: 400;
+    color: #54960b;
+}
+
+.italic-txt {
+    font-style: italic;
+}
+
+.hdr .cm {
+    width: auto;
+}
+
+.sc {
+    width: 450px;
+    float: left;
+}
+
+.mk {
+    margin: 0 10px 0 0;
+    padding: 0;
+}
+
+.row .mk {
+    float: right;
+    padding: 1px 0 0;
+}
+
+.mk input {
+    width: 50px;
+}
+
+.nr {
+    float: left;
+    width: auto;
+}
+
+    .nr textarea {
+        width: 95%;
+        font-family: "PT Sans", sans-serif, Arial, Helvetica !important;
+        margin-bottom: 12px;
+    }
+
+    .nr .smalllabel {
+        margin-bottom: 4px;
+    }
+
+.row .cm {
+    width: auto;
+    padding-right: 11px;
+}
+
+.cm input {
+    float: left;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+ul.cpty {
+    margin: 0;
+    padding: 0;
+}
+
+    ul.cpty li {
+        list-style-type: none;
+        margin: 0;
+        padding: 10px;
+    }
+
+        ul.cpty li:hover {
+            background: #e9f2f7;
+            border-top: 1px solid #fff;
+            margin-top: -1px;
+        }
+
+.cpty .mk {
+    float: right;
+    clear: both;
+    padding: 0;
+}
+
+    .cpty .mk input {
+        float: right;
+        position: relative;
+        top: -2px;
+    }
+
+.tcreport {
+    background-color: #fff;
+}
+
+    .tcreport td {
+        border: 1px solid #ABD2E1;
+        vertical-align: top;
+        padding: 10px;
+    }
+
+    .tcreport tr.rgHeader {
+        background: url(/ui/apps/sites/stars_classroom/images/grid_top_bkg.gif) repeat-x scroll 0 0 #B1CEDC !important;
+        border: 1px solid #ABD2E1;
+        border-bottom: none;
+    }
+
+.rgMasterTable tr th {
+    font-weight: 700 !important;
+    font-size: 1.3em !important;
+    color: #444444 !important;
+    background: url(/ui/apps/sites/stars_classroom/images/grid_top_bkg.gif) repeat-x scroll 0 0 #B1CEDC !important;
+    padding: 10px !important;
+}
+
+.Teacherlist .RadGrid_Metro .rgMasterTable td {
+    padding: 10px;
+}
+
+.rgPager td {
+    padding: 2px !important;
+}
+
+.rgMasterTable tr th a {
+    font-weight: 700 !important;
+    color: #444444 !important;
+}
+
+.tcreport tr.altrow {
+    background: #f3f3f3;
+}
+
+.tcreport tr.rgHeader th {
+    height: 34px;
+    padding-left: 8px;
+}
+
+    .tcreport tr.rgHeader th a {
+        font-weight: 700 !important;
+    }
+
+.tcreport tr.markspager:hover {
+    background: none;
+}
+
+.tcreport tr.markspager td {
+    background: none;
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+    .tcreport tr.markspager td .gridpager {
+        display: inline;
+        position: relative;
+        left: 44em;
+        font-weight: bolder;
+        font-size: 1.1em;
+        color: #444444;
+        border: 0 solid #ABD2E1;
+        margin: 0;
+        padding: 0 0 0 27px;
+    }
+
+        .tcreport tr.markspager td .gridpager span.selectedpage {
+            font-weight: 700;
+            margin: 0;
+            padding: 0 .5em;
+        }
+
+        .tcreport tr.markspager td .gridpager a.page {
+            font-weight: 400;
+            text-decoration: underline !important;
+            margin: 0;
+            padding: 0 .5em;
+        }
+
+            .tcreport tr.markspager td .gridpager a.page:hover {
+                background: #e9f2f7;
+                width: 16px;
+                height: 16px;
+                text-decoration: none !important;
+            }
+
+.tcreport .narrative {
+    padding-bottom: 4px;
+    width: 360px;
+}
+
+    .tcreport .narrative textarea {
+        width: 30em;
+    }
+
+.Exam input {
+    width: 4em;
+}
+
+.tcreport .student-inactive {
+    color: #f89937;
+}
+
+.tcreport .student-inactive-text {
+    color: #f89937;
+    font-size: small;
+    font-style: italic;
+}
+
+.tcreport .student-unenrolled {
+    color: purple;
+}
+
+.tcreport .student-unenrolled-text {
+    color: purple;
+    font-size: small;
+    font-style: italic;
+}
+
+.unsaved-textbox {
+    color: red;
+    font-weight: bolder;
+    display: block !important;
+    width: 20px !important;
+    z-index: 5000;
+    top: 2px;
+    position: relative;
+}
+
+.mk .unsaved-textbox {
+    color: red;
+    font-weight: bolder;
+    display: block !important;
+    width: 20px !important;   
+    z-index: 5000;
+    position: relative;
+    top: -21px;
+    left: 38px;
+}
+
+.saved-textbox {
+    color: Green;
+    font-weight: bolder;
+    display: block !important;
+    width: 20px !important;
+    z-index: 6000;
+}
+
+.Exam .saved-textbox {
+    color: Green;
+    font-weight: bolder;
+    display: block !important;
+    width: 20px !important;
+    z-index: 6000;
+    position: relative;
+    top: -22px;
+    left: 38px;
+}
+
+.Exam .unsaved-textbox {
+    color: red;
+    font-weight: bolder;
+    display: block !important;
+    width: 20px !important;
+    z-index: 5000;
+    position: relative;
+    top: -20px;
+    left: 35px;
+}
+
+.modified {
+    background-color: #fcf7c0 !important;
+}
+
+.commands {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    display: table;
+    clear: both;
+}
+
+    .commands .loginbutton {
+        margin: 10px 10px 10px 0;
+    }
+
+    .commands .save {
+        float: left !important;
+        width: auto;
+        padding-right: 12px;
+    }
+
+    .commands .cancel {
+        float: left !important;
+        width: 120px;
+    }
+
+.teacher-enrollments {
+    display: block;
+    clear: both;
+}
+
+.DatePickerSpanDates .table {
+    margin-left: 0;
+    padding-left: 0;
+}
+
+.DatePickerSpanDates .rcInputCell {
+    padding-right: 2px !important;
+    margin-left: 0;
+    padding-left: 0;
+}
+
+.comment-label {
+    width: 340px;
+    padding-bottom: 4px;
+}
+
+.commentids {
+    width: 370px;
+}
+
+    .commentids .trackfield {
+        width: 4em;
+        margin-right: 4px;
+    }
+
+    .commentids .cmr {
+        position: relative;
+        top: 2px;
+        float: right;
+        display: table;
+        width: 165px;
+    }
+
+.cmr .ntxt {
+    position: relative;
+    top: 0;
+    left: 20px;
+    font-weight: 400;
+    color: #54960b;
+}
+
+.mk .saved-textbox {
+    position: relative;
+    top: -22px;
+    left: 38px;
+}
+
+.Mark span {
+    position: relative;
+    top: -20px;
+    left: 31px;
+}
+
+.commentids span {
+    margin-left: -21px;
+    margin-top: 3px;
+    padding-right: 0;
+}
+
+.toggle-icon {
+    width: 20px;
+    display: inline-block;
+}
+
+.publish {
+    background-color: #ff9933;
+    margin: 2px 3px 10px 0;
+}
+
+.comment-1 span.riSingle input, .comment-2 span.riSingle input, .comment-3 span.riSingle input {
+    width: 40px !important;
+}
+
+.comment-1 span.riSingle, .comment-2 span.riSingle, .comment-3 span.riSingle {
+    width: 60px !important;
+    padding-right: 8px !important;
+}
+
+.comment-title {
+    padding-bottom: .8em;
+    margin: 0;
+}
+
+.comment-commands {
+    text-align: center !important;
+    padding-top: 2em;
+}
+
+.comments .rtWrapper td.rtWrapperContent {
+    padding: 24px 14px 14px !important;
+}
+
+.comment-browse {
+    padding-top: .6em;
+    padding-bottom: .6em;
+}
+
+.comment-intro {
+    padding-top: .6em;
+    padding-bottom: 1em;
+}
+
+.ca_opts {
+    float: left;
+    width: 650px;
+    display: inline-block;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+    .ca_opts .classes {
+        width: auto;
+        float: left;
+        padding-right: 6px;
+    }
+
+        .ca_opts .classes input, .ca_opts .assess input {
+            margin-left: 0;
+            background: url(/ui/apps/sites/stars_classroom/images/toggle_btn_bg.png) repeat-x scroll 0 0 rgba(0,0,0,0);
+        }
+
+    .ca_opts .assess {
+        width: auto;
+        float: left;
+    }
+
+.prevnext .button {
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.saveandpub .button {
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
+.RadPicker_MetroTouch .rcCalPopup, .RadPicker_MetroTouch .rcTimePopup {
+    border: none !important;
+    background-color: #ffffff !important;
+}
+
+.RadPicker_MetroTouch .rcCalPopup {
+    position: relative;
+    left: .3em;
+}
+
+.sa_ctr {
+    clear: both;
+    border: none;
+    margin: 15px 0 12px;
+    padding: 0 0 20px;
+}
+
+    .sa_ctr .cal input {
+        width: 30px !important;
+        margin: 0;
+    }
+
+    .sa_ctr .top_hdr {
+        clear: both;
+        width: 100%;
+        display: block;
+        color: #02658f;
+        letter-spacing: -.01em;
+        font-size: 16px;
+        font-weight: 600;
+    }
+
+.form_fields div.datepicker .RadPicker input {
+    width: 100px !important;
+}
+
+
+.top_hdr > .fl, .form_fields > .fl {
+    padding: 10px 16px;
+    border: 1px solid #ACCBD9;
+    border-right: none;
+    border-top: none;
+}
+
+.top_hdr > .fl {
+    background-color: #ACCBD9;
+}
+
+.form_fields > .fl {
+    height: 26px;
+}
+
+.sa_ctr .form_fields .fl input {
+    width: 30px !important;
+    padding: 0 3px;
+}
+
+.readinglevel, .readinglevel2 {
+    width: 214px;
+}
+
+.goal {
+    width: 100px;
+}
+
+.datepicker {
+    width: 130px;
+}
+
+.form_fields > div.scorer, .top_hdr > div.scorer {
+    width: 119px;
+    width: 120px\9;
+    border-right: 1px solid #ACCBD9;
+}
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    /* IE10+ specific styles go here */
+    .form_fields > div.scorer, .top_hdr > div.scorer {
+        width: 120px;
+    }
+}
+
+.sa_ctr .form_fields .fl.scorer input {
+    width: 60px !important;
+}
+
+.categories {
+    padding-top: 5px;
+    margin-top: 12px;
+}
+
+.sa_ctr .row {
+    color: #444444;
+    display: table;
+    font-weight: 400;
+    width: 912px;
+    clear: both;
+    background-color: #ffffff;
+    margin: 0;
+    padding: 15px;
+}
+
+.sa_ctr .col {
+    width: auto;
+    float: left;
+    display: inline-block;
+    font-size: .8em;
+}
+
+    .sa_ctr .col div {
+        padding-bottom: 5px;
+        text-align: right;
+    }
+
+        .sa_ctr .col div input {
+            width: 35px;
+        }
+
+.sa_ctr .comments {
+    width: 912px;
+    padding-bottom: 15px;
+}
+
+    .sa_ctr .comments .txtarea {
+        width: 95%;
+    }
+
+    .sa_ctr .comments .txtctr {
+        padding-top: 10px;
+    }
+
+.txtctr textarea {
+    border: 1px solid #cbe6f1;
+}
+
+.a_history {
+    clear: both;
+    background-color: #accbd9;
+    font-size: .8em;
+}
+
+    .a_history td.header {
+        background-color: #accbd9;
+        color: #02658F;
+        font-size: 16px;
+        font-weight: 600;
+        letter-spacing: -.01em;
+    }
+
+    .a_history td {
+        background-color: #ffffff;
+        padding: 6px;
+    }
+
+.o_fluency .general {
+    width: 252px;
+}
+
+.o_fluency .miscues {
+    width: 235px;
+}
+
+.o_fluency .comprehension {
+    width: 315px;
+}
+
+.sa_ctr .expcol {
+    font-size: .7em;
+    width: auto;
+    float: left;
+    color: #2393C8;
+    margin: -20px 0 0 225px;
+}
+
+.sa_ctr .altrow {
+    background-color: #f3f3f3;
+}
+
+.a_history_ctr {
+    clear: both;
+    display: block;
+    padding-top: 30px;
+}
+
+.btn_ctr {
+    padding-bottom: 10px;
+}
+
+.inst_top {
+    font-size: .8em;
+    padding-bottom: .2em;
+    clear: both;
+    display: none;
+}
+
+.RadGrid_MetroTouch th.rgSorted, .RadGrid_MetroTouch th.rgSorted a, .RadGrid_MetroTouch .rgNumPart a.rgCurrentPage, .RadGrid_MetroTouch .rgNumPart a.rgCurrentPage:hover {
+    color: White !important;
+}
+
+.sa_menu .option {
+    width: 90%;
+    height: auto;
+    display: table;
+    margin: 0 auto 20px;
+    padding: 0;
+}
+
+.sa_menu .btn {
+    background-color: #8bb8e7;
+    width: 250px;
+    height: auto;
+    min-height: 90px;
+    float: left;
+    text-align: center;
+    color: #444444;
+    border-radius: 7px;
+    font-size: 1.5em;
+    padding: 45px 12px 12px;
+}
+
+    .sa_menu .btn:hover {
+        background-color: #a5da6f;
+        border: 2px solid #e1e1e1;
+        width: 246px;
+        min-height: 86px;
+    }
+
+.sa_menu .details {
+    display: inline-block;
+    width: 550px;
+    height: auto;
+    margin: 0 0 0 15px;
+    padding: 0;
+}
+
+.blue-label {
+    font-family: "PT Sans", sans-serif, Arial, Helvetica;
+    font-weight: 700;
+    font-size: 12pt;
+    color: #1f768c !important;
+    padding-right: 10px;
+}
+
+.green-label {
+    font-family: "PT Sans", sans-serif, Arial, Helvetica;
+    font-weight: 700;
+    font-size: 12pt;
+    color: #70b625 !important;
+    padding-right: 10px;
+}
+
+
+    .green-label.required {
+        padding-right: 2px;
+    }
+
+.teacher-list.filters {
+    padding: 0 0 1em;
+}
+
+    .teacher-list.filters .school {
+        display: inline-block;
+        margin-right: 1em;
+        width: 545px;
+        position: relative;
+        top: -2px;
+    }
+
+        .teacher-list.filters .school .RadComboBox.school-selection-radcombobox {
+            width: 545px !important;
+        }
+
+    .teacher-list.filters .filter {
+        display: inline-block;
+        margin-right: 1em;
+    }
+
+        .teacher-list.filters .filter label {
+            display: block;
+            font-family: "PT Sans", sans-serif, Arial, Helvetica;
+            font-weight: 700;
+            font-size: 12pt;
+            color: #70b625 !important;
+            padding-right: 10px;
+        }
+
+.RadComboBox.school-selection-radcombobox, .RadDropDownList.school-selection-raddropdownlist {
+    width: 25em;
+}
+
+.RadComboBox.school-selection-radcombobox {
+    position: relative;
+    top: -.65em;
+}
+
+    .RadComboBox.school-selection-radcombobox .school-selection-label {
+        position: relative;
+        top: -4px;
+    }
+
+.RadWindow .school-selection {
+    margin-left: 12px;
+}
+
+.TeacherCourseSectionBox .school-selection {
+    margin-left: 0;
+}
+
+.term-raddropdownlist {
+    width: 15em;
+}
+
+.CourseListPopup table.coursegrid, .CourseListPopup table.coursegrid th, .CourseListPopup table.coursegrid td {
+    border: 1px solid #cdcdcd;
+}
+
+.CourseListPopup h4 {
+    color: #444444;
+    font-size: 1.4em;
+}
+
+.CourseListPopup table.coursegrid th {
+    background: url(/ui/apps/sites/stars_classroom/images/grid_top_bkg.gif) repeat-x scroll 0 0 #B1CEDC;
+    color: #444 !important;
+    font-size: 1.1em;
+}
+
+.CourseListPopup table.coursegrid td {
+    color: #444 !important;
+}
+
+.studentinformation .SpanDates table .header {
+    background: url(/ui/apps/sites/stars_classroom/images/grid_top_bkg.gif) repeat-x scroll 0 0 #B1CEDC !important;
+    font-weight: 700;
+    font-size: .9em;
+    padding: 6px;
+}
+
+.teacher-enrollments strong, .manage-students-list strong {
+    font-size: 1.4em;
+    display: table;
+    padding-bottom: 6px;
+}
+
+.RadWindow .commands {
+    padding-bottom: 15px;
+    margin-left: 12px;
+}
+
+.RadGrid_Metro .rgInfoPart {
+    width: 100px;
+}
+
+.manage-students-list .RadGrid {
+    margin: 5px 12px 12px;
+}
+
+.manage-students-list strong {
+    margin-left: 12px;
+    padding-bottom: 0 !important;
+}
+
+.teacherenrollments-wrap {
+    margin-left: 12px;
+    padding: 15px 0 0 !important;
+}
+
+.RadButton_Metro.rbSkinnedButton {
+    background: none !important;
+    border: none !important;
+}
+
+.RadButton_Metro .rbDecorated {
+    background: url(/ui/apps/sites/stars_classroom/images/button_bg.png) repeat-x scroll 0 0 rgba(0,0,0,0) !important;
+    border: 0 none !important;
+    border-radius: 7px !important;
+    color: #FFF4FF !important;
+    font-family: "PT Sans", sans-serif, Arial, Helvetica !important;
+    font-size: 18px !important;
+    font-weight: 700;
+    height: 30px !important;
+    line-height: 32px;
+    text-transform: capitalize;
+}
+
+.studentinformation .SpanDates table td {
+    border: 1px solid #cdcdcd;
+    padding: 5px;
+}
+
+.manage-students-list table.rgMasterTable a {
+    text-decoration: underline !important;
+    cursor: pointer;
+}
+
+.spandatepicker-dates {
+    display: table;
+    clear: both;
+}
+
+    .spandatepicker-dates .start, .spandatepicker-dates .end {
+        width: 170px;
+        float: left;
+    }
+
+.metro-title {
+    font-size: 18pt;
+    margin: 0 .5em 0 .1em;
+}
+
+.ruled {
+    width: 100%;
+    border-bottom: 2px solid #1f768c;
+}
+
+.qparam {
+    margin: 0 .5em 0 0;
+}
+
+    .qparam strong {
+        color: #70b625 !important;
+        margin: 5px 3px 0 3px;
+    }
+
+    .qparam span {
+        margin: 0 0 0 .5em;
+    }
+
+.school-selection-radcombobox table {
+    border: 1px solid red;
+    width: 490px !important;
+}
+
+.subheader-duration {
+    font-weight: 400;
+    position: relative;
+    width: 280px;
+    font-size: .8em;
+}
+
+    .subheader-duration .enrollment-start {
+        position: relative;
+        width: 168px;
+        float: left;
+    }
+
+div.RadToolTip_Metro .rtWrapper .rtWrapperContent {
+    color: #444444 !important;
+}
+
+.RadToolTip_Metro .rtContent, .RadToolTip_Metro {
+    background-color: White !important;
+}
+
+.comment-finder .RadComboBoxWithLabel label {
+    color: #444444 !important;
+}
+
+.ReadSpanDates ul li {
+    list-style-type: none;
+}
+
+.spandatepicker ul li {
+    list-style-type: none;
+    margin: .2em 0 0;
+}
+
+.spandatepicker-violation {
+    width: 20em !important;
+}
+
+.unsaved-textbox1{
+    color: red;
+    font-weight: bolder;
+    display: block !important;  
+    z-index: 5000;
+}
+
+.group-display-text {
+    font-size: smaller;
+    font-weight: 700;
+}
+
+.studentdates {
+    font-size: 10pt;
+    color: #02658f;
+    font-weight: 400;
+}
+
+    .studentdates .title .title-tooltip {
+        display: inline-block;
+    }
+
+    .studentdates .title .title-text {
+        font-weight: 700 !important;
+    }
+
+.tooltip-icon {
+    display: inline-block;
+    position: relative;
+    width: 16px;
+    height: 16px;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAMzSURBVDhPZVNpbExRFP7efXurtMqoGh20qosWraJtFEWI5Yedhh/EksYuEhJrKxL8IJGIEEnRSBAipLU0pEuqlpZOF21RNdOdYky36dB5z73Pmjov5/2455zvbN/h0EcsC46GcRq3Bjqm60AUe6NOFfSXpxM90561r8Zw/CV/AQ4dIpbn8p5+3tL+tQsnKhPChpHo0KGGqfxNC0pfN2kZt0vcna7edHuc6wTS0jRm+wlAg0cUKwWJ4y0xx7bNU4vKbHj4rBZVdR8Nc8QoE2ZPGY2EcRbsPX3XVVhqf2mL60liIDxzsHjN2ZscF7zy+Pb56u5T2Sgqs2PLqgTsWj0Vi2ZEghCCK3etKKlqwrHt88QaW5vJWdLhcdY+KuRZzz7eypWMtOVeu05m4Wl5PeJppo2LJ8PW7IBffxUTI8wY4u+DqzmVeNvwBUdSZwvXc6wJ6qhpN3m/kFk7U5fFz3C0u7iLd14YJYuigGs55biUbcWzygYsmTkWwwN8cTO3Gm2OLgSbBzLln1jtHYRNmw6MYz0zkSUB9a1OtHzugiKLGD8m0Hj//LXbAPZSZZS+/YCYcDPtjJ9O2KqiQgJQRictijwkSYRMA5nGhpuxIyUBuq7j/O2XUBUZKgVo/tSJ8JEmaJoWRQx4KoRwEAUBEs3CVKZA+9YlQRJ4XL5Xjpp6B80uGRWoskTXxz4ax0hSUduKmLBhRgVGFRRggI8CW4sTxdXNKChrpNklowIGEho0CLWNX8DzfAWhMHlWSpKZk0Ig0GxMWa8cXd2TykY8r25hjlAU8Q9I9GgTKt+1ar0eLY8wel64VeJmq5sUORwCdRZ4At9+KnasmIzNi2ONrDItW6EAESMHIyTQFycz89068WQSxu2O7m/pB848cB3elExbCaQZCdW/LGcVsbbCggZiaVIwDp7N6enscqezWIOJzpTEIkdx+1xKHNPBDcnCiEA/9Hp03MitQT7tP9wyCMkTzIiPCMDhcw977j9+/eJdTPd65Ofr/x1Tf2/1wNaURHZMXGiQPziOw3vKyFd1H7UTGbnu9k5Xel1s32P6R36fMyOJrmvGOdO5VHzv1eg5e/qcM/ADmLY0yBiIc7kAAAAASUVORK5CYII=);
+    background-repeat: no-repeat;
+}
+
+.RadMenu_Metro .rmLink .rmText {
+    text-transform: none;
+}
+
+body a img, .rgPager td.rgPagerCell {
+    border: none !important;
+}
+
+body.pop, div.RadTabStrip .rtsLevel .rtsSelected, div.RadTabStrip .rtsLevel .rtsSelected .rtsOut {
+    background: #FFF !important;
+}
+
+.lightbold {
+    font-weight: 600;
+}
+
+.bold, h2.vrcf span.name, .data-details span.name, .studentinformation label, .studentdates .title {
+    font-weight: 700;
+}
+
+#userstatus, #userroles {
+    float: right;
+    text-align: right;
+    width: auto;
+    font-size: 12px;
+    color: #1f768c;
+    font-weight: 700;
+}
+
+.fl, .nr input, .commentids span, .commentids input, .flleft {
+    float: left;
+}
+
+.fr, .flright {
+    float: right;
+}
+
+.selections h2.markingperiod, .selections h2.assessmentperiod {
+    width: 120px;
+}
+
+.selections .s3, .selections .s3 select {
+    width: 40px;
+}
+
+.Mark input {
+    width: 50px;
+}
+
+div.courses, div.offclasses {
+    margin-top: 20px;
+    width: 105%;
+    height: 60px;
+    position: relative;
+    margin-right: -20px;
+    min-height: 200px;
+    padding: 0;
+}
+
+.courses .last, .offclasses .last {
+    margin-right: 0 !important;
+}
+
+div.course h3, div.offclass h3 {
+    font-size: 88%;
+    color: #444;
+    font-weight: 400;
+    /*   margin-left: 20px;
+    margin-top: 8px;
+    margin-bottom: 5px;
+*/
+    margin: 0;
+    padding: 8px 12px;
+    /*line-height: 1.1em;*/
+    min-height: 64px;
+}
+
+.course .icons, .offclass .icons {
+    height: 19px;
+    padding-right: 4px;
+}
+
+.gt image, .cte image, .se image, .ell image, .wbl image, .coteacher image, .tcreport tr.markspager {
+    border: none;
+}
+
+div.class_desc ul, .parent-details p.address, .student-details p.address, .form_fields .RadPicker, .ReadSpanDates ul, .spandatepicker ul {
+    margin: 0;
+    padding: 0;
+}
+
+.success, .green, .checkmark {
+    color: #559933;
+}
+
+.parent-details, .comment-intro, .comment-type, .studentinformation span, .studentinformation label, .studentinformation .SpanDates table td {
+    color: #444444;
+}
+
+.cfn_cont h2, .Savebtn .loginbutton, .sa_ctr h2 {
+    margin: 0;
+}
+
+div.RadTabStrip div.rtsLevel li.rtsAfter .rtsOut, div.RadTabStrip div.rtsLevel li.rtsLast .rtsLink, div.RadTabStrip .rtsLevel .rtsBefore, div.RadTabStrip .rtsLevel .rtsAfter, div.RadTabStrip .rtsOut {
+    background: #d2dce5 !important;
+}
+
+td.rtWrapperContent, .RadTabStripLeft_Vista .rtsSeparator, .RadTabStripRight_Vista .rtsSeparator {
+    background: #f6fbff !important;
+}
+
+div#MainContent_ClassControl1_CommentToStudent_RadPageView1, .searchstepstable td, .searchsteps {
+    background: #FFF;
+}
+
+.RadInput .riTextBox, .RadListBox_Default .rlbGroup {
+    border: 1px solid #d5dce4 !important;
+}
+
+.RadTabStrip_Vista .rtsNextArrow, .RadTabStrip_Vista .rtsPrevArrow, .RadTabStrip_Vista .rtsPrevArrowDisabled, .RadTabStrip_Vista .rtsNextArrowDisabled, .RadTabStripTop_Vista .rtsLevel .rtsLink, .RadTabStripTop_Vista .rtsLevel .rtsOut, .RadTabStripBottom_Vista .rtsLevel .rtsLink, .RadTabStripBottom_Vista .rtsLevel .rtsOut, .RadTabStripTop_Vista_Baseline .rtsLevel, .RadTabStripBottom_Vista_Baseline .rtsLevel {
+    background-image: url(WebResource.axd?d=Ag4hkhEM0-cp82lGZMbStZQiIFmaQ6PkwlB0jxM4aFshst3eDDWbn20UVTKR91yEdkKqS9FNfAxxJqTOgPZU0rebUNLzy0fnOSL3KzbNuFO-kmyBUdPkUAMdruGdpGBVinfasTRoSOcXhVbzUNgWDRoeFB_2NKN1baRPs2cp2onpNlYFQKSpJGZiHLKbD_3q0&t=635034392015107921);
+}
+
+.RadTabStripRight_Vista .rtsLink, .RadTabStripRight_Vista .rtsLI .rtsDisabled:hover, .RadTabStripTop_Vista .rtsOut, .RadTabStripTop_Vista .rtsDisabled:hover .rtsOut {
+    background-position: 100% 0;
+}
+
+    .RadTabStripRight_Vista .rtsLink:hover, .RadTabStripRight_Vista .rtsUL .rtsLink:hover {
+        background-position: 100% -200px;
+    }
+
+.RadTabStripRight_Vista .rtsSelected, .RadTabStripRight_Vista .rtsSelected:hover, .RadTabStripRight_Vista .rtsUL .rtsSelected, .RadTabStripRight_Vista .rtsUL .rtsSelected:hover {
+    background-position: 100% -400px;
+}
+
+.RadTabStripTop_Vista .rtsLink, .RadTabStripTop_Vista .rtsDisabled:hover, .rtsDropClueBottom_Vista {
+    background-position: 0 0;
+}
+
+.RadTabStripTop_Vista .rtsSelected, .RadTabStripTop_Vista .rtsSelected:hover, .RadTabStripTop_Vista .rtsSelected .rtsOut, .RadTabStripTop_Vista .rtsSelected:hover .rtsOut {
+    background-position: 0 0 !important;
+}
+
+.RadTabStripBottom_Vista .rtsLink, .RadTabStripBottom_Vista .rtsDisabled:hover {
+    background-position: 0 -182px;
+}
+
+    .RadTabStripBottom_Vista .rtsOut, .RadTabStripBottom_Vista .rtsDisabled:hover .rtsOut {
+        background-position: 100% -182px;
+    }
+
+.row:hover, .tcreport tr:hover, .tcreport tr.altrow:hover {
+    background: #e9f2f7;
+}
+
+.TeacherCourseSectionfields table.rgMasterTable tbody td, .CourseListPopup table.coursegrid th, .CourseListPopup table.coursegrid td {
+    padding: 8px;
+}
+
+.manage-students-list td.rgPagerCell .rgInfoPart {
+    display: none;
+}
+
+table.hidecol2 th:nth-child(2),
+table.hidecol2 td:nth-child(2),
+table.hidecol3 th:nth-child(3),
+table.hidecol3 td:nth-child(3),
+table.hidecol4 th:nth-child(4),
+table.hidecol4 td:nth-child(4),
+table.hidecol5 th:nth-child(5),
+table.hidecol5 td:nth-child(5),
+table.hidecol6 th:nth-child(6),
+table.hidecol6 td:nth-child(6),
+table.hidecol7 th:nth-child(7),
+table.hidecol7 td:nth-child(7),
+table.hidecol8 th:nth-child(8),
+table.hidecol8 td:nth-child(8),
+table.hidecol9 th:nth-child(9),
+table.hidecol9 td:nth-child(9),
+table.hidecol10 th:nth-child(10),
+table.hidecol10 td:nth-child(10) {
+    display: none;
+}
+
+.comment-1, .comment-2, .comment-3, .comment-finder .RadComboBoxWithLabel {
+    padding-bottom: 8px !important;
+}
+
+.RadToolTip.rtVisibleCallout .rtCallout, .hidden-id {
+    display: none !important;
+}
+
+.areaofneed .general, .areaofstrength .general {
+    width: 265px;
+}
+
+.areaofneed .comprehension, .areaofstrength .comprehension {
+    width: 355px;
+}
+
+.areaofneed .cueing, .areaofstrength .cueing {
+    width: 225px;
+}
+
+.o_fluency, .areaofneed, .areaofstrength, .comments {
+    border: 1px solid #ABD2E1;
+    border-top: none;
+}
+
+.teacherenrollments-subheading-start, .teacherenrollments-subheading-end {
+    position: relative;
+    width: 170px;
+    float: left;
+}
+
+.form .form-label, .pipo-properties .bold {
+    margin-top: 0.4em;
+    font: bold 14px "PT Sans", sans-serif, Arial, Helvetica;
+    color: #70b625;
+}
+
+.form .col-field {
+    float: left;
+    margin-right: 1em;
+}
+
+.form .RadAutoCompleteBox_Metro .racInput {
+    height: 20px;
+}
+
+.request-comment {
+    width: 49em;
+    height: 2.3em;
+}
+
+.teacherrequest .elementarycourse .RadComboBox_Metro {
+    width: 54.9em !important;
+}
+
+.teacherrequest .requesttype {
+    display: table;
+}
+
+    .teacherrequest .requesttype label {
+        width: 10em;
+        font: bold 14px "PT Sans", sans-serif, Arial, Helvetica;
+    }
+
+.es-student-unenrolled {
+    color: purple;
+    font-weight: 700;
+}
+
+.teachermenu .RadMenu_Metro {
+    z-index: 1;
+}
+
+    .teachermenu .RadMenu_Metro div.rmRootGroup, .teachermenu .RadMenu_Metro ul.rmRootGroup {
+        background: url(/ui/apps/sites/stars_classroom/images/grid_top_bkg.gif) repeat-x scroll 0 0 #B1CEDC !important;
+    }
+
+    .teachermenu .RadMenu_Metro .rmRootLink .rmText {
+        color: #444444;
+        font-weight: bold;
+    }
+
+    .teachermenu .RadMenu_Metro .rmRootLink:hover {
+        border-color: #444444 !important;
+    }
+
+.RadMenu_Metro .rmFocused, .RadMenu_Metro .rmFocused:hover, .RadMenu_Metro .rmSelected, .RadMenu_Metro .rmSelected:hover {
+    border-color: #444444 !important;
+}
+
+.autocomplete-student-id {
+    font-weight: bold;
+    color: #70b625;
+}
+
+.autocomplete-student-name {
+}
+
+.teacher-name h2 {
+    margin: 0;
+    padding: 0;
+}
+
+.manage-course-section h3 {
+    font-size: 16px;
+    margin: 0 0 0 0.7em;
+    padding: 0;
+}
+
+.manage-course-section h5 {
+    padding: 0;
+    margin: 0;
+}
+
+.tooltip-icon.nickname {
+    display: inline-block;
+}
+
+.spanpicker-header {
+    font-size: 12px;
+}
+
+.teacherenrollments-wrap h5 .plain-text {
+    font-weight: normal;
+}
+
+th.combine-action-column, td.combine-action-column {
+    border-right: 0 !important;
+}
+
+th.combine-action-column-middle, td.combine-action-column-middle {
+    border-right: 0 !important;
+    border-left: 0 !important;
+}
+
+th.combine-action-column-last, td.combine-action-column-last {
+    border-left: 0 !important;
+}
+
+td.certify a {
+    position: relative;
+    left: -8.2em;
+    font-weight: bold;
+    font-size: 12pt;
+}
+
+
+.column-layout {
+}
+
+    .column-layout .col {
+        float: left;
+    }
+
+.teacher-verification, .errornotification {
+    padding: 2em 1em 1em 1em;
+    border: 1px solid #ABD2E1;
+    margin-top: 2em;
+}
+
+.teacher-verification-checkbox {
+    width: 10%;
+}
+
+.teacher-verification-text {
+    width: 90%;
+}
+
+.teacher-verification-checkbox-input input[type=checkbox] {
+    top: -23px;
+    position: relative;
+    height: 4.5em;
+    width: 4.5em;
+}
+
+.teacher-verification-checkbox-label {
+    position: relative;
+    top: -20px;
+    left: 5px;
+    color: Green;
+    font-size: 10pt;
+    font-weight: bold;
+}
+
+tr.certify-request td {
+    background-color: #f5eeb8;
+    padding: 10px;
+    font-weight: bold;
+}
+
+.teacher-reports-table .report-title {
+    font-weight: bold;
+}
+
+.teacher-reports-table .report-filter-label {
+    display: inline-block;
+    width: 7em;
+    font-weight: bold;
+}
+
+.pipoadmin .filters {
+    margin: 1em;
+}
+
+.pipofilter {
+    margin-left: 1em;
+}
+
+.k-grid th.k-header,
+.k-grid-header {
+    background: #B1CEDC;
+}
+
+    .k-grid th.k-header,
+    .k-grid th.k-header .k-link {
+        color: black;
+    }
+
+.k-primary {
+    color: white !important;
+}
+
+.pipo .k-tooltip {
+    position: relative;
+}
+
+.scrolling-command-bar {
+    box-sizing: border-box;
+    position: fixed;
+    width: 100%;
+    height: 45px;
+    bottom: 0;
+    left: 0;
+    background-color: White;
+    border-top: 3px solid #70b625;
+    box-shadow: 0 -3px 50px 2px #888;
+    z-index: 500;
+}
+
+    .scrolling-command-bar .command-content {
+        display: table;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+    }
+
+        .scrolling-command-bar .command-content .command-areas {
+            display: table-cell;
+            vertical-align: middle;
+        }
+
+            .scrolling-command-bar .command-content .command-areas .command-area {
+                width: 968px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+.inline {
+    display: inline-block;
+}
+
+label.radtoplabel {
+    display: block;
+    font-weight: 700;
+}
+
+.radlonglabel {
+    width: 125px !important;
+    font-weight: 700;
+}
+
+.RadAutoCompleteBoxPopup_Metro,
+.RadComboBoxWithLabel,
+.RadComboBoxWithLabel .rcbLabel,
+.RadAutoCompleteBox_Metro .racInput,
+.RadComboBoxPopup_Metro .racInput,
+.RadAutoCompleteBox_Metro,
+.RadWindow_Metro,
+.riLabel,
+.RadInput_Metro {
+    font-family: inherit !important;
+    font-size: inherit !important;
+}
+
+    .RadAutoCompleteBox_Metro .racEmptyMessage {
+        color: #bbb !important;
+        font-style: italic !important;
+        font-size: 80% !important;
+    }
+
+.CommentCodes {
+}
+
+.generatereport {
+}
+
+    .generatereport .studentsearch {
+        position: relative;
+        display: inline-block;
+        top: .3em;
+    }
+
+.control-group {
+    padding: 0 2em 2em 2em;
+}
+
+.multiline-textbox {
+    width: 80%;
+    height: 5.5em;
+}
+
+.multiline-textboxCSS {
+    width: 80%;
+    height: 5.5em;
+    margin-left: 18px;
+}
+
+.compentency-desc {
+    display: inline-block;
+    width: 800px;
+}
+
+a.appupdates {
+    color: Red !important;
+    font-size: 13pt;
+}
+
+.center-text {
+    text-align: center;
+}
+
+.elementarygrading-commands {
+    position: relative;
+    top: -2em;
+}
+
+.markingperiod-selection {
+    position: relative;
+    top: 4em;
+    margin-top: 0.5em;
+}
+
+/* Kendo Tooltip */
+.k-widget.k-tooltip {
+    background-color: White;
+    border: none;
+    box-shadow: 15px 5px 50px 6px #ccc;
+    color: #444444;
+}
+
+.k-tooltip {
+    padding: 0;
+}
+
+/* Student Bio Pop-up */
+/*
+.studentbiodata {
+    box-sizing: border-box;
+    height: 450px;
+    width: 400px;
+}
+*/
+.studentinfo-popup {
+    box-sizing: border-box;
+    padding: 0 0 1em 1em;
+    height: 60%;
+}
+
+.guardianinfo-popup {
+    box-sizing: border-box;
+    background-color: #e8f5fb;
+    padding-left: 1em;
+    padding-top: 0.1em;
+    height: 37.5%;
+    margin-left: -9px;
+    margin-right: -9px;
+    margin-bottom: -9px;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+
+.student-image {
+    left: -1em;
+    text-align: center;
+}
+
+.reportcardgenerator .studentautocomplete {
+    width: 600px;
+}
+
+.reportcardgenerator .officialclassautocomplete {
+    width: 300px;
+}
+
+.kendoactionbar {
+    width: 100%;
+    text-align: right;
+}
+
+.kendorefresh {
+    width: 100px;
+    background-repeat: no-repeat;
+    padding-left: 24px;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAACiUlEQVRIS8WVPWgUQRTH38zO5s7DLliJ2FgoEWIsLJQkYHHFbXaP3XNJm6iFgqBiJzZWdkIiYhH8KnWLZyY5CLlCDUmlBgURREUQtLCwcr1wu7NPBvbg7tj7KkKm253/e7997z9vlsEuL7bL+WHvAaVS6XA+n3eJ6AwAHAOAfUT0lTG2Va/Xn62trX3WXbAsa9I0TSSiqeXl5U/NznStwPf9/UqpO0mSXGKMiW6tJKLnnPOAiB4DgI6ZllJu9AT4vn8wjuMqAIwP61FfgG3bBc75Jud8opmciF4xxp7Ecfw2iqLYNM1xIcQ5AKgAAG/9iL4Az/PuEdGVNKgBAJcR8VFnJTMzM0XTNF9oTwYGFIvFQ4VC4QtjLJcGXchKbtv2WSGEbmG+E9yzgnK5fJ1zfjcN2kDE6SwPHMe5ZRjGfNZeo9EoV6vVj5kme54nichON+cQ8emwJnfq246p67rvAOCkFkVRdGJ1dfXDIADf9w/EcXwj1f5GxGYX2ifZ87yLSqlRLRwZGVkKguDPIADHcSYMw9hOtW8Q8VTfQRskcVPjuu55AHiYPiMiepkAy7KOm6b5EgCMTkCSJAtSyttZYNd1NwFAXyWglLompVzIBDiOM2UYxuuMJDtKqZKUUsPblm4rES2lL3eEEEeCIPg5DKCulCpLKWtdkt/XlqV7i4h4tVXXdoq6VJAkSRIAgL4pvwkhWJIkYwAwxxhrnZPtOI4nV1ZW/g0L6Os3Eb0Pw9Cq1Wq/es5BSwV/GWPzRDQLAPpS67YiAHgQhuHN9fX1MEvU1iLbtscMw9A3p4uI+mRApVI5GkXRLOf8NACMEhFxzr8rpbZyuRwGQfCjV4l7/8vsa0Afwa5X8B88NB0oBKAEUwAAAABJRU5ErkJggg==);
+}
+
+.k-window-titlebar.k-header {
+    background-color: #B1CEDC;
+}
+
+.studentsListForGrade .studentid {
+    width: 40em;
+}
+
+/* School Message Board */
+.message-board {
+    position: relative;
+    color: #907c0a;
+    background-color: #f5eeb8;
+    padding: 1em;
+    font-size: 10.5pt !important;
+    font-weight: 700;
+    border-radius: 7px;
+    margin-bottom: 1em;
+}
+
+    .message-board .message-board-close {
+        border: solid 1px #907c0a;
+        position: absolute;
+        top: 1em;
+        right: 1em;
+        cursor: pointer;
+        padding: 0 .2em 0 .2em;
+    }
+
+    .message-board .message-board-title {
+        margin: 0;
+        padding: 0;
+    }
+
+    .message-board ul {
+        margin: 0;
+        padding: 0;
+    }
+
+        .message-board ul li {
+            list-style-type: none;
+            margin: .3em;
+        }
+
+            .message-board ul li .message-text {
+                display: inline-block;
+                position: relative;
+                width: 50em;
+                top: .4em;
+            }
+
+.message-icon {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    height: 34px;
+    width: 32px;
+}
+
+    .message-icon.softrelease {
+        background: url('/ui/apps/sites/stars/images/softrelease.gif') no-repeat;
+    }
+
+    .message-icon.important {
+        background: url('/ui/apps/sites/stars/images/important.gif') no-repeat;
+    }
+
+    .message-icon.bug {
+        background: url('/ui/apps/sites/stars/images/bug.gif') no-repeat;
+    }
+
+    .message-icon.info {
+        background: url('/ui/apps/sites/stars/images/info.gif') no-repeat;
+    }
+
+.mtiDetails {
+    height: auto;
+    width: auto;
+    font-weight: 400;
+    font-size: 10.0pt;
+    color: #444444;
+    margin: 0;
+    padding: 0;
+    font-style: italic;
+}
+
+.k-mtiTextBox {
+    padding-left: 35px;
+}
+
+.artsDetails {
+    height: auto;
+    width: auto;
+    font-weight: 400;
+    font-size: 10.0pt;
+    color: #444444;
+    margin: 0;
+    padding: 0;
+    font-style: italic;
+}
+
+.k-artsTextBox {
+    padding-left: 35px;
+}
+
+.download {
+    position: relative;
+    width: 700px;
+    height: 80px;
+    padding-top: 20px;
+}
+
+.downLoad-rightdiv {
+    position: relative;
+    padding-top: 5px;
+    padding-left: 10px;
+    float: left;
+    width: 200px;
+}
+
+.downLoad-leftdiv {
+    position: relative;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    float: left;
+    width: 400px;
+}
+
+.downLoad-button-div {
+    padding-top: 15px;
+    float: left;
+    width: 100%;
+}
+
+.download-button.disable {
+    background: #9b9393; /*url(/ui/apps/sites/stars_classroom/images/toggle_btn_bg.png) repeat-x;*/
+    cursor: none;
+}
+
+.download-button {
+    background: url(/ui/apps/sites/stars_classroom/images/button_bg.png) repeat-x; /*#70b625;*/
+    border: 0;
+    font-family: "PT Sans", sans-serif, Arial, Helvetica;
+    font-size: 18px;
+    color: #fff4ff;
+    text-transform: capitalize;
+    font-weight: 700;
+    height: 32px;
+    line-height: 32px;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    border-radius: 7px;
+    padding: 0 10px 5px;
+}
+
+.downloadtooltip {
+    display: inline-block;
+    vertical-align: sub;
+    width: inherit;
+}
+
+.downloadoptioncheckbox {
+    vertical-align: text-bottom;
+}
+
+
+.fileUpload {
+    position: relative;
+    overflow: hidden;
+    margin: 10px;
+}
+
+    .fileUpload input.upload {
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin: 0;
+        padding: 0;
+        font-size: 20px;
+        cursor: pointer;
+        opacity: 0;
+        filter: alpha(opacity=0);
+    }
+
+.label-Upload {
+    font-weight: bold;
+}
+
+.uploadbutton {
+    border: 0;
+    font-family: "PT Sans", sans-serif, Arial, Helvetica;
+    font-size: 18px;
+    color: #fff4ff;
+    text-transform: capitalize;
+    font-weight: 700;
+    height: 32px;
+    line-height: 32px;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    border-radius: 7px;
+}
+
+.uploadbutton-green {
+    background: url(/ui/apps/sites/stars_classroom/images/button_bg.png) repeat-x;
+}
+
+.uploadbutton-blue {
+    background-color: #5bc0de;
+    border-color: #46b8da;
+}
+
+.uploadbutton-yellow {
+    background-color: #f0ad4e;
+    border-color: #eea236;
+}
+
+.uploadbutton-purple {
+    display: inline-block;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    background: url(/ui/apps/sites/stars_classroom/images/button_bg_purple.png) repeat-x;
+    margin: 0px;
+    padding: 0px 10px 0px;
+}
+
+    .uploadbutton-purple.disable {
+        background: #9b9393;
+        cursor: none;
+    }
+
+.warning-msg-box {
+    margin: 10px 0px;
+    padding: 5px 10px 5px 80px;
+    background-repeat: no-repeat;
+    background-position: 10px center;
+    background-image: url(/ui/apps/sites/stars_classroom/images/alert-icon.png);
+}
+
+
+.fieldset {
+    position: relative;
+    border: 1px solid #1f768c;
+    margin: 0px;
+    padding: 10px;
+    text-align: left;
+    width: 400px;
+    float: left;
+}
+
+    .fieldset .legend {
+        background: #fff;
+        height: 1px;
+        position: absolute;
+        top: -1px;
+        padding: 0 5px;
+        color: #000;
+        overflow: visible;
+    }
+
+    .fieldset div {
+        position: relative;
+        width: auto;
+        float: left;
+        padding: 1px;
+    }
+
+        .fieldset div .radio {
+            position: relative;
+            width: 150px;
+            float: left;
+        }
+
+    .fieldset .legend span {
+        top: -0.9em;
+        position: relative;
+        vertical-align: middle;
+        display: inline-block;
+        overflow: visible;
+        font-family: "PT Sans", sans-serif, Arial, Helvetica;
+        font-weight: 700;
+        font-size: 12pt;
+        color: #70b625 !important;
+    }
+
+        .fieldset .legend span.required {
+            color: red !important;
+            font-weight: bold;
+        }
+
+.k-callout {
+    border-bottom-color: lightblue !important;
+}
+
+.k-tooltip {
+    border: 1px solid lightblue !important;
+    margin: 0 !important;
+}
+
+.k-tooltip-content {
+    height: 100%;
+    font-family: "PT Sans", sans-serif, Arial, Helvetica !important;
+    font-size: 14px !important;
+    margin: 0 !important;
+    padding: 5px !important;
+}
+
+/* Additional styles for my assessments page */
+.col13 {
+    width: 13%;
+}
+
+.col16 {
+    width: 16%;
+}
+
+.col23 {
+    width: 23%;
+}
+
+.col20 {
+    width: 20%;
+}
+
+.leftPadding15 {
+    padding-left: 15px;
+}
+
+.leftPadding10 {
+    padding-left: 10px;
+}
+
+.rightPadding10 {
+    padding-right: 10px;
+}
+
+.noPadding {
+    padding: 0;
+}
+
+.top10 {
+    margin-top: 10px;
+}
+
+.top25 {
+    margin-top: 25px;
+}
+
+.bottom10 {
+    margin-bottom: 10px;
+}
+
+.col27 {
+    width: 27%;
+}
+
+.col15 {
+    width: 15%;
+}
+
+.noMargin {
+    margin: 0;
+}
+
+.header-row {
+    background-color: #ACCBD9;
+    color: #02658f;
+    letter-spacing: -.01em;
+    font-size: 16px;
+    font-weight: 600;
+    margin-left: -15px;
+    margin-right: -15px;
+    box-sizing: border-box;
+    padding: 10px 15px;
+}
+
+.sa_ctr .row.studentAssessment-row {
+    padding: 0 15px;
+    background: transparent !important;
+}
+
+.header-row ul, .grade-row ul {
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+    .header-row ul li, .grade-row ul li {
+        list-style: none;
+        display: inline-block;
+        vertical-align: top;
+        box-sizing: border-box;
+    }
+
+.grade-row {
+    margin-left: -15px;
+    margin-right: -15px;
+    box-sizing: border-box;
+    padding: 0px 15px;
+}
+
+    .grade-row ul li {
+        border-right: 1px solid #ABD2E1;
+        padding-bottom: 5000em;
+        margin-bottom: -5000em;
+    }
+
+        .grade-row ul li:first-child {
+            padding-left: 0;
+        }
+
+        .grade-row ul li:last-child {
+            border: none;
+        }
+
+        .grade-row ul li > div {
+            margin: 10px 0;
+        }
+
+    .grade-row input {
+        width: 30px;
+        padding: 0 3px;
+        text-transform: uppercase;
+    }
+
+    .grade-row .scoreId input {
+        width: 60px;
+    }
+
+.grade-headerRow {
+    padding: 0 !important;
+    box-sizing: border-box;
+    width: 100% !important;
+}
+
+    .grade-headerRow input {
+        margin-bottom: 10px;
+    }
+
+.studentExempt {
+    margin: 7px 0;
+    box-sizing: border-box;
+}
+
+    .studentExempt .studentExemptHelp {
+        display: inline-block;
+        top: 4px;
+        left: 130px;
+        position: absolute;
+        padding-left: 5px;
+    }
+
+.student-checkbox {
+    position: relative;
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+    .student-checkbox label {
+        font-weight: 700;
+        font-size: 16px;
+        color: #1f768c;
+        cursor: pointer;
+        position: absolute;
+        left: 20px;
+        top: 1px;
+    }
+
+    .student-checkbox input[type=checkbox] {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        position: absolute;
+        left: 0;
+        top: 5px;
+    }
+
+.errorMessage {
+    color: #dd4c39;
+    max-width: 100%;
+    margin-top: 2px;
+    margin-bottom: 5px;
+    font-weight: 700;
+    font-size: 13px;
+}
+
+.divAssessmentDate .HiddenPicker table tbody tr td:first-child span input {
+    padding: 0 !important;
+    width: 0 !important;
+}
+
+.divAssessmentDate .HiddenPicker table tbody tr td a.rcCalPopup {
+    margin-left: -4px;
+    margin-top: -3px;
+}
+
+.k-widget.k-tooltip {
+    padding: 4px;
+    border-radius: 6px;
+}
+
+.HiddenRadDateTextBox {
+    width: 1px !important;
+    border: 0 !important;
+    margin: 0 !important;
+    background: none transparent !important;
+    visibility: hidden !important;
+}
+
+.hightAuto {
+    height: auto;
+}
+
+    .hightAuto input.loginbutton {
+        box-sizing: border-box;
+        padding: 0px 10px;
+        margin: 0 0 0 10px;
+        height: 33px;
+        line-height: 33px;
+    }
+
+.error-block {
+    position: relative;
+    clear: both;
+    margin: 10px 0 0 130px;
+}
+
+.login-errorblock {
+    clear: both;
+    margin-left: 40px;
+}
+
+#container .LoginformHolder .forgottenPass a {
+    color: #1f768c;
+    font-weight: 700;
+}
+
+.LoginformHolder h2.margin-top5, .margin-top5 {
+    margin-top: 8px;
+}
+
+.spacerHeight-otherProperties {
+    display: block;
+    min-height: 15px;
+}
+
+div.class_desc .bottom li:last-child {
+    padding-bottom: 15px;
+}
+
+div.class_desc li.iconAbs {
+    margin-left: 32px;
+    position: relative;
+}
+
+    div.class_desc li.iconAbs .iconPosition {
+        position: absolute;
+        left: -30px;
+        margin: 0;
+        top: 0;
+    }
+
+div.class_desc {
+    height: auto;
+    min-height: auto;
+}
+
+div.coursePill-blueGray, div.coursePill-blueGray:hover {
+    background: #D8E4E6;
+    border-radius: 8px;
+}
+
+div.coursePill-pink, div.coursePill-pink:hover {
+    background: #E9D8FF;
+    border-radius: 8px;
+}
+
+div.teachersClassControl > a {
+    display: inline-block;
+}
+
+
+
+
+div.class_desc {
+    padding: 0;
+    margin: 0;
+    background: #FFF;
+    box-sizing: border-box;
+}
+
+    div.class_desc .legendHeader ul {
+        background: #e4eff8;
+        padding: 15px 5px;
+        border-top-left-radius: 8px;
+        -webkit-border-top-left-radius: 8px;
+        -moz-border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+        -webkit-border-top-left-radius: 8px;
+        -moz-border-top-left-radius: 8px;
+    }
+
+    div.class_desc div.bottom {
+        margin: 15px 5px 0 5px;
+        padding: 0;
+    }
+
+.classLevel {
+    padding-bottom: 2em;
+}
+
+/* Calendar control hover CSS */
+table.RadCalendarMonthView_Metro tr td:hover, table.RadCalendarMonthView_Metro tr:last-child td:last-child input:hover {
+    border-color: #e5e5e5;
+    background: #e5e5e5;
+}
+
+table.RadCalendarMonthView_Metro tr td.rcSelected:hover, table.RadCalendarMonthView_Metro tr td.rcDisabled:hover, table.RadCalendarMonthView_Metro tr:last-child td:last-child:hover {
+    border-color: transparent;
+    background: transparent;
+}
+
+table.RadCalendarMonthView_Metro tr td.rcDisabled a, table.RadCalendarMonthView_Metro tr td.rcDisabled a:hover {
+    cursor: default;
+}
+
+.disableDropdown.k-textbox:hover {
+    background: transparent;
+    border-color: #bcb4b0;
+}

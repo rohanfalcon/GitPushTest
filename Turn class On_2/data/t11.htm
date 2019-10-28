@@ -1,0 +1,1531 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head><title>
+	Add/Edit Student Record
+</title><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><link id="CheckBoxSliderCss" rel="stylesheet" type="text/css" href="/ui/apps/sites/stars_classroom/checkboxSlider.css?ver=2.31.1.2" /><link id="IvoryCss" rel="stylesheet" type="text/css" href="/ui/apps/sites/stars_classroom/ivory.css?ver=2.31.1.2" /><link id="ElementarySchoolSchedulingCss" rel="stylesheet" type="text/css" href="/ui/apps/sites/stars_classroom/elementaryschoolscheduling.css?ver=2.31.1.2" /><link id="KendoCommonCss" rel="stylesheet" href="/ui/apps/sites/stars_classroom/kendo/kendo.common.css?ver=2.31.1.2" /><link id="KendoDefaultCss" rel="stylesheet" href="/ui/apps/sites/stars_classroom/kendo/kendo.default.css?ver=2.31.1.2" /><link id="KendoMetroCss" rel="stylesheet" href="/ui/apps/sites/stars_classroom/kendo/kendo.metro.min.css?ver=2.31.1.2" /><link rel="stylesheet" type="text/css" href="../Content/toastr.css" /><link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic" /><link rel="stylesheet" href="/ui/apps/resources/font-awesome/css/font-awesome.min.css" type="text/css" /><link id="MainCss" rel="stylesheet" type="text/css" href="/ui/apps/sites/stars_classroom/main.css?ver=2.31.1.2" />
+
+    <!--[if lte IE 8]>
+    <link id="Ie8Css" rel="stylesheet" type="text/css" href="/ui/apps/sites/stars_classroom/ie8.css?ver=2.31.1.2" />    
+    <![endif]-->
+
+    <script src="/starsclassroom/Scripts/kendo/jquery.min.js?ver=2.31.1.2" type="text/javascript"></script>
+    <script src="/starsclassroom/Scripts/kendo/kendo.all.min.js?ver=2.31.1.2" type="text/javascript"></script>
+    <script src="/starsclassroom/Scripts/toastr.min.js?ver=2.31.1.2" type="text/javascript"></script>
+    <script src="/starsclassroom/Scripts/unsavedconfirmation.js?ver=2.31.1.2" type="text/javascript"></script>
+
+    <!--[if lte IE 8]>
+    <script src="/starsclassroom/Scripts/ie8Fallback.js?ver=2.31.1.2" type="text/javascript"></script>
+    <![endif]-->
+
+    <script src="/starsclassroom/Scripts/validate.min.js?ver=2.31.1.2" type="text/javascript"></script>
+
+    <link href="/starsclassroom/WebResource.axd?d=urCACUaUZeT6oPoIZXShbq9LQ-yh1b8NC-tNAmxvuvUdIcqG1G5NlhoWuIGHfYhg6IhYGBLUNCdZDlRs29Bl_u7K1YmY93EZGW5g4sZPSZdwtoEH0&amp;t=636360589564367603" type="text/css" rel="stylesheet" class="Telerik_stylesheet" /><link href="/starsclassroom/WebResource.axd?d=aupLorz3w8A80OJEEKIwoIYcJ2VYR7pVPrfDpRhKy7SjsVZBb19sY6rmGQMhK9sL_xRBWGAVqrhHmW-AOsxlQ8ScpDiOrC7dPSDlJBoAmdbOLXe-Lic-39qbKV4fNsnNU5WebQ2&amp;t=636360589559077603" type="text/css" rel="stylesheet" class="Telerik_stylesheet" /></head>
+<body>
+    <div id="loadingdiv">
+    </div>
+
+    <form method="post" action="./PIPOAssignment.aspx?id=0&amp;School=1010015&amp;Year=2017&amp;Term=1" onsubmit="javascript:return WebForm_OnSubmit();" id="ctl01">
+<div class="aspNetHidden">
+<input type="hidden" name="RadScriptManager1_TSM" id="RadScriptManager1_TSM" value="" />
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['ctl01'];
+if (!theForm) {
+    theForm = document.ctl01;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/starsclassroom/WebResource.axd?d=pynGkmcFUV13He1Qd6_TZItUc7uOXVQ_JJSF3nqWHTssVf86I8T6DdUK_rt6gpBWQGLL6g2&amp;t=636160664560000000" type="text/javascript"></script>
+
+
+<script src="/starsclassroom/ScriptResource.axd?d=1HpV3OVB0CaEXoaafcqmhqJZa2bebF8z_FF0-EldwBH21IaxfGlAbaVjDF2unh6RE80xJSul3t-rb8c97YYqwPNFk2NeUGa5nusJgONIncVk7O-3fGq9Cs5R_JP4mzB8Vp9sSQ2&amp;t=ffffffffbc20153d" type="text/javascript"></script>
+<script src="/starsclassroom/Telerik.Web.UI.WebResource.axd?_TSM_HiddenField_=RadScriptManager1_TSM&amp;compress=1&amp;_TSM_CombinedScripts_=%3b%3bSystem.Web.Extensions%2c+Version%3d4.0.0.0%2c+Culture%3dneutral%2c+PublicKeyToken%3d31bf3856ad364e35%3aen-US%3a4bd8faf8-554d-46be-b2ff-c9d57adb612c%3aea597d4b%3ab25378d2" type="text/javascript"></script>
+<script src="https://d2i2wahzwrm1n5.cloudfront.net/ajaxz/2017.2.621/Common/Core.js" type="text/javascript"></script>
+<script src="../Scripts/starsLib.js?ver=2.31.1.2" type="text/javascript"></script>
+<script src="https://d2i2wahzwrm1n5.cloudfront.net/ajaxz/2017.2.621/Ajax/Ajax.js" type="text/javascript"></script>
+<script src="https://d2i2wahzwrm1n5.cloudfront.net/ajaxz/2017.2.621/Common/jQuery.js" type="text/javascript"></script>
+<script src="https://d2i2wahzwrm1n5.cloudfront.net/ajaxz/2017.2.621/Common/Navigation/OverlayScript.js" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+function WebForm_OnSubmit() {
+if (typeof(ValidatorOnSubmit) == "function" && ValidatorOnSubmit() == false) return false;
+return true;
+}
+//]]>
+</script>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="83C391A5" />
+</div>
+        <script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ctl00$RadScriptManager1', 'ctl01', ['tctl00$RadAjaxManager1SU','RadAjaxManager1SU'], [], [], 90, 'ctl00');
+//]]>
+</script>
+
+
+        <!-- 2017.2.621.45 --><div id="RadAjaxManager1SU">
+	<span id="ctl00_RadAjaxManager1" style="display:none;"></span>
+</div>
+
+        <div id="RadAjaxLoadingPanel1" class="RadAjax RadAjax_Metro" style="display:none;">
+	<div class="raDiv">
+
+	</div><div class="raColor raTransp">
+
+	</div>
+</div>
+
+        <!-- Begin Container -->
+        <div id="container">
+            <!-- Begin Header -->
+            <div id="header">
+                <div class="left">
+                </div>
+                <div class="right">
+                </div>
+            </div>
+            <!-- End Header -->
+            <!-- Begin Header Nav -->
+            <div id="headernav">
+                <!-- Begin Header Nav-right -->
+                <div class="right">
+                    <!-- Begin Userlogin -->
+                    <div id="userroles">
+                        &nbsp;<a id="LogOffLinkButton" href="javascript:__doPostBack(&#39;ctl00$LogOffLinkButton&#39;,&#39;&#39;)">Log Off</a>
+                    </div>
+                    <div id="userstatus">
+                        <span id="LoginName1">Welcome, cmsuser1</span>
+                    </div>
+                    <!-- End Userlogin -->
+                </div>
+            </div>
+            <!-- End Header Nav -->
+            <!-- Begin Application Area -->
+            <div id="apparea">
+                
+    
+                    <div class="breadcrumbs top">
+                        <a id="MainContent_LoginViewTop_HomeLinkTop" href="../Default.aspx">Home</a>
+                        <a id="MainContent_LoginViewTop_AdminLinkTop" href="default.aspx">> School Administrator</a>
+                        <a id="MainContent_LoginViewTop_CrumbPIPOTop" href="PIPOList.aspx">> Push-In/Pull-Out Instruction</a>
+                        <span>&gt; Add/Edit Student Record</span>
+                    </div>
+                
+    
+
+<h2 class="help">
+    <a href='https://wiki.nycenet.edu/display/HSST/STARS+Classroom+Student+Service+Assignment' target="_blank">
+        <img src="/ui/doe/images/spacer.gif" width="24" height="23" alt="" />
+    </a>
+</h2>
+<h2 class="contact">
+    <a href="#" onclick="return openWindow('/starsclassroom/ContactUs.aspx');">
+        <img src="/ui/apps/sites/stars_classroom/images/contactus_ico.png" />
+    </a>
+</h2>
+
+    <div class="clear">
+    </div>
+    <div>
+        <h1>
+            Add/Edit Student Record
+        </h1>
+        <div id="marknote">
+            Complete this screen for each student record. A <span class="required">*</span> next to a title indicates that the field is required in order to save the record.
+        </div>
+        <div class="school-selection">
+    <span class='qparam'><strong>School:</strong><span>01M015 - P.S. 015 ROBERTO CLEM...</span></span><span class='qparam'><strong>Year:</strong><span>2017</span></span><span class='qparam'><strong>Term:</strong><span>1 : Sep 8-Jun 28 (current)</span></span>    
+</div>
+        
+<style>
+    .k-grid td {
+        border-width: 1px;
+    }
+
+    .k-tooltip {
+        position: relative;
+        color: #DE6443 !important;
+    }
+</style>
+
+<div class="pipo form">
+    <div class="commands">
+        <div class="save radbutton">
+            <input type="button" name="ctl00$MainContent$PIPOAssignmentControl$TopSaveButton" value="Save and Back" onclick="SaveData1(); return false;__doPostBack(&#39;ctl00$MainContent$PIPOAssignmentControl$TopSaveButton&#39;,&#39;&#39;)" id="MainContent_PIPOAssignmentControl_TopSaveButton" class="loginbutton" />
+        </div>
+        <div class="save radbutton">
+            <input type="button" name="ctl00$MainContent$PIPOAssignmentControl$TopSaveAndNewButton" value="Save and New Record" onclick="SaveAddNew(); return false;__doPostBack(&#39;ctl00$MainContent$PIPOAssignmentControl$TopSaveAndNewButton&#39;,&#39;&#39;)" id="MainContent_PIPOAssignmentControl_TopSaveAndNewButton" class="loginbutton" />
+        </div>
+        <div class="cancel radbutton">
+            <input type="submit" name="ctl00$MainContent$PIPOAssignmentControl$TopCancelButton" value="Cancel Record" onclick="CancelClick(); return false;" id="MainContent_PIPOAssignmentControl_TopCancelButton" title="Cancel Record" class="loginbutton" />
+        </div>
+    </div>
+    <div class="commands">
+        <label id="MainContent_PIPOAssignmentControl_lblErr" class="errormessage" style="display: none">
+        </label>
+    </div>
+
+
+    
+
+
+<div id="pipoForm" data-role="validator">
+    <div>
+        <strong>Record Details</strong>
+    </div>
+    <div class="row-field">
+        <div class="form-label">
+            Record Type: <span class="required">*</span>
+        </div>
+        <div>
+            <input type="radio" name="serviceType" value="1" checked="checked" />
+            Push-In 
+            <input type="radio" name="serviceType" value="2" />
+            Pull-Out
+        </div>
+    </div>
+    <div class="row-field">
+        <div class="form-label">
+            Course: <span class="required">*</span>
+        </div>
+
+        <input id="courseList" style="width: 450px" />
+
+        <div id="MainContent_PIPOAssignmentControl_PIPOStudentGradeLevelControl_Panel2" title="Listed are all course codes available for your school in STARS. Please use the grade level appropriate course codes when assigning a service. To create a new variation of a course code, middle and high schools can follow the information provided in the Help." class="tooltip-icon">
+
+</div>
+    </div>
+    <div class="studentsListForGrade form">
+        <div class="grade col-field">
+            <div class="form-label">
+                Grade Level
+            </div>
+            <div>
+                <input id="allGrades" style="width: 100px" />
+            </div>
+        </div>
+        <div class="studentid col-field">
+            <div class="form-label">
+                Student Name/ID <span class="required">*</span>
+            </div>
+            <div>
+                <select id="studentList" name="studentList" required="required" data-required-msg="Student / ID is required"></select>
+                <span class="k-invalid-msg" data-for="studentList"></span>
+            </div>
+        </div>
+    </div>
+    <div class="clear"></div>
+    <div class="row-field">
+        <div class="form-label">
+            Teacher: <span class="required">*</span>
+        </div>
+        <input id="teachersList" name="teachersList" style="width: 450px" required data-required-msg="Select a Teacher" />
+        <span class="k-invalid-msg" data-for="teachersList"></span>
+    </div>
+    <div class="row-field">
+        <div class="fl mr">
+            <div class="form-label">Student Start Date: <span class="required">*</span></div>
+
+            <input id="startDatePicker" name="startDatePicker" required data-required-msg="Select a Student Start Date" />
+            <span class="k-invalid-msg" data-for="startDatePicker"></span>
+        </div>
+        <div class="fl mr">
+            <div class="form-label">Student End Date: <span class="required">*</span></div>
+
+            <input id="endDatePicker" name="endDatePicker" required data-required-msg="Select a Student End Date" data-greaterdate-field="startDatePicker" data-greaterdate-msg='Retire date should be after Hire date' />
+            <span class="k-invalid-msg" data-for="endDatePicker"></span>
+        </div>
+        <div class="fl">
+            <div class="form-label">Minutes Per Week:</div>
+            <input type="text" id="minutesPerWeekTxtBox" class="shade-textbox" readonly="readonly" maxlength="3" disabled="disabled" />
+
+            <div id="MainContent_PIPOAssignmentControl_PIPOStudentGradeLevelControl_Panel1" title="Aggregate number of minutes entered in ‘Meeting Times’." class="tooltip-icon">
+
+</div>
+        </div>
+    </div>
+</div>
+
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+
+            var numericSchoolDbn, termId, schoolyear, grade, pipoId;
+            var pageParameters;
+            var cCode = '';
+            var IsLoaded = false;
+            var isArtsSubject = false;
+
+            numericSchoolDbn = '1010015';
+            termId = '1';
+            schoolyear = '2017';
+            pipoId = '0';
+            grade = "-1";
+
+            //Get PIPO Data
+            $.ajax(
+                {
+                    url: $service_url + "/PipoAssignment/GetPipoData",
+                    type: 'GET',
+                    data: {
+                        pipoid: pipoId,
+                        numericschooldbn: numericSchoolDbn,
+                        term: termId,
+                        schoolyear: schoolyear
+                    },
+                    dataType: 'json',                   
+                    success: function (data) {
+                       
+                        pageParameters = JSON.parse(data.pageParams);
+                        pipopageState.isArtsSubject = (pageParameters.isArtsSubject).toLowerCase();
+                    }
+                }
+            );
+
+            subjectProperties = new stars.SubjectProperties(0);
+            ////subjectProperties.disableARTS();
+            $(".suject-arts").hide();
+            subjectProperties.disableMTI();
+
+            $("#courseList").kendoDropDownList({
+                dataTextField: "Text",
+                dataValueField: "Value",
+                dataSource: {
+                    transport: {
+                        read: {
+                            dataType: "json",
+                            cache: false,
+                            url: $service_url + "/PipoAssignment/GetCourseList",
+                            data: {
+                                numericschooldbn: numericSchoolDbn,
+                                term: termId,
+                                schoolyear: schoolyear
+                            }
+                        }
+                    }
+                },
+                change: function (e) {
+
+                    $('#allGrades').data("kendoDropDownList").value([]);
+                    $('#studentList').data("kendoMultiSelect").value([]);
+
+                    cCode = this.value();
+                    gradeDataSource.read();
+                    studentsDataSource.read();
+                    GetSubjectPopertiesBasedonCourse(numericSchoolDbn, schoolyear, termId,cCode);
+                },
+                dataBound: function () {
+
+                    if (pipoId > 0) {
+
+                        cCode = pageParameters.courseCode;
+                    }
+                    else {
+
+                        cCode = this.value();
+                    }
+                    
+                    gradeDataSource.read();
+                }
+            });//end of loading course List
+
+            function GetSubjectPopertiesBasedonCourse(numericSchoolDbn, schoolyear, termId, cCode) {
+                $.ajax(
+                    {
+                        url: $service_url + "/PipoAssignment/GetSubjectCode",
+                        type: 'GET',
+                        data: {
+                            numericSchoolDbn: numericSchoolDbn,
+                            schoolYear: schoolyear,
+                            termId: termId,
+                            courseCode: cCode
+                        },
+                        dataType: 'json',
+                        success: function (data) {
+                            piposubjectId = data.subjectId;
+                            showorHideforPipo(data.subjectId);
+                        }
+                    }
+                );
+            };
+
+            function showorHideforPipo(subjectId) {
+                subjectProperties = new stars.SubjectProperties(0);
+                    if (subjectId === 438 || subjectId === 439 || subjectId === 440 || subjectId === 441) {
+                        subjectProperties = new stars.SubjectProperties(0);
+                        subjectProperties.enableARTS();
+                        pipopageState.isArtsSubject = "true";
+                    } else {
+                        subjectProperties = new stars.SubjectProperties(0);
+                        subjectProperties.disableARTS();
+                        pipopageState.isArtsSubject = "false";
+                    }
+            };
+            var gradeDataSource = new kendo.data.DataSource({
+                contentType: 'application/json; charset=utf-8',
+                transport: {
+                    read: function (options) {
+                        $.ajax({
+                            url: $service_url + "/PipoAssignment/GetAllGrades",
+                            dataType: "json", // "jsonp" is required for cross-domain requests; use "json" for same-domain requests
+                            cache: false,
+                            data: {
+                                numericschooldbn: numericSchoolDbn,
+                                term: termId,
+                                schoolyear: schoolyear,
+                                courseCode: cCode
+                            },
+                            success: function (result) {
+                                // notify the data source that the request succeeded
+                                options.success(result);
+                            },
+                            error: function (result) {
+                                // notify the data source that the request failed
+                                options.error(result);
+                            }
+                        });
+                    }
+                }
+            });
+
+            function GetGradeListForAllSelection() {
+                var dataArray = $("#allGrades").data("kendoDropDownList").dataSource.data();
+                var textArrary = new Array();
+
+                $.each(dataArray, function () {
+
+                    if (this.Text.toLowerCase() !== "All".toLowerCase()) {
+                        textArrary.push(this.Text);
+                    }
+                });
+
+                return textArrary.join(',');
+            }
+
+            //Grades DropDown
+            $("#allGrades").kendoDropDownList({
+                autoBind: false,
+                dataTextField: "Text",
+                dataValueField: "Value",
+                dataSource: gradeDataSource,
+                dataBound: function (e) {
+
+                    $('#studentList').data("kendoMultiSelect").value([]);
+                    grade = GetGradeListForAllSelection();
+                    studentsDataSource.read();
+
+                },
+                change: function (e) {
+
+                    $('#studentList').data("kendoMultiSelect").value([]);
+
+                    if (this.text().toLowerCase() === "All".toLowerCase()) {
+                        grade = GetGradeListForAllSelection();
+                    }
+                    else {
+                        grade = this.value();
+                    }
+
+                    studentsDataSource.read();
+                }
+            });//end of loading grades dropdown                     
+
+            var studentsDataSource = new kendo.data.DataSource({
+                contentType: 'application/json; charset=utf-8',
+                transport: {
+                    read: function (options) {
+                        $.ajax({
+                            url: $service_url + "/PipoAssignment/GetStudentsList",
+                            dataType: "json", // "jsonp" is required for cross-domain requests; use "json" for same-domain requests
+                            cache: false,
+                            data: {
+                                gradeId: grade,
+                                numericschooldbn: numericSchoolDbn,
+                                term: termId,
+                                schoolyear: schoolyear
+                            },
+                            success: function (result) {
+                                // notify the data source that the request succeeded
+                                options.success(result);
+                            },
+                            error: function (result) {
+                                // notify the data source that the request failed
+                                options.error(result);
+                            }
+                        });
+                    }
+                }
+
+            });
+
+            //Multi Select option
+            $("#studentList").kendoMultiSelect({
+                autoBind: false,
+                dataTextField: "DisplayText",
+                filter: "contains",
+                dataValueField: "Osisid",
+                autoBind: false,
+                placeholder: "Search by student name or student id",
+                itemTemplate: ' <span class="autocomplete-student-id">#: data.Osisid #</span>&nbsp;|&nbsp; <span class="autocomplete-student-name">' +
+                          ' #: data.Lastname # &nbsp;#: data.Firstname #',
+                height: 300,
+                width: 400,
+                dataSource: studentsDataSource,
+                dataBound: function (e) {                  
+                    if (IsLoaded === false) {
+                        LoadData(pipoId);
+                    }
+                }
+            });
+
+            //Populate Teachers drop down
+            $("#teachersList").kendoDropDownList({
+                optionLabel: "-- Select a Teacher --",
+                dataTextField: "Text",
+                dataValueField: "Value",
+                filter: 'contains',
+                dataSource: {
+                    transport: {
+                        read: {
+                            dataType: "json",
+                            cache: false,
+                            url: $service_url + "/PipoAssignment/GetTeachersList",
+                            data: {
+                                numericschooldbn: numericSchoolDbn,
+                                term: termId,
+                                schoolyear: schoolyear
+                            }
+                        }
+                    }
+                }
+            });//end of loading course List
+
+            //DatePickers
+            $("#startDatePicker").kendoDatePicker();
+            $("#endDatePicker").kendoDatePicker();
+            $("#pipoForm").kendoValidator({});
+
+
+            pipopageState = {
+                numericSchoolDbn: numericSchoolDbn,
+                schoolYear: schoolyear,
+                term: termId,
+                pipoId: pipoId,
+                properties: {}
+            }
+            var LoadData = function (pipoId) {
+
+                IsLoaded = true;
+
+                if (pipoId > 0) {
+
+                    var coursedrp = $("#courseList").data("kendoDropDownList");
+                    coursedrp.value(pageParameters.courseCode);
+                    coursedrp.enable(false);
+                    ////coursedrp.readonly();
+
+                    var gradesdrp = $("#allGrades").data("kendoDropDownList");
+                    gradesdrp.enable(false);
+                    ////gradesdrp.readonly();
+
+                    $("input[name=serviceType][value=" + pageParameters.serviceType + "]").attr('checked', 'checked');
+                    $('input[name=serviceType]').attr('disabled', true);
+
+                    var multiselect = $('#studentList').data("kendoMultiSelect");
+                    multiselect.value(pageParameters.studentID);
+                    multiselect.enable(false);   
+                    ////multiselect.readonly();
+
+                    var teacherdrp = $("#teachersList").data("kendoDropDownList");
+                    teacherdrp.value(pageParameters.teacherId);
+                    teacherdrp.enable(false);
+                    ////teacherdrp.readonly();
+
+                    var startdateDatepicker = $("#startDatePicker").data("kendoDatePicker");
+                    var enddateDatepicker = $("#endDatePicker").data("kendoDatePicker");
+                    startdateDatepicker.value(pageParameters.studentStartDate);
+                    enddateDatepicker.value(pageParameters.studentEndDate);
+
+                    enddateDatepicker.min(pageParameters.termStartDate);
+                    enddateDatepicker.max(pageParameters.termEndDate);
+                    startdateDatepicker.min(pageParameters.termStartDate);
+                    startdateDatepicker.max(pageParameters.termEndDate);
+
+                    if ((pageParameters.isArtsSubject).toLowerCase() === "true") {
+                        subjectProperties = new stars.SubjectProperties(0);
+                        subjectProperties.enableARTS();
+                        subjectProperties.disableMTI();
+                    }
+
+                    var minutestxtbox = $("#minutesPerWeekTxtBox").val(pageParameters.minutesperWeek);
+                }
+                else {
+
+                    var startdateDatepicker = $("#startDatePicker").data("kendoDatePicker");
+                    var enddateDatepicker = $("#endDatePicker").data("kendoDatePicker");
+
+                    startdateDatepicker.min(pageParameters.termStartDate);
+                    startdateDatepicker.max(pageParameters.termEndDate);
+                    startdateDatepicker.value(pageParameters.studentStartDate);
+
+                    enddateDatepicker.min(pageParameters.termStartDate);
+                    enddateDatepicker.max(pageParameters.termEndDate);
+                    enddateDatepicker.value(pageParameters.studentEndDate);
+                }
+            }
+            $(".subject-arts .track-change input[name*='ArtsMinutesTextBox']").focusout(function (event) {
+                var subjectNode, subjectMinutes, artsMinutes;
+                artsMinutes = $(this).val();
+
+                $(this).closest('.subject-arts').find("span[id*='msg1']").html("");
+
+                if (!((artsMinutes).trim()) || artsMinutes == '' || undefined) {
+                    $(this).closest('.subject-arts').find("span[id*='msg1']").html("Enter minutes per week delivered by CBO.</br>");
+                }
+                else if (artsMinutes < 1 || artsMinutes > 999 || isNaN(artsMinutes) || (!isNaN(artsMinutes) && (artsMinutes).toString().indexOf('.') != -1)) {
+                    $(this).closest('.subject-arts').find("span[id*='msg1']").html("Minutes per week delivered by CBO must be between 1 and 999.</br>");
+                }
+            });
+        });
+
+    </script>
+
+
+
+    <div class="g960">
+        <div class="irow hide-action-end">
+            <div class="c12 subject-properties-title mt">
+                <strong>Subject Properties</strong>
+            </div>
+            <div class="pipo-properties">
+                
+
+<div class="irow space-bot track-input-change" associatedid="0">
+    <div class="c4 subject-specialed">
+        <div class="bold">Target Language of Instruction</div>
+        
+        <div class="space-bot">
+            <select name="ctl00$MainContent$PIPOAssignmentControl$ucSubjectProperties$EslLanguagesDropDownList" id="MainContent_PIPOAssignmentControl_ucSubjectProperties_EslLanguagesDropDownList" class="k-textbox" onchange="LanguageChanged(this);">
+	<option value="188">Acholi</option>
+	<option value="2">Adangme</option>
+	<option value="3">Afrikaans</option>
+	<option value="4">Afroasiatic</option>
+	<option value="5">Akan</option>
+	<option value="6">Albanian</option>
+	<option value="186">American Sign Language</option>
+	<option value="7">Amharic</option>
+	<option value="8">Amoy/Fukienese</option>
+	<option value="9">Arabic</option>
+	<option value="10">Araucanian</option>
+	<option value="11">Arawak</option>
+	<option value="12">Armenian</option>
+	<option value="13">Assamese</option>
+	<option value="14">Aymara</option>
+	<option value="15">Azerbaijani</option>
+	<option value="16">Balante</option>
+	<option value="190">Balinese</option>
+	<option value="17">Baluchi</option>
+	<option value="18">Bambara</option>
+	<option value="19">Basque</option>
+	<option value="20">Belorussian</option>
+	<option value="21">Bemba</option>
+	<option value="22">Bengali</option>
+	<option value="23">Bhili</option>
+	<option value="24">Bihari</option>
+	<option value="189">Bosnian</option>
+	<option value="25">Brahui</option>
+	<option value="26">Breton</option>
+	<option value="27">Bulgarian</option>
+	<option value="28">Burmese</option>
+	<option value="175">Cantonese</option>
+	<option value="29">Catalan</option>
+	<option value="191">Cebuan</option>
+	<option value="30">Cham</option>
+	<option value="192">Chechen</option>
+	<option value="31">Chinese,any</option>
+	<option value="179">Chinese/any-Spanish</option>
+	<option value="177">Chinese-dialect,unknown/other</option>
+	<option value="193">Chuukese</option>
+	<option value="32">Czech</option>
+	<option value="34">Dagomba/Dagbane</option>
+	<option value="35">Danish</option>
+	<option value="33">Dari</option>
+	<option value="36">Dejula</option>
+	<option value="37">Dutch</option>
+	<option value="38">Dzongkha</option>
+	<option selected="selected" value="1">English</option>
+	<option value="39">Estonian</option>
+	<option value="40">Ewe</option>
+	<option value="41">Fanti</option>
+	<option value="42">Farsi</option>
+	<option value="194">Fijian</option>
+	<option value="43">Finnish</option>
+	<option value="44">Flemish</option>
+	<option value="46">Fon</option>
+	<option value="187">Foreign Student taught in English</option>
+	<option value="45">French</option>
+	<option value="178">French-Haitian Creole</option>
+	<option value="183">French-Khmer</option>
+	<option value="47">Fulani</option>
+	<option value="48">Ga</option>
+	<option value="49">Galician</option>
+	<option value="50">Galla</option>
+	<option value="51">Garifuna</option>
+	<option value="52">Georgian</option>
+	<option value="53">German</option>
+	<option value="54">Grebo</option>
+	<option value="55">Greek</option>
+	<option value="56">Guarani</option>
+	<option value="57">Gujarati</option>
+	<option value="58">Gurma</option>
+	<option value="59">Haitian Creole</option>
+	<option value="60">Hausa</option>
+	<option value="61">Hebrew</option>
+	<option value="62">Hindi</option>
+	<option value="63">Hungarian</option>
+	<option value="64">Ibo</option>
+	<option value="65">Icelandic</option>
+	<option value="66">Ilocano</option>
+	<option value="67">Indonesian</option>
+	<option value="68">Irish</option>
+	<option value="69">Italian</option>
+	<option value="195">Jamaican-Creole</option>
+	<option value="70">Japanese</option>
+	<option value="71">Jonkhan</option>
+	<option value="72">Kabre</option>
+	<option value="73">Kabyle</option>
+	<option value="74">Kachi</option>
+	<option value="75">Kafiri</option>
+	<option value="76">Kamba</option>
+	<option value="77">Kanarese/Kannada</option>
+	<option value="196">Kannada</option>
+	<option value="78">Kanuri</option>
+	<option value="79">Karen</option>
+	<option value="80">Kashmiri</option>
+	<option value="198">Kazakh</option>
+	<option value="81">Khmer</option>
+	<option value="82">Khoisan</option>
+	<option value="83">Khowan</option>
+	<option value="84">Kibuyu</option>
+	<option value="85">Korean</option>
+	<option value="86">Kpelle</option>
+	<option value="197">Krio</option>
+	<option value="87">Kurdish</option>
+	<option value="88">Lao</option>
+	<option value="89">Latvian</option>
+	<option value="90">Lithuanian</option>
+	<option value="200">Loma</option>
+	<option value="91">Luba</option>
+	<option value="199">Luganda</option>
+	<option value="92">Lunyankole</option>
+	<option value="93">Luo</option>
+	<option value="94">Macedonian</option>
+	<option value="95">Malagasy</option>
+	<option value="96">Malay</option>
+	<option value="97">Malayalam</option>
+	<option value="98">Malinke</option>
+	<option value="99">Maltese</option>
+	<option value="176">Mandarin</option>
+	<option value="201">Mandinka</option>
+	<option value="100">Marathi</option>
+	<option value="101">Mohawk</option>
+	<option value="102">Moldavian</option>
+	<option value="103">Mongolian</option>
+	<option value="104">Mossi/More</option>
+	<option value="105">Nahuati</option>
+	<option value="106">Napali</option>
+	<option value="107">Native American Languages</option>
+	<option value="202">Ndebele</option>
+	<option value="108">Niger-Congo,other</option>
+	<option value="184">None</option>
+	<option value="109">Norwegian</option>
+	<option value="110">Nyanja/Chinyanja</option>
+	<option value="111">Oneida</option>
+	<option value="112">Oriya</option>
+	<option value="113">Ossetlan</option>
+	<option value="207">Other</option>
+	<option value="203">Palauan</option>
+	<option value="114">Papiamento</option>
+	<option value="115">Pashto/Pushto</option>
+	<option value="116">Persian</option>
+	<option value="117">Pilipino/Tagalog</option>
+	<option value="118">Polish</option>
+	<option value="119">Portuguese</option>
+	<option value="120">Provencal</option>
+	<option value="121">Punjabi/Panjabi</option>
+	<option value="122">Quechua</option>
+	<option value="123">Quiche</option>
+	<option value="124">Rajasthani</option>
+	<option value="125">Romanian</option>
+	<option value="126">Romansch</option>
+	<option value="127">Rundi</option>
+	<option value="128">Russian</option>
+	<option value="182">Russian-Yiddish</option>
+	<option value="129">Rwanda</option>
+	<option value="130">Samoan</option>
+	<option value="131">Sanskrit</option>
+	<option value="132">Scottish Gaelic</option>
+	<option value="133">Seneca</option>
+	<option value="134">Serbo-Croatian</option>
+	<option value="135">Seri</option>
+	<option value="136">Sesotho</option>
+	<option value="205">Setswana</option>
+	<option value="137">Shan</option>
+	<option value="138">Shina</option>
+	<option value="139">Shluh</option>
+	<option value="140">Sidamo</option>
+	<option value="141">Sindhi</option>
+	<option value="142">Sinhalese</option>
+	<option value="143">Slovak</option>
+	<option value="144">Slovenian</option>
+	<option value="145">Somali</option>
+	<option value="204">Soninke</option>
+	<option value="146">South Arabic</option>
+	<option value="147">Spanish</option>
+	<option value="185">Student doesn&#39;t speak</option>
+	<option value="148">Sukuma</option>
+	<option value="149">Sundanese</option>
+	<option value="150">Swahili/Kiswahili</option>
+	<option value="151">Swazi</option>
+	<option value="152">Swedish</option>
+	<option value="153">Tadzhik</option>
+	<option value="154">Tamazight</option>
+	<option value="155">Tamil</option>
+	<option value="156">Telugu</option>
+	<option value="157">Thai</option>
+	<option value="158">Tibetan</option>
+	<option value="159">Tigre</option>
+	<option value="160">Tigrinya</option>
+	<option value="161">Tonga</option>
+	<option value="162">Tuareg</option>
+	<option value="163">Turkish</option>
+	<option value="164">Turkmen/Turkoman</option>
+	<option value="165">Twi</option>
+	<option value="166">Ukrainian</option>
+	<option value="167">Urdu</option>
+	<option value="168">Uzbeck</option>
+	<option value="169">Vietnamese</option>
+	<option value="180">Vietnamese-Chinese</option>
+	<option value="181">Vietnamese-French</option>
+	<option value="206">Visayak</option>
+	<option value="170">Welsh</option>
+	<option value="171">Wolof</option>
+	<option value="172">Yiddish</option>
+	<option value="173">Yonba</option>
+	<option value="174">Yoruba</option>
+
+</select>
+        </div>
+
+        <div>
+            <label class="bold" for="MainContent_PIPOAssignmentControl_ucSubjectProperties_TargetLangTimeDropDownList">Percentage of Time in Target Language</label>
+
+            <select name="ctl00$MainContent$PIPOAssignmentControl$ucSubjectProperties$TargetLangTimeDropDownList" id="MainContent_PIPOAssignmentControl_ucSubjectProperties_TargetLangTimeDropDownList" disabled="disabled" class="aspNetDisabled k-textbox disableDropdown">
+	<option value="100">100%</option>
+	<option value="95">95%</option>
+	<option value="90">90%</option>
+	<option value="85">85%</option>
+	<option value="80">80%</option>
+	<option value="75">75%</option>
+	<option value="70">70%</option>
+	<option value="65">65%</option>
+	<option value="60">60%</option>
+	<option value="55">55%</option>
+	<option value="50">50%</option>
+	<option value="45">45%</option>
+	<option value="40">40%</option>
+	<option value="35">35%</option>
+	<option value="30">30%</option>
+	<option value="25">25%</option>
+
+</select>
+        </div>
+    </div>
+
+    <div class="c4 subject-ell">
+        <div class="space-bot">
+            <label for="MainContent_PIPOAssignmentControl_ucSubjectProperties_SpecialEdDropDownList" class="bold">Special Education Program</label>
+
+            <select name="ctl00$MainContent$PIPOAssignmentControl$ucSubjectProperties$SpecialEdDropDownList" id="MainContent_PIPOAssignmentControl_ucSubjectProperties_SpecialEdDropDownList" class="k-textbox">
+	<option selected="selected" value="0"></option>
+	<option value="0"></option>
+	<option value="3">Integrated Co-Teacher</option>
+	<option value="4">Special Class 12:1</option>
+	<option value="6">Special Class 12:1:1</option>
+	<option value="8">Special Class 12:1:4</option>
+	<option value="5">Special Class 15:1</option>
+	<option value="9">Special Class 6:1:1</option>
+	<option value="7">Special Class 8:1:1</option>
+	<option value="1">Teacher Support Services</option>
+	<option value="2">Teacher Support Services - Indirect</option>
+
+</select>
+        </div>
+
+        <div class="space-bot">
+            <label for="MainContent_PIPOAssignmentControl_ucSubjectProperties_EslCheckbox" class="bold">English as a Second Language</label>
+            <div>
+                <span class="k-checkbox"><input id="MainContent_PIPOAssignmentControl_ucSubjectProperties_EslCheckbox" type="checkbox" name="ctl00$MainContent$PIPOAssignmentControl$ucSubjectProperties$EslCheckbox" /><label for="MainContent_PIPOAssignmentControl_ucSubjectProperties_EslCheckbox">English as a Second Language</label></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="c4 subject-properties">
+        <div class="bold">Other Properties</div>
+        <div class="space-bot">
+            
+                    <div>
+                        <input id="MainContent_PIPOAssignmentControl_ucSubjectProperties_OtherPropertiesRepeater_OtherProperties_0" type="checkbox" name="ctl00$MainContent$PIPOAssignmentControl$ucSubjectProperties$OtherPropertiesRepeater$ctl00$OtherProperties" value="0" subjectPropertiesGroup="0" /><label for="MainContent_PIPOAssignmentControl_ucSubjectProperties_OtherPropertiesRepeater_OtherProperties_0">Gifted and Talented</label>
+                    </div>
+                
+                    <div>
+                        <input id="MainContent_PIPOAssignmentControl_ucSubjectProperties_OtherPropertiesRepeater_OtherProperties_1" type="checkbox" name="ctl00$MainContent$PIPOAssignmentControl$ucSubjectProperties$OtherPropertiesRepeater$ctl01$OtherProperties" value="1" subjectPropertiesGroup="0" /><label for="MainContent_PIPOAssignmentControl_ucSubjectProperties_OtherPropertiesRepeater_OtherProperties_1">iLearn</label>
+                    </div>
+                
+                    <div>
+                        <input id="MainContent_PIPOAssignmentControl_ucSubjectProperties_OtherPropertiesRepeater_OtherProperties_2" type="checkbox" name="ctl00$MainContent$PIPOAssignmentControl$ucSubjectProperties$OtherPropertiesRepeater$ctl02$OtherProperties" value="2" subjectPropertiesGroup="0" /><label for="MainContent_PIPOAssignmentControl_ucSubjectProperties_OtherPropertiesRepeater_OtherProperties_2">Other Online</label>
+                    </div>
+                
+                    <div>
+                        <input id="MainContent_PIPOAssignmentControl_ucSubjectProperties_OtherPropertiesRepeater_OtherProperties_3" type="checkbox" name="ctl00$MainContent$PIPOAssignmentControl$ucSubjectProperties$OtherPropertiesRepeater$ctl03$OtherProperties" value="3" subjectPropertiesGroup="0" /><label for="MainContent_PIPOAssignmentControl_ucSubjectProperties_OtherPropertiesRepeater_OtherProperties_3">Adaptive PE</label>
+                    </div>
+                
+        </div>
+        <div id="MainContent_PIPOAssignmentControl_ucSubjectProperties_AidsDiv">
+            <label for="MainContent_PIPOAssignmentControl_ucSubjectProperties_AidsTextBox" id="MainContent_PIPOAssignmentControl_ucSubjectProperties_AidsLabel">HIV/AIDS Lessons Delivered</label>
+            <input name="ctl00$MainContent$PIPOAssignmentControl$ucSubjectProperties$AidsTextBox" type="text" value="0" id="MainContent_PIPOAssignmentControl_ucSubjectProperties_AidsTextBox" class="k-textbox" style="width:50px;" />
+            <span id="MainContent_PIPOAssignmentControl_ucSubjectProperties_rgvAidsTextBox" class="required" style="display:none;">Enter a whole number between 0 and 600</span>
+        </div>            
+
+    </div>
+    <div class = "clear padding-top20">
+
+    <div id="MainContent_PIPOAssignmentControl_ucSubjectProperties_CSForAllDiv" class="c4 subject-csforall">
+        <div class="bold">Computer Science for All</div>
+        <div class="space-bot track-change">
+            
+                    <div>
+                        <input id="MainContent_PIPOAssignmentControl_ucSubjectProperties_CSforAllRepeater_CSforAll_0" type="checkbox" name="ctl00$MainContent$PIPOAssignmentControl$ucSubjectProperties$CSforAllRepeater$ctl00$CSforAll" value="0" subjectCSforAllCoursesGroup="0" /><label for="MainContent_PIPOAssignmentControl_ucSubjectProperties_CSforAllRepeater_CSforAll_0">Physical Computing</label>
+                    </div>
+                
+                    <div>
+                        <input id="MainContent_PIPOAssignmentControl_ucSubjectProperties_CSforAllRepeater_CSforAll_1" type="checkbox" name="ctl00$MainContent$PIPOAssignmentControl$ucSubjectProperties$CSforAllRepeater$ctl01$CSforAll" value="1" subjectCSforAllCoursesGroup="0" /><label for="MainContent_PIPOAssignmentControl_ucSubjectProperties_CSforAllRepeater_CSforAll_1">Maker Activities</label>
+                    </div>
+                
+                    <div>
+                        <input id="MainContent_PIPOAssignmentControl_ucSubjectProperties_CSforAllRepeater_CSforAll_2" type="checkbox" name="ctl00$MainContent$PIPOAssignmentControl$ucSubjectProperties$CSforAllRepeater$ctl02$CSforAll" value="2" subjectCSforAllCoursesGroup="0" /><label for="MainContent_PIPOAssignmentControl_ucSubjectProperties_CSforAllRepeater_CSforAll_2">Robotics</label>
+                    </div>
+                
+                    <div>
+                        <input id="MainContent_PIPOAssignmentControl_ucSubjectProperties_CSforAllRepeater_CSforAll_3" type="checkbox" name="ctl00$MainContent$PIPOAssignmentControl$ucSubjectProperties$CSforAllRepeater$ctl03$CSforAll" value="3" subjectCSforAllCoursesGroup="0" /><label for="MainContent_PIPOAssignmentControl_ucSubjectProperties_CSforAllRepeater_CSforAll_3">Web Design and Development</label>
+                    </div>
+                
+                    <div>
+                        <input id="MainContent_PIPOAssignmentControl_ucSubjectProperties_CSforAllRepeater_CSforAll_4" type="checkbox" name="ctl00$MainContent$PIPOAssignmentControl$ucSubjectProperties$CSforAllRepeater$ctl04$CSforAll" value="4" subjectCSforAllCoursesGroup="0" /><label for="MainContent_PIPOAssignmentControl_ucSubjectProperties_CSforAllRepeater_CSforAll_4">Game Design</label>
+                    </div>
+                
+                    <div>
+                        <input id="MainContent_PIPOAssignmentControl_ucSubjectProperties_CSforAllRepeater_CSforAll_5" type="checkbox" name="ctl00$MainContent$PIPOAssignmentControl$ucSubjectProperties$CSforAllRepeater$ctl05$CSforAll" value="5" subjectCSforAllCoursesGroup="0" /><label for="MainContent_PIPOAssignmentControl_ucSubjectProperties_CSforAllRepeater_CSforAll_5">Block-based Programming</label>
+                    </div>
+                
+                    <div>
+                        <input id="MainContent_PIPOAssignmentControl_ucSubjectProperties_CSforAllRepeater_CSforAll_6" type="checkbox" name="ctl00$MainContent$PIPOAssignmentControl$ucSubjectProperties$CSforAllRepeater$ctl06$CSforAll" value="6" subjectCSforAllCoursesGroup="0" /><label for="MainContent_PIPOAssignmentControl_ucSubjectProperties_CSforAllRepeater_CSforAll_6">Text-based Programming</label>
+                    </div>
+                
+                    <div>
+                        <input id="MainContent_PIPOAssignmentControl_ucSubjectProperties_CSforAllRepeater_CSforAll_7" type="checkbox" name="ctl00$MainContent$PIPOAssignmentControl$ucSubjectProperties$CSforAllRepeater$ctl07$CSforAll" value="7" subjectCSforAllCoursesGroup="0" /><label for="MainContent_PIPOAssignmentControl_ucSubjectProperties_CSforAllRepeater_CSforAll_7">Mobile App Development</label>
+                    </div>
+                
+                    <div>
+                        <input id="MainContent_PIPOAssignmentControl_ucSubjectProperties_CSforAllRepeater_CSforAll_8" type="checkbox" name="ctl00$MainContent$PIPOAssignmentControl$ucSubjectProperties$CSforAllRepeater$ctl08$CSforAll" value="8" subjectCSforAllCoursesGroup="0" /><label for="MainContent_PIPOAssignmentControl_ucSubjectProperties_CSforAllRepeater_CSforAll_8">Data and Data Science</label>
+                    </div>
+                
+                    <div>
+                        <input id="MainContent_PIPOAssignmentControl_ucSubjectProperties_CSforAllRepeater_CSforAll_9" type="checkbox" name="ctl00$MainContent$PIPOAssignmentControl$ucSubjectProperties$CSforAllRepeater$ctl09$CSforAll" value="9" subjectCSforAllCoursesGroup="0" /><label for="MainContent_PIPOAssignmentControl_ucSubjectProperties_CSforAllRepeater_CSforAll_9">Other</label>
+                    </div>
+                
+            <textarea name="ctl00$MainContent$PIPOAssignmentControl$ucSubjectProperties$OtherCSText" rows="2" cols="20" id="MainContent_PIPOAssignmentControl_ucSubjectProperties_OtherCSText" disabled="disabled" class="aspNetDisabled multiline-textboxCSS" onKeyUp="Count(this,100)" onChange="Count(this,100)">
+</textarea>
+            <div id="MainContent_PIPOAssignmentControl_ucSubjectProperties_Panel1" title="Enter Computer Science topic when “Other” is selected." class="tooltip-icon">
+
+</div> 
+        </div>
+        <div id="MainContent_PIPOAssignmentControl_ucSubjectProperties_CSInsTimeDiv">
+            <label for="MainContent_PIPOAssignmentControl_ucSubjectProperties_CSInstTimeDropDownList" class="bold">Computer Science Instructional Time in the Term</label>
+            <select name="ctl00$MainContent$PIPOAssignmentControl$ucSubjectProperties$CSInstTimeDropDownList" id="MainContent_PIPOAssignmentControl_ucSubjectProperties_CSInstTimeDropDownList" class="k-textbox">
+	<option selected="selected" value="0">0 hours</option>
+	<option value="1">1-5 hours</option>
+	<option value="2">5-10 hours</option>
+	<option value="3">10-20 hours</option>
+	<option value="4">20-40 hours</option>
+	<option value="5">Entire Term</option>
+
+</select>
+        </div>
+        
+    </div>
+
+    <div id="MainContent_PIPOAssignmentControl_ucSubjectProperties_MtiDiv" class="c4 subject-mti">
+        <label class="bold">Move-to-Improve (MTI)</label>
+        <div class="space-bot track-change">
+            <div class="mtiDetails">
+                Only schools that meet MTI All-Star criteria (85% or more of classroom teachers trained in MTI in addition to a regularly scheduled PE teacher)
+                can count MTI minutes toward PE. MTI minutes are inclusive of total PE minutes per week entered.
+            </div>
+            <span class="k-checkbox" class="bold"><input id="MainContent_PIPOAssignmentControl_ucSubjectProperties_MtiCheckBox" type="checkbox" name="ctl00$MainContent$PIPOAssignmentControl$ucSubjectProperties$MtiCheckBox" /><label for="MainContent_PIPOAssignmentControl_ucSubjectProperties_MtiCheckBox">Move-to-Improve</label></span>
+            <div id="MainContent_PIPOAssignmentControl_ucSubjectProperties_MinutesDiv" class="k-mtiTextBox"> 
+                <label id="MainContent_PIPOAssignmentControl_ucSubjectProperties_MtiMinutesPerWeekLbl" for="MainContent_PIPOAssignmentControl_ucSubjectProperties_MtiMinutesTextBox">Minutes per Week</label>
+                <input name="ctl00$MainContent$PIPOAssignmentControl$ucSubjectProperties$MtiMinutesTextBox" type="text" id="MainContent_PIPOAssignmentControl_ucSubjectProperties_MtiMinutesTextBox" disabled="disabled" class="aspNetDisabled" style="width:30px;" />
+                <br />
+                <span style="color:red"  id="msg"></span>
+            </div>
+        </div>
+    </div>
+    <div id="MainContent_PIPOAssignmentControl_ucSubjectProperties_ArtsDiv" class="c4 subject-arts">
+        <label class="bold">Arts Delivered by CBO</label>
+        <div class="space-bot track-change">
+            <div class="artsDetails">
+                If arts instruction is provided by a community-based organization (CBO) or cultural organization, schools must indicate the number of instructional minutes that the organization will deliver.
+            </div>
+            <span class="k-checkbox" class="bold"><input id="MainContent_PIPOAssignmentControl_ucSubjectProperties_ArtsCheckBox" type="checkbox" name="ctl00$MainContent$PIPOAssignmentControl$ucSubjectProperties$ArtsCheckBox" /><label for="MainContent_PIPOAssignmentControl_ucSubjectProperties_ArtsCheckBox"> Arts Delivered by CBO </label></span>
+            <div id="MainContent_PIPOAssignmentControl_ucSubjectProperties_ArtsMinutesDiv" class="k-artsTextBox">
+                <label id="MainContent_PIPOAssignmentControl_ucSubjectProperties_ArtsMinutesLbl" for="MainContent_PIPOAssignmentControl_ucSubjectProperties_ArtsMinutesTextBox">Minutes per Week</label>
+                <input name="ctl00$MainContent$PIPOAssignmentControl$ucSubjectProperties$ArtsMinutesTextBox" type="text" id="MainContent_PIPOAssignmentControl_ucSubjectProperties_ArtsMinutesTextBox" disabled="disabled" class="aspNetDisabled" style="width:30px;" />
+                <br />	
+                <span style="color:red" id="msg1"></span>
+    		</div>
+        </div>
+    </div>
+    </div>
+</div>
+
+    <script type="text/javascript">
+
+
+        function Count(text, length) {
+            var maxlength = new Number(length);
+            if (text.value.length > maxlength) {
+                text.value = text.value.substring(0, maxlength);
+                toastmessage("warn", "The textbox for the “Other” category should include a maximum of 100 characters.");
+            }
+        }
+
+        function LanguageChanged(language) {
+            var langdropdown = $(language).closest('.subject-specialed').find("select[name*='TargetLangTimeDropDownList']");
+            langdropdown.val(100);
+            if (language.value == 1)
+            {
+                $(langdropdown).attr('disabled', true);
+                $(langdropdown).addClass("disableDropdown");
+            } else {
+                $(langdropdown).attr('disabled', false);
+                $(langdropdown).removeClass("disableDropdown");
+            }
+        }
+
+        $(".subject-mti .track-change input[name*='MtiCheckBox']").change(function (event) {
+
+            var mtiminutesvalidation = $(this).closest('.subject-mti').find("span[id*='msg']");
+
+            if ($(event.target).is(":checked")) {
+                $(this).closest('.subject-mti').find("label[id*='MtiMinutesPerWeekLbl']").addClass("required-field");
+                $(this).closest('.subject-mti').find("input[name*='MtiMinutesTextBox']").attr('disabled', false);
+
+                $(mtiminutesvalidation).show();
+                $(mtiminutesvalidation).empty();
+            }
+            else {
+                $(this).closest('.subject-mti').find("label[id*='MtiMinutesPerWeekLbl']").removeClass("required-field");
+                $(this).closest('.subject-mti').find("input[name*='MtiMinutesTextBox']").attr('disabled', 'disabled');
+                $(this).closest('.subject-mti').find("input[name*='MtiMinutesTextBox']").val('');
+
+                $(mtiminutesvalidation).hide();
+                $(mtiminutesvalidation).empty();
+            }
+        });
+
+        $(".subject-csforall .track-change input").change(function (event) {
+            if (($(event.target)).attr('value') == "9")
+            {
+                if ($(event.target).is(":checked"))
+                {
+                    $(this).closest('.subject-csforall').find('textarea').attr('disabled', false);
+                }
+                else {
+                    $(this).closest('.subject-csforall').find('textarea').attr('disabled', 'disabled');
+                    $(this).closest('.subject-csforall').find('textarea').val('');
+                }
+            }
+        });
+
+        $(".subject-arts .track-change input[name*='ArtsCheckBox']").change(function (event) {
+
+            var artsminutesvalidation = $(this).closest('.subject-arts').find("span[id*='msg1']");
+            if ($(event.target).is(":checked")) {
+                $(this).closest('.subject-arts').find("label[id*='ArtsMinutesLbl']").addClass("required-field");
+                $(this).closest('.subject-arts').find("input[name*='ArtsMinutesTextBox']").attr('disabled', false);
+
+                $(artsminutesvalidation).show();
+                $(artsminutesvalidation).empty();
+            }
+            else {
+                $(this).closest('.subject-arts').find("label[id*='ArtsMinutesLbl']").removeClass("required-field");
+                $(this).closest('.subject-arts').find("input[name*='ArtsMinutesTextBox']").attr('disabled', 'disabled');
+                $(this).closest('.subject-arts').find("input[name*='ArtsMinutesTextBox']").val('');
+
+                $(artsminutesvalidation).hide();
+                $(artsminutesvalidation).empty();
+            }
+        });
+
+
+    </script>
+
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <strong>Meeting Times</strong>
+        <div id="MainContent_PIPOAssignmentControl_Panel1" title="Indicate the period and day the assigned teacher provides the service to the selected students. Enter the total number of minutes for each period-day record and room number. ‘No of minutes’ are used to calculate the ‘Minutes per Week’." class="tooltip-icon">
+
+</div>
+    </div>
+    <div class='form-label'>Meeting Time(s)<span class='required' style='text-align: left;'>*</span></div>
+    <div id="pipogrid"></div>
+
+    <div class="commands">
+        <div class="save radbutton">
+            <input type="button" name="ctl00$MainContent$PIPOAssignmentControl$BottomSaveButton" value="Save and Back" onclick="SaveData1(); return false;__doPostBack(&#39;ctl00$MainContent$PIPOAssignmentControl$BottomSaveButton&#39;,&#39;&#39;)" id="MainContent_PIPOAssignmentControl_BottomSaveButton" class="loginbutton" />
+        </div>
+        <div class="save radbutton">
+            <input type="button" name="ctl00$MainContent$PIPOAssignmentControl$BottomSaveAndNewButton" value="Save and New Record" onclick="SaveAddNew(); return false;__doPostBack(&#39;ctl00$MainContent$PIPOAssignmentControl$BottomSaveAndNewButton&#39;,&#39;&#39;)" id="MainContent_PIPOAssignmentControl_BottomSaveAndNewButton" class="loginbutton" />
+        </div>
+        <div class="cancel radbutton">
+            <input type="submit" name="ctl00$MainContent$PIPOAssignmentControl$BottomCancelButton" value="Cancel Record" onclick="CancelClick(); return false;" id="MainContent_PIPOAssignmentControl_BottomCancelButton" title="Cancel Record" class="loginbutton" />
+        </div>
+    </div>
+</div>
+
+
+    <script type="text/javascript">
+        var schoolDbn, tId, yr;
+        var days = [];
+        var lblErr = $('#MainContent_PIPOAssignmentControl_lblErr');
+
+        $(document).ready(function () {
+            schoolDbn = '1010015';
+            tId = '1';
+            yr = '2017';
+
+            var dataSource = new kendo.data.DataSource({
+                transport: {
+                    read: {
+                        url: $service_url + "/PipoAssignment/GetMeetingTimes",
+                        dataType: "json",
+                        cache: false
+                    },
+                    update: {
+                        url: $service_url + "/PipoAssignment/UpdateMeetingTimes",
+                        dataType: "json",
+                        type: "POST",
+                        cache: false,
+                        complete: function (e) {
+
+                            if (e.status == "406") {
+                                var json = JSON.parse(e.responseText);
+                                toastmessage("warn", json.error);                                
+                            }
+                            else {
+                                $("#pipogrid").data("kendoGrid").dataSource.read();
+                            }
+                        }
+                    },
+                    destroy: {
+                        url: $service_url + "/PipoAssignment/DeleteMeetingTimes",
+                        dataType: "json",
+                        cache: false
+                    },
+                    create: {
+                        url: $service_url + "/PipoAssignment/CreateMeetingTimes",
+                        dataType: "json",
+                        type: "POST",
+                        complete: function (e) {
+
+                            if (e.status == "406") {
+                                var json = JSON.parse(e.responseText);
+                                toastmessage("warn", json.error);                                
+                            }
+                            else {
+                                $("#pipogrid").data("kendoGrid").dataSource.read();
+                            }
+                        }
+
+                    },
+                    parameterMap: function (options, operation) {
+
+                        if (operation === "update" || operation === "create" || operation === "destroy") {
+                            return { models: JSON.stringify(options.models) };
+                        }
+                    },
+                    cache: false
+                },
+                batch: true,
+                pageSize: 5,
+                schema: {
+                    model: {
+                        id: "Id",
+                        fields: {
+                            Id: { editable: false, nullable: true },
+                            Period: { defaultValue: { Value: 0, Text: "0" } },
+                            Day: { field: "Day", defaultValue: { Value: 0, Text: "Monday" } },
+                            Room: { validation: { required: true } },
+                            Minutes: {
+                                validation: {
+                                    required: true, max: 650,
+                                    minutesvalidation: function (input) {
+                                        if (input.is("[name='Minutes']") && input.val() != "") {
+                                            input.attr("data-minutesvalidation-msg", "Please enter only numbers.");
+                                            if (isNaN(input.val())) {
+                                                return false;
+                                            }
+                                            else {
+                                                input.attr("data-minutesvalidation-msg", "Enter a whole number between 0 and 600");
+                                                var re = new RegExp("\b([0-9]{1,2}|[1-5][0-9]{2}|600)\b");
+                                                return input.val().length <= 3 || re.test(input.val());
+                                            }
+                                        }
+
+                                        return true;
+                                    }
+                                } //end of validation
+                            }
+                        }
+                    }
+                }
+            });// end of datasource loop
+
+            $.getJSON($service_url + "/PipoAssignment/GetDays",
+                 {
+                     numericschooldbn: schoolDbn,
+                     term: tId,
+                     schoolyear: yr
+                 },
+                function (data) {
+                    days = data;
+                    dataSource.fetch();
+                }); //end of getJSON
+
+            $("#pipogrid").kendoGrid({
+                dataSource: dataSource,
+                pageable: true,
+                noRecords: {
+                    template: "No Meeting Times"
+                },
+                toolbar: ["create"],
+                columns: [
+                    { field: "Period", title: "Period", width: "180px", editor: periodDropDownEditor, template: "#=Period.Value#", "class": "course-dropdown" },
+                    { field: "Day", title: "Day", width: "180px", editor: dayDropDownEditor, template: "#=getDayName(Day.Value)#" },
+                    { field: "Room", title: "Room", width: "120px" },
+                    { field: "Minutes", title: "No of Minutes", width: "120px", },
+                    { command: ["edit", "destroy"], title: "&nbsp;", width: "200px" }],
+                editable: "inline",
+                edit: function (e) {
+                    e.container.find("input[name=Room]").attr("maxlength", 5);
+                },
+            });
+
+        });//end of document.ready
+
+        function periodDropDownEditor(container, options) {
+            $('<input required data-text-field="Text" data-value-field="Value" data-bind="value:' + options.field + '"/>')
+                .appendTo(container)
+                .kendoDropDownList({
+                    autoBind: false,
+                    dataSource: {
+                        transport: {
+                            read: {
+                                dataType: "json",
+                                url: $service_url + "/PipoAssignment/GetPeriodList",
+                                data: {
+                                    numericschooldbn: schoolDbn,
+                                    term: tId,
+                                    schoolyear: yr
+                                }
+                            }
+                        }
+                    }
+                });
+        }
+
+        function dayDropDownEditor(container, options) {
+            $('<input required data-text-field="Text" data-value-field="Value" data-bind="value:' + options.field + '"/>')
+                .appendTo(container)
+                .kendoDropDownList({
+                    autoBind: false,
+                    dataSource: days
+                });
+        }
+
+        function getDayName(dayID) {
+            for (var idx = 0, length = days.length; idx < length; idx++) {
+                if (days[idx].Value == dayID) {
+
+                    return days[idx].Text;
+                }
+            }
+        }
+
+        function SaveData1() {
+            var validator = $("#pipoForm").data("kendoValidator");
+            var jdata = "";
+            if (validator.validate()) {
+                CaptureScreenData();
+                jdata = JSON.stringify(pipopageState);
+                ValidatePipoDataforArts(pipopageState);
+                jQuery.ajax({
+                    type: "POST",
+                    cache: false,
+                    dataType: "json",
+                    contentType: "application/json; charset=utf-8",
+                    data: JSON.stringify({ jsonData: jdata }),
+                    url: $service_url + "/PipoAssignment/SavePipoAssignment",
+                    beforeSend: function () {
+                        showLoad();
+                    },
+                    success: function (result) {
+                        if (!jQuery.isEmptyObject(result)) {
+                            toastmessage("success", result.Message);
+                            hideLoad();
+                            lblErr.hide();
+                            location.href = '/starsclassroom/SchoolAdmin/PIPOList.aspx';
+                        }
+                    },
+                    error: function (xhr, ajaxOptions, thrownError) {
+                        if (xhr.status == 500) {
+                            toastmessage("error", "Our apologies, an error has occurred, please contact <a href='mailto:AcademicPolicy@schools.nyc.gov'>AcademicPolicy@schools.nyc.gov</a>.");
+                        } else {
+
+                            var errorJson = JSON.parse(xhr.responseText);
+                            if (errorJson.Status == 3) {
+                                lblErr.show();
+                                lblErr.html(errorJson.Message);
+                                toastmessage("warn", errorJson.Message);
+
+                            } else {
+                                lblErr.hide();
+                                toastmessage("warn", errorJson.Message);
+                            }
+                        }
+
+                        hideLoad();
+                    }
+                });
+
+            }// end of validator if loop
+        }
+
+        //Save and Add NEw
+
+        function SaveAddNew() {
+            var validator = $("#pipoForm").data("kendoValidator");
+            var jdata = "";
+            if (validator.validate()) {
+                CaptureScreenData();
+                jdata = JSON.stringify(pipopageState);
+                ValidatePipoDataforArts(jdata);
+                jQuery.ajax({
+                    type: "POST",
+                    cache: false,
+                    dataType: "json",
+                    contentType: "application/json; charset=utf-8",
+                    data: JSON.stringify({ jsonData: jdata }),
+                    url: $service_url + "/PipoAssignment/SavePipoAssignment",
+                    beforeSend: function () {
+                        showLoad();
+                    },
+                    success: function (result) {
+                        if (!jQuery.isEmptyObject(result)) {
+
+                            toastmessage("success", result.Message);
+                            hideLoad();
+                            lblErr.hide();
+                            location.href = '/starsclassroom/SchoolAdmin/PIPOAssignment.aspx?id=0&School=1010015&Year= 2017&Term=1';
+
+                        }
+                    },
+                    error: function (xhr, ajaxOptions, thrownError) {
+                        if (xhr.status == 500) {
+                            toastmessage("error", "Our apologies, an error has occurred, please contact <a href='mailto:AcademicPolicy@schools.nyc.gov'>AcademicPolicy@schools.nyc.gov</a>.");
+                        } else {
+
+                            var errorJson = JSON.parse(xhr.responseText);
+                            if (errorJson.Status == 3) {
+                                lblErr.show();
+                                lblErr.html(errorJson.Message);
+                                toastmessage("warn", errorJson.Message);
+
+                            } else {
+                                lblErr.hide();
+                                toastmessage("warn", errorJson.Message);
+                            }
+                        }
+
+                        hideLoad();
+                    }
+                });
+
+            }// end of validator if loop
+        }
+
+        function CaptureScreenData() {
+
+            propertiesControl = new stars.SubjectProperties(0);
+            pipopageState.properties = propertiesControl.getProperties(0);
+
+            pipopageState.serviceType = $('input[name=serviceType]:checked').val();
+            pipopageState.studentIds = $("#studentList").data("kendoMultiSelect").value();
+            pipopageState.courseid = $("#courseList").data("kendoDropDownList").value();
+            pipopageState.teacherid = $("#teachersList").data("kendoDropDownList").value();
+            pipopageState.beginDate = $("#startDatePicker").data("kendoDatePicker").value();
+            pipopageState.endDate = $("#endDatePicker").data("kendoDatePicker").value();
+        }
+        function CancelClick() {
+            location.href = '/starsclassroom/SchoolAdmin/PIPOList.aspx';
+        }
+
+        function ValidatePipoDataforArts(pipoData) {
+            if (pipoData.isArtsSubject === "true") {
+                $('.subject-arts').find("span[id*='msg1']").html("");
+                if (pipoData.properties.arts.isarts) {
+                    if (pipoData.properties.arts.artsminutes === '' || undefined) {
+                        $('.subject-arts').find("span[id*='msg1']").html("Enter minutes per week delivered by CBO.</br>");
+                    }
+
+                    if (parseInt(pipoData.properties.arts.artsminutes) < 1 || parseInt(pipoData.properties.arts.artsminutes) > 999 || isNaN(pipoData.properties.arts.artsminutes) || (!isNaN(pipoData.properties.arts.artsminutes) && (pipoData.properties.arts.artsminutes).toString().indexOf('.') != -1)) {
+                        $('.subject-arts').find("span[id*='msg1']").append("Minutes per week delivered by CBO must be between 1 and 999.</br>");
+                    }
+                }
+            }
+         };
+    </script>
+
+
+    </div>
+    
+                    <div class="breadcrumbs bottom">
+                        <a id="MainContent_LoginViewBottom_CrumbHomeBottom" href="../Default.aspx">Home</a>
+                        <a id="MainContent_LoginViewBottom_AdminLinkBottom" href="default.aspx">> School Administrator</a>
+                        <a id="MainContent_LoginViewBottom_CrumbPIPOBottom" href="PIPOList.aspx">> Push-In/Pull-Out Instruction</a>
+                        <span>&gt; Add/Edit Student Record</span>
+                    </div>
+                
+
+            </div>
+
+            <!-- End Application Area -->
+            <!-- Begin Footer -->
+            <div id="footer">
+                <div class="left">
+                    &copy; 2013 The New York City Department of Education
+                </div>
+                <div class="right">
+                    Privacy Policy and Terms of Use
+                </div>
+            </div>
+
+            <div class="clear space-bot">&nbsp;</div>
+            <!-- End Footer -->
+        </div>
+        <!-- End Container -->
+
+        
+            <script src="/starsclassroom/Scripts/MasterPageFunctions.js" type="text/javascript">        
+            </script>
+        
+
+        <script type="text/javascript">
+           
+            // Web API URL part 
+            $service_url = '/starsclassroom/starsapi';
+           
+            (function (i, s, o, g, r, a, m) {
+                i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                    (i[r].q = i[r].q || []).push(arguments)
+                }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+            })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+            ga('create', 'UA-40262604-1', 'nycenet.edu');
+            ga('send', 'pageview');
+        </script>
+    
+<script type="text/javascript">
+//<![CDATA[
+var Page_Validators =  new Array(document.getElementById("MainContent_PIPOAssignmentControl_ucSubjectProperties_rgvAidsTextBox"));
+//]]>
+</script>
+
+<script type="text/javascript">
+//<![CDATA[
+var MainContent_PIPOAssignmentControl_ucSubjectProperties_rgvAidsTextBox = document.all ? document.all["MainContent_PIPOAssignmentControl_ucSubjectProperties_rgvAidsTextBox"] : document.getElementById("MainContent_PIPOAssignmentControl_ucSubjectProperties_rgvAidsTextBox");
+MainContent_PIPOAssignmentControl_ucSubjectProperties_rgvAidsTextBox.controltovalidate = "MainContent_PIPOAssignmentControl_ucSubjectProperties_AidsTextBox";
+MainContent_PIPOAssignmentControl_ucSubjectProperties_rgvAidsTextBox.errormessage = "Enter a whole number between 0 and 600";
+MainContent_PIPOAssignmentControl_ucSubjectProperties_rgvAidsTextBox.display = "Dynamic";
+MainContent_PIPOAssignmentControl_ucSubjectProperties_rgvAidsTextBox.validationGroup = "FormValidationGroup";
+MainContent_PIPOAssignmentControl_ucSubjectProperties_rgvAidsTextBox.type = "Integer";
+MainContent_PIPOAssignmentControl_ucSubjectProperties_rgvAidsTextBox.evaluationfunction = "RangeValidatorEvaluateIsValid";
+MainContent_PIPOAssignmentControl_ucSubjectProperties_rgvAidsTextBox.maximumvalue = "600";
+MainContent_PIPOAssignmentControl_ucSubjectProperties_rgvAidsTextBox.minimumvalue = "0";
+//]]>
+</script>
+
+
+<script type="text/javascript">
+//<![CDATA[
+
+var Page_ValidationActive = false;
+if (typeof(ValidatorOnLoad) == "function") {
+    ValidatorOnLoad();
+}
+
+function ValidatorOnSubmit() {
+    if (Page_ValidationActive) {
+        return ValidatorCommonOnSubmit();
+    }
+    else {
+        return true;
+    }
+}
+        Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.RadAjaxManager, {"_updatePanels":"","ajaxSettings":[],"clientEvents":{OnRequestStart:"",OnResponseEnd:""},"defaultLoadingPanelID":"RadAjaxLoadingPanel1","enableAJAX":true,"enableHistory":false,"links":[],"styles":[],"uniqueID":"ctl00$RadAjaxManager1","updatePanelsRenderMode":0}, null, null, $get("ctl00_RadAjaxManager1"));
+});
+Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.RadAjaxLoadingPanel, {"initialDelayTime":0,"isSticky":false,"minDisplayTime":0,"skin":"Metro","uniqueID":"ctl00$RadAjaxLoadingPanel1","zIndex":90000}, null, null, $get("RadAjaxLoadingPanel1"));
+});
+
+document.getElementById('MainContent_PIPOAssignmentControl_ucSubjectProperties_rgvAidsTextBox').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('MainContent_PIPOAssignmentControl_ucSubjectProperties_rgvAidsTextBox'));
+}
+//]]>
+</script>
+</form>
+</body>
+</html>

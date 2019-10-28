@@ -1,0 +1,1012 @@
+[API Trapper      (44bc:27a4)] Recording in 32-bit mode: C:\Program Files (x86)\Internet Explorer\iexplore.exe
+[API Trapper      (438c:194c)] Recording in 64-bit mode: C:\Program Files\Internet Explorer\IEXPLORE.EXE
+[API Trapper      (3b78:4790)] Recording in 32-bit mode: C:\Program Files (x86)\Internet Explorer\IEXPLORE.EXE
+[Network Analyzer (438c:1c80)] ------------------------------------------------------------------------------------------
+[Network Analyzer (438c:1c80)] Load Network Traffic Analyzers:
+[Network Analyzer (438c:1c80)]     Analyzer Module: WPLUS (value=)
+[Network Analyzer (438c:1c80)]     Analyzer Module: WebBase (value=GetHttpProtocolAnalyzer:api_http_filter_x64.dll)
+[Network Analyzer (438c:1c80)]     + Network Analyzer: api_http_filter_x64.dll @ GetHttpProtocolAnalyzer Loaded!
+[Network Analyzer (438c:1c80)]     + Interception Auditors: WinInetWplusInterceptionAudit:api_http_filter_x64.dll
+[Network Analyzer (438c:1c80)]     Analyzer Module: QTWeb (value=GetWebSocketProtocolAnalyzer:WebSocketAnalyzer_x64.dll)
+[Network Analyzer (438c:1c80)]     + Network Analyzer: WebSocketAnalyzer_x64.dll @ GetWebSocketProtocolAnalyzer Loaded!
+[Network Analyzer (438c:1c80)]     Analyzer Module: local_server (value=)
+[Network Analyzer (438c:1c80)] ------------------------------------------------------------------------------------------
+[Network Analyzer (438c: 58c)] Address lookup for 335DPC908 = 10.3.111.139
+[Network Analyzer (438c:1c80)] Address lookup for 335DPC908 = 10.3.111.139
+[Network Analyzer (438c:1c80)] Request Connection: Remote Server @ 10.251.36.200:80   (Service=)  (Sid=  1)  PROXIED!
+[Web Request      (438c: 58c)] "GET /central00.pac"   
+[Network Analyzer (438c: 58c)]   (Sid:  1) Client -> Server @ : 135 bytes (Service=HTTP)
+[Network Analyzer (438c: 58c)]   (Sid:  1) Server -> Client : 3472 bytes  (Service=HTTP)
+[Network Analyzer (438c: 58c)]   (Sid:  1) Server -> Client : 2356 bytes  (Service=HTTP)
+[Network Analyzer (3b78:2490)] ------------------------------------------------------------------------------------------
+[Network Analyzer (3b78:2490)] Load Network Traffic Analyzers:
+[Network Analyzer (3b78:2490)]     Analyzer Module: WPLUS (value=)
+[Network Analyzer (3b78:2490)]     Analyzer Module: WebBase (value=GetHttpProtocolAnalyzer:api_http_filter.dll)
+[Network Analyzer (3b78:2490)]     + Network Analyzer: api_http_filter.dll @ GetHttpProtocolAnalyzer Loaded!
+[Network Analyzer (3b78:2490)]     + Interception Auditors: WinInetWplusInterceptionAudit:api_http_filter.dll
+[Network Analyzer (3b78:2490)]     Analyzer Module: QTWeb (value=GetWebSocketProtocolAnalyzer:WebSocketAnalyzer.dll)
+[Network Analyzer (3b78:2490)]     + Network Analyzer: WebSocketAnalyzer.dll @ GetWebSocketProtocolAnalyzer Loaded!
+[Network Analyzer (3b78:2490)]     Analyzer Module: local_server (value=)
+[Network Analyzer (3b78:2490)] ------------------------------------------------------------------------------------------
+[Network Analyzer (3b78:47b8)] Address lookup for 335DPC908 = 10.3.111.139
+[Network Analyzer (438c:42e8)] Address lookup for 335DPC908 = 10.3.111.139
+[Network Analyzer (438c:42e8)] Request Connection: Remote Server @ 10.2.1.140:8002   (Service=)  (Sid=  2)  PROXIED!
+[Network Analyzer (3b78:2490)] Address lookup for 335DPC908 = 10.3.111.139
+[Network Analyzer (3b78:2490)] Request Connection: Remote Server @ 10.2.55.154:443   (Service=)  (Sid=  1)  PROXIED!
+[Web Request      (438c: 58c)] "GET http://www.bing.com/favicon.ico"   
+[Network Analyzer (438c: 58c)]   (Sid:  2) Client -> Server @ : 399 bytes (Service=HTTP)
+[Network Analyzer (438c: 58c)]   (Sid:  2) Server -> Client : 603 bytes  (Service=HTTP)
+[Network Analyzer (3b78:4230)]   (Sid:  1) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.1, ciphers:ECDHE-RSA-AES256-SHA)
+[Network Analyzer (3b78:4230)]   (Sid:  1) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:ECDHE-RSA-AES256-SHA384)
+[Network Analyzer (3b78:36ac)] Address lookup for 335DPC908 = 10.3.111.139
+[Network Analyzer (3b78:36ac)] Request Connection: Remote Server @ 10.2.1.140:8002   (Service=)  (Sid=  2)  PROXIED!
+[Network Analyzer (3b78: 4f8)] Address lookup for 335DPC908 = 10.3.111.139
+[Network Analyzer (3b78: 4f8)] Request Connection: Remote Server @ 10.2.1.140:8002   (Service=)  (Sid=  3)  PROXIED!
+[Network Analyzer (3b78: 4f8)] Address lookup for 335DPC908 = 10.3.111.139
+[Network Analyzer (3b78: 4f8)] Request Connection: Remote Server @ 10.2.1.140:8002   (Service=)  (Sid=  4)  PROXIED!
+[Network Analyzer (3b78:2490)] Address lookup for 335DPC908 = 10.3.111.139
+[Network Analyzer (3b78:2490)] Request Connection: Remote Server @ 10.2.55.154:443   (Service=)  (Sid=  5)  PROXIED!
+[Network Analyzer (3b78:1d00)]   (Sid:  5) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.1, ciphers:AES256-SHA)
+[Network Analyzer (3b78:1d00)]   (Sid:  5) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:ECDHE-RSA-AES256-SHA384)
+[Network Analyzer (3b78:47b8)]   (Sid:  1) Connection Terminated (by Client)
+[Network Analyzer (3b78:47b8)]   (Sid:  5) Connection Terminated (by Client)
+[Network Analyzer (438c:42e8)] Address lookup for 335DPC908 = 10.3.111.139
+[Network Analyzer (438c:3728)] Address lookup for 335DPC908 = 10.3.111.139
+[Network Analyzer (438c:3728)] Request Connection: Remote Server @ 72.21.81.200:443   (Service=)  (Sid=  3)  PROXIED!
+[Network Analyzer (438c:42e8)] Request Connection: Remote Server @ 72.21.81.200:443   (Service=)  (Sid=  4)  PROXIED!
+[Network Analyzer (3b78:2490)] Address lookup for 335DPC908 = 10.3.111.139
+[Network Analyzer (3b78:2490)] Request Connection: Remote Server @ 10.2.55.154:443   (Service=)  (Sid=  6)  PROXIED!
+[Network Analyzer (438c:3c38)]   (Sid:  4) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.1, ciphers:AES256-SHA)
+[Network Analyzer (438c:4694)]   (Sid:  3) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.1, ciphers:ECDHE-RSA-AES128-SHA)
+[Network Analyzer (438c:4694)]   (Sid:  3) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:ECDHE-RSA-AES256-SHA384)
+[Network Analyzer (438c:3c38)]   (Sid:  4) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:ECDHE-RSA-AES256-SHA384)
+[Network Analyzer (438c:358c)] Address lookup for 335DPC908 = 10.3.111.139
+[Network Analyzer (438c:1c80)] Address lookup for 335DPC908 = 10.3.111.139
+[Network Analyzer (438c:358c)] Request Connection: Remote Server @ 10.2.1.140:8002   (Service=)  (Sid=  5)  PROXIED!
+[Network Analyzer (438c:1c80)] Request Connection: Remote Server @ 10.2.1.140:8002   (Service=)  (Sid=  6)  PROXIED!
+[Network Analyzer (3b78:2a70)]   (Sid:  6) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.1, ciphers:AES256-SHA)
+[Network Analyzer (3b78:2a70)]   (Sid:  6) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:ECDHE-RSA-AES256-SHA384)
+[Network Analyzer (3b78:47b8)]   (Sid:  6) Connection Terminated (by Client)
+[Network Analyzer (3b78:2490)] Address lookup for 335DPC908 = 10.3.111.139
+[Network Analyzer (3b78:2490)] Request Connection: Remote Server @ 10.2.55.154:443   (Service=)  (Sid=  7)  PROXIED!
+[Network Analyzer (3b78:45e0)]   (Sid:  7) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.1, ciphers:AES256-SHA)
+[Network Analyzer (3b78:45e0)]   (Sid:  7) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:ECDHE-RSA-AES256-SHA384)
+[Network Analyzer (3b78:2490)] Address lookup for 335DPC908 = 10.3.111.139
+[Network Analyzer (3b78:2490)] Request Connection: Remote Server @ 10.2.55.154:443   (Service=)  (Sid=  8)  PROXIED!
+[Network Analyzer (3b78:3434)]   (Sid:  8) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.1, ciphers:AES256-SHA)
+[Network Analyzer (3b78:3434)]   (Sid:  8) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:ECDHE-RSA-AES256-SHA384)
+[Web Request      (3b78:47b8)] "GET /starsclassroom/Login.aspx?ReturnUrl=%2fstarsclassroom"   
+[Network Analyzer (3b78:47b8)]   (Sid:  8) Client -> Server @ : 612 bytes (SSL)(Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid:  8) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid:  8) Server -> Client : 3895 bytes (SSL) (Service=HTTP)
+[Web Request      (3b78:47b8)] "GET /ui/apps/sites/stars_classroom/checkboxSlider.css?ver=2.31.1.2"   
+[Network Analyzer (3b78:47b8)]   (Sid:  8) Client -> Server @ : 526 bytes (SSL)(Service=HTTP)
+[Network Analyzer (3b78:2490)] Address lookup for 335DPC908 = 10.3.111.139
+[Network Analyzer (3b78:47b8)]   (Sid:  8) Server -> Client : 2480 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:2368)] Address lookup for 335DPC908 = 10.3.111.139
+[Network Analyzer (3b78:2368)] Request Connection: Remote Server @ 10.2.55.154:443   (Service=)  (Sid=  9)  PROXIED!
+[Network Analyzer (3b78:4364)] Address lookup for 335DPC908 = 10.3.111.139
+[Network Analyzer (3b78:2490)] Request Connection: Remote Server @ 10.2.55.154:443   (Service=)  (Sid= 10)  PROXIED!
+[Web Request      (3b78:47b8)] "GET /starsclassroom/Content/toastr.css"   
+[Network Analyzer (3b78: 4f8)] Address lookup for 335DPC908 = 10.3.111.139
+[Network Analyzer (3b78:47b8)]   (Sid:  8) Client -> Server @ : 498 bytes (SSL)(Service=HTTP)
+[Network Analyzer (3b78:4364)] Request Connection: Remote Server @ 10.2.55.154:443   (Service=)  (Sid= 11)  PROXIED!
+[Network Analyzer (3b78:36ac)] Address lookup for 335DPC908 = 10.3.111.139
+[Network Analyzer (3b78:47b8)]   (Sid:  8) Server -> Client : 5935 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:4038)] Address lookup for 335DPC908 = 10.3.111.139
+[Web Request      (3b78:47b8)] "GET /ui/apps/resources/font-awesome/css/font-awesome.min.css"   
+[Network Analyzer (3b78:47b8)]   (Sid:  8) Client -> Server @ : 520 bytes (SSL)(Service=HTTP)
+[Network Analyzer (3b78:36ac)] Request Connection: Remote Server @ 10.2.55.154:443   (Service=)  (Sid= 12)  PROXIED!
+[Network Analyzer (3b78:3a20)]   (Sid: 10) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.1, ciphers:AES256-SHA)
+[Network Analyzer (3b78: 4f8)] Request Connection: Remote Server @ 10.2.55.154:443   (Service=)  (Sid= 13)  PROXIED!
+[Network Analyzer (3b78:4038)] Request Connection: Remote Server @ 10.2.1.140:8002   (Service=)  (Sid= 14)  PROXIED!
+[Web Request      (3b78:47b8)] "CONNECT fonts.googleapis.com:443"   
+[Network Analyzer (3b78:47b8)]   (Sid: 14) Client -> Server @ : 230 bytes (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid:  8) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid:  8) Server -> Client : 14864 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:4058)]   (Sid:  9) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.1, ciphers:AES256-SHA)
+[Network Analyzer (3b78:47b8)]   (Sid: 14) Server -> Client : 116 bytes 
+[Web Request      (3b78:47b8)] "GET /ui/apps/sites/stars_classroom/main.css?ver=2.31.1.2"   
+[Network Analyzer (3b78:47b8)]   (Sid:  8) Client -> Server @ : 516 bytes (SSL)(Service=HTTP)
+[Network Analyzer (3b78:43dc)]   (Sid: 11) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.1, ciphers:AES256-SHA)
+[Network Analyzer (3b78:47b8)]   (Sid:  8) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid:  8) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid:  8) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid:  8) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid:  8) Server -> Client : 248 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid:  8) Server -> Client : 9392 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:382c)]   (Sid: 12) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.1, ciphers:AES256-SHA)
+[Web Request      (3b78:47b8)] "GET /starsclassroom/WebResource.axd?d=urCACUaUZeT6oPoIZXShbq9LQ-yh1b8NC-tNAmxvuvUdIcqG1G5NlhoWuIGHfYhg6IhYGBLUNCdZDlRs29Bl_u7K1YmY93EZGW5g4sZPSZdwtoEH0&t=636360589564367603"   
+[Network Analyzer (3b78:47b8)]   (Sid:  8) Client -> Server @ : 632 bytes (SSL)(Service=HTTP)
+[Network Analyzer (3b78:3a20)]   (Sid: 10) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:ECDHE-RSA-AES256-SHA384)
+[Network Analyzer (3b78:47b8)]   (Sid:  8) Server -> Client : 1135 bytes (SSL) (Service=HTTP)
+[Web Request      (3b78:47b8)] "GET /ui/apps/sites/stars_classroom/ivory.css?ver=2.31.1.2"   
+[Network Analyzer (3b78:47b8)]   (Sid: 10) Client -> Server @ : 517 bytes (SSL)(Service=HTTP)
+[Web Request      (3b78:47b8)] "GET /starsclassroom/WebResource.axd?d=aupLorz3w8A80OJEEKIwoIYcJ2VYR7pVPrfDpRhKy7SjsVZBb19sY6rmGQMhK9sL_xRBWGAVqrhHmW-AOsxlQ8ScpDiOrC7dPSDlJBoAmdbOLXe-Lic-39qbKV4fNsnNU5WebQ2&t=636360589559077603"   
+[Network Analyzer (3b78:47b8)]   (Sid:  8) Client -> Server @ : 654 bytes (SSL)(Service=HTTP)
+[Network Analyzer (3b78:4058)]   (Sid:  9) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:ECDHE-RSA-AES256-SHA384)
+[Web Request      (3b78:47b8)] "GET /ui/apps/sites/stars_classroom/kendo/kendo.default.css?ver=2.31.1.2"   
+[Network Analyzer (3b78:47b8)]   (Sid:  9) Client -> Server @ : 531 bytes (SSL)(Service=HTTP)
+[Network Analyzer (3b78:3978)]   (Sid: 13) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.1, ciphers:AES256-SHA)
+[Network Analyzer (3b78:47b8)]   (Sid:  8) Server -> Client : 647 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 10) Server -> Client : 3540 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid:  9) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Web Request      (3b78:47b8)] "GET /starsclassroom/Scripts/kendo/jquery.min.js?ver=2.31.1.2"   
+[Network Analyzer (3b78:47b8)]   (Sid:  8) Client -> Server @ : 520 bytes (SSL)(Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid:  9) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid:  9) Server -> Client : 8854 bytes (SSL) (Service=HTTP)
+[Web Request      (3b78:47b8)] "GET /starsclassroom/Scripts/kendo/kendo.all.min.js?ver=2.31.1.2"   
+[Network Analyzer (3b78:47b8)]   (Sid: 10) Client -> Server @ : 523 bytes (SSL)(Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid:  8) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid:  8) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Web Request      (3b78:47b8)] "GET /starsclassroom/Scripts/toastr.min.js?ver=2.31.1.2"   
+[Network Analyzer (3b78:47b8)]   (Sid:  9) Client -> Server @ : 514 bytes (SSL)(Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid:  8) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 10) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid:  8) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid:  9) Server -> Client : 2915 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 10) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:43dc)]   (Sid: 11) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:ECDHE-RSA-AES256-SHA384)
+[Network Analyzer (3b78:382c)]   (Sid: 12) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:ECDHE-RSA-AES256-SHA384)
+[Network Analyzer (3b78:4038)] Address lookup for 335DPC908 = 10.3.111.139
+[Network Analyzer (3b78:47b8)]   (Sid:  8) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:1fc0)] Address lookup for 335DPC908 = 10.3.111.139
+[Network Analyzer (3b78:36ac)] Address lookup for 335DPC908 = 10.3.111.139
+[Network Analyzer (3b78:2490)] Address lookup for 335DPC908 = 10.3.111.139
+[Network Analyzer (3b78:47b8)]   (Sid: 10) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid:  8) Server -> Client : 11043 bytes (SSL) (Service=HTTP)
+[Web Request      (3b78:47b8)] "GET /starsclassroom/Scripts/unsavedconfirmation.js?ver=2.31.1.2"   
+[Network Analyzer (3b78:47b8)]   (Sid:  9) Client -> Server @ : 523 bytes (SSL)(Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 10) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 10) Server -> Client : 337 bytes (SSL) (Service=HTTP)
+[Web Request      (3b78:47b8)] "GET /ui/apps/sites/stars_classroom/kendo/kendo.metro.min.css?ver=2.31.1.2"   
+[Network Analyzer (3b78:47b8)]   (Sid: 11) Client -> Server @ : 533 bytes (SSL)(Service=HTTP)
+[Web Request      (3b78:47b8)] "GET /ui/apps/sites/stars_classroom/kendo/kendo.common.css?ver=2.31.1.2"   
+[Network Analyzer (3b78:47b8)]   (Sid: 12) Client -> Server @ : 530 bytes (SSL)(Service=HTTP)
+[Network Analyzer (3b78:283c)]   (Sid: 14) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.1, ciphers:ECDHE-ECDSA-AES128-SHA)
+[Web Request      (3b78:47b8)] "GET /starsclassroom/Scripts/validate.min.js?ver=2.31.1.2"   
+[Network Analyzer (3b78:47b8)]   (Sid:  8) Client -> Server @ : 516 bytes (SSL)(Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid:  9) Server -> Client : 867 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 10) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:2490)] Request Connection: Remote Server @ 54.192.37.180:443   (Service=)  (Sid= 15)  PROXIED!
+[Network Analyzer (3b78:47b8)]   (Sid:  8) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 10) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 11) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 12) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid:  8) Server -> Client : 6642 bytes (SSL) (Service=HTTP)
+[Web Request      (3b78:47b8)] "GET /starsclassroom/WebResource.axd?d=pynGkmcFUV13He1Qd6_TZItUc7uOXVQ_JJSF3nqWHTssVf86I8T6DdUK_rt6gpBWQGLL6g2&t=636160664560000000"   
+[Network Analyzer (3b78:47b8)]   (Sid:  9) Client -> Server @ : 590 bytes (SSL)(Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 10) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 11) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 12) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:36ac)] Request Connection: Remote Server @ 54.192.37.180:443   (Service=)  (Sid= 16)  PROXIED!
+[Network Analyzer (3b78:3978)]   (Sid: 13) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:ECDHE-RSA-AES256-SHA384)
+[Network Analyzer (3b78:47b8)]   (Sid:  9) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 10) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 11) Server -> Client : 316 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 12) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Web Request      (3b78:47b8)] "GET /starsclassroom/ScriptResource.axd?d=1HpV3OVB0CaEXoaafcqmhqJZa2bebF8z_FF0-EldwBH21IaxfGlAbaVjDF2unh6RE80xJSul3t-rb8c97YYqwPNFk2NeUGa5nusJgONIncVk7O-3fGq9Cs5R_JP4mzB8Vp9sSQ2&t=ffffffffbc20153d"   
+[Network Analyzer (3b78:47b8)]   (Sid:  8) Client -> Server @ : 655 bytes (SSL)(Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid:  9) Server -> Client : 7021 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 10) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 12) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid:  8) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 10) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Web Request      (3b78:47b8)] "GET /starsclassroom/Telerik.Web.UI.WebResource.axd?_TSM_HiddenField_=RadScriptManager1_TSM&compress=1&_TSM_CombinedScripts_=%3b%3bSystem.Web.Extensions%2c+Version%3d4.0.0.0%2c+Culture%3dneutral%2c+PublicKeyToken%3d31bf3856ad364e35%3aen-US%3a4bd8faf8-554d-46be-b2ff-c9d57adb612c%3aea597d4b%3ab25378d2"   
+[Network Analyzer (3b78:47b8)]   (Sid: 11) Client -> Server @ : 759 bytes (SSL)(Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 12) Server -> Client : 249 bytes (SSL) (Service=HTTP)
+[Web Request      (3b78:47b8)] "GET /ui/apps/sites/stars_classroom/elementaryschoolscheduling.css?ver=2.31.1.2"   
+[Network Analyzer (3b78:47b8)]   (Sid: 13) Client -> Server @ : 538 bytes (SSL)(Service=HTTP)
+[Network Analyzer (3b78:1fc0)] Request Connection: Remote Server @ 54.192.37.180:443   (Service=)  (Sid= 17)  PROXIED!
+[Network Analyzer (3b78:47b8)]   (Sid:  8) Server -> Client : 10924 bytes (SSL) (Service=HTTP)
+[Web Request      (3b78:47b8)] "GET /starsclassroom/Scripts/MasterPageFunctions.js"   
+[Network Analyzer (3b78:47b8)]   (Sid:  9) Client -> Server @ : 510 bytes (SSL)(Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 10) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 12) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid:  9) Server -> Client : 1960 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 10) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 11) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 12) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 13) Server -> Client : 16155 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:4038)] Request Connection: Remote Server @ 54.192.37.180:443   (Service=)  (Sid= 18)  PROXIED!
+[Network Analyzer (3b78:47b8)]   (Sid: 10) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 11) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 12) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 10) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 11) Server -> Client : 2792 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 12) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 10) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 12) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 10) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 12) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:14e0)]   (Sid: 15) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.1, ciphers:ECDHE-RSA-AES128-SHA)
+[Network Analyzer (3b78:47b8)]   (Sid: 10) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 12) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 10) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 12) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 10) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 12) Server -> Client : 15828 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 10) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 10) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:283c)]   (Sid: 14) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:ECDHE-RSA-AES256-SHA384)
+[Network Analyzer (3b78:47b8)]   (Sid: 10) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 10) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:2d90)]   (Sid: 16) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.1, ciphers:AES256-SHA)
+[Network Analyzer (3b78:47b8)]   (Sid: 10) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 10) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 10) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 10) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 10) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 10) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 10) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 10) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 10) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 10) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 10) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 10) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 10) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 10) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 10) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:3c10)]   (Sid: 17) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.1, ciphers:AES256-SHA)
+[Network Analyzer (3b78:47b8)]   (Sid: 10) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 10) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 10) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:4038)] Address lookup for 335DPC908 = 10.3.111.139
+[Network Analyzer (3b78:2d90)]   (Sid: 16) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:ECDHE-RSA-AES256-SHA384)
+[Network Analyzer (3b78:47b8)]   (Sid: 10) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:14e0)]   (Sid: 15) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:ECDHE-RSA-AES256-SHA384)
+[Network Analyzer (3b78:47b8)]   (Sid: 10) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 10) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 10) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:4038)] Request Connection: Remote Server @ 10.2.1.140:8002   (Service=)  (Sid= 19)  PROXIED!
+[Network Analyzer (3b78:47b8)]   (Sid: 10) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 10) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 10) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 10) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 10) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:290c)]   (Sid: 18) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.1, ciphers:AES256-SHA)
+[Network Analyzer (3b78:47b8)]   (Sid: 10) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 10) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 10) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 10) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 10) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 10) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 10) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 10) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 10) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 10) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:3c10)]   (Sid: 17) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:ECDHE-RSA-AES256-SHA384)
+[Network Analyzer (3b78:47b8)]   (Sid: 10) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:40f4)] Address lookup for 335DPC908 = 10.3.111.139
+[Network Analyzer (3b78:36ac)] Address lookup for 335DPC908 = 10.3.111.139
+[Network Analyzer (3b78:47b8)]   (Sid: 10) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 10) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 10) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 10) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 10) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:40f4)] Request Connection: Remote Server @ 10.2.1.140:8002   (Service=)  (Sid= 20)  PROXIED!
+[Network Analyzer (3b78:47b8)]   (Sid: 10) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 10) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 10) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:36ac)] Request Connection: Remote Server @ 10.2.1.140:8002   (Service=)  (Sid= 21)  PROXIED!
+[Network Analyzer (3b78:47b8)]   (Sid: 10) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 10) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:290c)]   (Sid: 18) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:ECDHE-RSA-AES256-SHA384)
+[Network Analyzer (3b78:47b8)]   (Sid: 10) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 10) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 10) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 10) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 10) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:4038)] Address lookup for 335DPC908 = 10.3.111.139
+[Network Analyzer (3b78:47b8)]   (Sid: 10) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 10) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 10) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 10) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:4038)] Request Connection: Remote Server @ 10.2.1.140:8002   (Service=)  (Sid= 22)  PROXIED!
+[Network Analyzer (3b78:47b8)]   (Sid: 10) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 10) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 10) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 10) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 10) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 10) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 10) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 10) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 10) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 10) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 10) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 10) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 10) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:36ac)] Address lookup for 335DPC908 = 10.3.111.139
+[Network Analyzer (3b78:47b8)]   (Sid: 10) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 10) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 10) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 10) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 10) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 10) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:36ac)] Request Connection: Remote Server @ 10.2.1.140:8002   (Service=)  (Sid= 23)  PROXIED!
+[Network Analyzer (3b78:47b8)]   (Sid: 10) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 10) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 10) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 10) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 10) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 10) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 10) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 10) Server -> Client : 9218 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid:  7) Connection Terminated (by Client)
+[Network Analyzer (438c:1c80)] Address lookup for 335DPC908 = 10.3.111.139
+[Network Analyzer (438c:1c80)] Request Connection: Remote Server @ 10.2.1.140:8002   (Service=)  (Sid=  7)  PROXIED!
+[Network Analyzer (438c:15f8)] Address lookup for 335DPC908 = 10.3.111.139
+[Network Analyzer (438c:15f8)] Request Connection: Remote Server @ 10.2.1.140:8002   (Service=)  (Sid=  8)  PROXIED!
+[Network Analyzer (3b78:39a8)] Address lookup for 335DPC908 = 10.3.111.139
+[Network Analyzer (3b78:39a8)] Request Connection: Remote Server @ 10.2.1.140:8002   (Service=)  (Sid= 24)  PROXIED!
+[Network Analyzer (3b78:40f4)] Address lookup for 335DPC908 = 10.3.111.139
+[Network Analyzer (3b78:36ac)] Address lookup for 335DPC908 = 10.3.111.139
+[Network Analyzer (3b78:39a8)] Address lookup for 335DPC908 = 10.3.111.139
+[Network Analyzer (3b78:40f4)] Request Connection: Remote Server @ 10.2.1.140:8002   (Service=)  (Sid= 25)  PROXIED!
+[Network Analyzer (3b78:36ac)] Request Connection: Remote Server @ 10.2.1.140:8002   (Service=)  (Sid= 26)  PROXIED!
+[Network Analyzer (3b78:39a8)] Request Connection: Remote Server @ 10.2.1.140:8002   (Service=)  (Sid= 27)  PROXIED!
+[Network Analyzer (3b78:39a8)] Address lookup for 335DPC908 = 10.3.111.139
+[Network Analyzer (3b78:39a8)] Request Connection: Remote Server @ 10.2.1.140:8002   (Service=)  (Sid= 28)  PROXIED!
+[Network Analyzer (438c:15f8)] Address lookup for 335DPC908 = 10.3.111.139
+[Network Analyzer (438c:15f8)] Request Connection: Remote Server @ 10.2.1.140:8002   (Service=)  (Sid=  9)  PROXIED!
+[Network Analyzer (438c:15f8)] Address lookup for 335DPC908 = 10.3.111.139
+[Network Analyzer (438c:15f8)] Request Connection: Remote Server @ 10.2.1.140:8002   (Service=)  (Sid= 10)  PROXIED!
+[Network Analyzer (438c:1c80)] Address lookup for 335DPC908 = 10.3.111.139
+[Network Analyzer (438c:1c80)] Request Connection: Remote Server @ 72.21.81.200:443   (Service=)  (Sid= 11)  PROXIED!
+[Network Analyzer (438c:33a4)]   (Sid: 11) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.1, ciphers:AES256-SHA)
+[Network Analyzer (438c:33a4)]   (Sid: 11) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:ECDHE-RSA-AES256-SHA384)
+[Web Request      (438c: 58c)] "GET /IE11/1434748155000/iecompatviewlist.xml"   
+[Network Analyzer (438c: 58c)]   (Sid: 11) Client -> Server @ : 668 bytes (SSL)(Service=HTTP)
+[Network Analyzer (438c: 58c)]   (Sid: 11) Server -> Client : 467 bytes (SSL) (Service=HTTP)
+[Network Analyzer (438c: 58c)]   (Sid: 11) Server -> Client : 16383 bytes (SSL) (Service=HTTP)
+[Network Analyzer (438c: 58c)]   (Sid: 11) Server -> Client : 16383 bytes (SSL) (Service=HTTP)
+[Network Analyzer (438c: 58c)]   (Sid: 11) Server -> Client : 1747 bytes (SSL) (Service=HTTP)
+[Network Analyzer (438c: 58c)]   (Sid:  4) Connection Terminated (by Client)
+[Network Analyzer (438c: 58c)]   (Sid:  3) Connection Terminated (by Client)
+[Network Analyzer (3b78:1fc0)] Address lookup for 335DPC908 = 10.3.111.139
+[Network Analyzer (3b78:47b8)]   (Sid: 14) Connection Terminated (by Client)
+[Network Analyzer (3b78: 4f8)] Address lookup for 335DPC908 = 10.3.111.139
+[Network Analyzer (3b78: 4f8)] Request Connection: Remote Server @ 10.2.1.140:8002   (Service=)  (Sid= 29)  PROXIED!
+[Web Request      (3b78:47b8)] "CONNECT fonts.googleapis.com:443"   
+[Network Analyzer (3b78:47b8)]   (Sid: 29) Client -> Server @ : 230 bytes (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 29) Server -> Client : 116 bytes 
+[Network Analyzer (3b78:1264)]   (Sid: 29) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.1, ciphers:AES128-SHA)
+[Network Analyzer (3b78:1264)]   (Sid: 29) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:ECDHE-RSA-AES256-SHA384)
+[Web Request      (3b78:47b8)] "GET /css?family=PT+Sans:400,700,400italic,700italic"   
+[Network Analyzer (3b78:47b8)]   (Sid: 29) Client -> Server @ : 510 bytes (SSL)(Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 29) Server -> Client : 789 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 29) Server -> Client : 64 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 29) Server -> Client : 5 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 16) Connection Terminated (by Client)
+[Network Analyzer (3b78:47b8)]   (Sid: 15) Connection Terminated (by Client)
+[Network Analyzer (3b78:1fc0)] Request Connection: Remote Server @ 54.192.37.180:443   (Service=)  (Sid= 30)  PROXIED!
+[Network Analyzer (3b78:3340)]   (Sid: 30) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.1, ciphers:AES256-SHA)
+[Network Analyzer (3b78:40f4)] Address lookup for 335DPC908 = 10.3.111.139
+[Network Analyzer (3b78:40f4)] Request Connection: Remote Server @ 54.192.37.180:443   (Service=)  (Sid= 31)  PROXIED!
+[Network Analyzer (3b78:1738)]   (Sid: 31) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.1, ciphers:AES256-SHA)
+[Network Analyzer (3b78:47b8)]   (Sid: 17) Connection Terminated (by Client)
+[Network Analyzer (3b78:3340)]   (Sid: 30) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:ECDHE-RSA-AES256-SHA384)
+[Web Request      (3b78:47b8)] "GET /ajaxz/2017.2.621/Common/Core.js"   
+[Network Analyzer (3b78:47b8)]   (Sid: 30) Client -> Server @ : 504 bytes (SSL)(Service=HTTP)
+[Network Analyzer (3b78:2368)] Address lookup for 335DPC908 = 10.3.111.139
+[Network Analyzer (3b78:47b8)]   (Sid: 30) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:2368)] Request Connection: Remote Server @ 54.192.37.180:443   (Service=)  (Sid= 32)  PROXIED!
+[Network Analyzer (3b78:47b8)]   (Sid: 30) Server -> Client : 2197 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:25e4)]   (Sid: 32) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.1, ciphers:AES256-SHA)
+[Network Analyzer (3b78:1738)]   (Sid: 31) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:ECDHE-RSA-AES256-SHA384)
+[Web Request      (3b78:47b8)] "GET /ajaxz/2017.2.621/Ajax/Ajax.js"   
+[Network Analyzer (3b78:47b8)]   (Sid: 31) Client -> Server @ : 502 bytes (SSL)(Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 18) Connection Terminated (by Client)
+[Network Analyzer (3b78:47b8)]   (Sid: 31) Server -> Client : 9316 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:4364)] Address lookup for 335DPC908 = 10.3.111.139
+[Network Analyzer (3b78:4364)] Request Connection: Remote Server @ 54.192.37.180:443   (Service=)  (Sid= 33)  PROXIED!
+[Network Analyzer (3b78:25e4)]   (Sid: 32) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:ECDHE-RSA-AES256-SHA384)
+[Web Request      (3b78:47b8)] "GET /ui/apps/sites/stars_classroom/images/grid_bkg.gif"   
+[Network Analyzer (3b78:47b8)]   (Sid: 10) Client -> Server @ : 514 bytes (SSL)(Service=HTTP)
+[Web Request      (3b78:47b8)] "GET /ajaxz/2017.2.621/Common/jQuery.js"   
+[Network Analyzer (3b78:47b8)]   (Sid: 32) Client -> Server @ : 506 bytes (SSL)(Service=HTTP)
+[Network Analyzer (3b78:2368)] Address lookup for 335DPC908 = 10.3.111.139
+[Network Analyzer (3b78:47b8)]   (Sid: 32) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 10) Server -> Client : 1583 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 32) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 32) Server -> Client : 1037 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:25b0)]   (Sid: 33) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.1, ciphers:AES256-SHA)
+[Network Analyzer (3b78:2368)] Request Connection: Remote Server @ 10.2.1.140:8002   (Service=)  (Sid= 34)  PROXIED!
+[Web Request      (3b78:47b8)] "GET /ui/apps/sites/stars_classroom/images/loading.gif"   
+[Network Analyzer (3b78:47b8)]   (Sid: 10) Client -> Server @ : 513 bytes (SSL)(Service=HTTP)
+[Web Request      (3b78:47b8)] "CONNECT fonts.gstatic.com:443"   
+[Network Analyzer (3b78:47b8)]   (Sid: 34) Client -> Server @ : 224 bytes (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 10) Server -> Client : 11067 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 34) Server -> Client : 116 bytes 
+[Network Analyzer (3b78:25b0)]   (Sid: 33) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:ECDHE-RSA-AES256-SHA384)
+[Network Analyzer (3b78:24cc)]   (Sid: 34) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.1, ciphers:ECDHE-ECDSA-AES128-SHA)
+[Network Analyzer (3b78:24cc)]   (Sid: 34) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:ECDHE-RSA-AES256-SHA384)
+[Network Analyzer (3b78:4364)] Address lookup for 335DPC908 = 10.3.111.139
+[Web Request      (3b78:47b8)] "GET /ajaxz/2017.2.621/Common/Navigation/OverlayScript.js"   
+[Network Analyzer (3b78:47b8)]   (Sid: 33) Client -> Server @ : 524 bytes (SSL)(Service=HTTP)
+[Network Analyzer (3b78:4364)] Request Connection: Remote Server @ 10.2.1.140:8002   (Service=)  (Sid= 35)  PROXIED!
+[Network Analyzer (3b78:47b8)]   (Sid: 33) Server -> Client : 1266 bytes (SSL) (Service=HTTP)
+[Web Request      (3b78:47b8)] "GET /ui/apps/sites/stars_classroom/images/button_bg.png"   
+[Network Analyzer (3b78:47b8)]   (Sid: 10) Client -> Server @ : 515 bytes (SSL)(Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 10) Server -> Client : 1299 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:4364)] Address lookup for 335DPC908 = 10.3.111.139
+[Network Analyzer (3b78:4364)] Request Connection: Remote Server @ 10.2.1.140:8002   (Service=)  (Sid= 36)  PROXIED!
+[Web Request      (3b78:47b8)] "GET /ui/apps/sites/stars_classroom/images/DOE_Logo.png"   
+[Network Analyzer (3b78:47b8)]   (Sid: 10) Client -> Server @ : 514 bytes (SSL)(Service=HTTP)
+[Web Request      (3b78:47b8)] "CONNECT www.google-analytics.com:443"   
+[Network Analyzer (3b78:47b8)]   (Sid: 36) Client -> Server @ : 238 bytes (Service=HTTP)
+[Web Request      (3b78:47b8)] "GET /ui/apps/sites/stars_classroom/images/home_img.jpg"   
+[Network Analyzer (3b78:47b8)]   (Sid: 11) Client -> Server @ : 514 bytes (SSL)(Service=HTTP)
+[Web Request      (3b78:47b8)] "GET /ui/apps/sites/stars_classroom/images/stars_classroom_logo.png"   
+[Network Analyzer (3b78:47b8)]   (Sid: 12) Client -> Server @ : 526 bytes (SSL)(Service=HTTP)
+[Web Request      (3b78:47b8)] "GET /ui/apps/sites/stars_classroom/images/toggle_btn_bg.png"   
+[Network Analyzer (3b78:47b8)]   (Sid: 13) Client -> Server @ : 519 bytes (SSL)(Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 10) Server -> Client : 14562 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 11) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 36) Server -> Client : 116 bytes 
+[Network Analyzer (3b78:47b8)]   (Sid: 11) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 12) Server -> Client : 13853 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 13) Server -> Client : 1233 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 11) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 11) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 11) Server -> Client : 251 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 11) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 11) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 11) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 11) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 11) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 11) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 11) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 11) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 11) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 11) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 11) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 11) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 11) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 11) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 11) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:3f3c)]   (Sid: 36) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.1, ciphers:ECDHE-RSA-AES128-SHA)
+[Network Analyzer (3b78:47b8)]   (Sid: 11) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 11) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 11) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 11) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 11) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 11) Server -> Client : 13288 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:3f3c)]   (Sid: 36) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:ECDHE-RSA-AES256-SHA384)
+[Network Analyzer (3b78:40f4)] Address lookup for 335DPC908 = 10.3.111.139
+[Network Analyzer (3b78:40f4)] Request Connection: Remote Server @ 10.2.1.140:8002   (Service=)  (Sid= 37)  PROXIED!
+[Network Analyzer (3b78:47b8)]   (Sid: 34) Connection Terminated (by Client)
+[Network Analyzer (3b78:2368)] Address lookup for 335DPC908 = 10.3.111.139
+[Network Analyzer (3b78:2368)] Request Connection: Remote Server @ 10.2.1.140:8002   (Service=)  (Sid= 38)  PROXIED!
+[Web Request      (3b78:47b8)] "CONNECT fonts.gstatic.com:443"   
+[Network Analyzer (3b78:47b8)]   (Sid: 38) Client -> Server @ : 224 bytes (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 38) Server -> Client : 116 bytes 
+[Network Analyzer (3b78:2e98)]   (Sid: 38) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.1, ciphers:AES128-SHA)
+[Network Analyzer (3b78:2e98)]   (Sid: 38) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:ECDHE-RSA-AES256-SHA384)
+[Web Request      (3b78:47b8)] "GET /s/ptsans/v8/S1YQx4pVZa17uu0HWQd2fA.eot"   
+[Network Analyzer (3b78:47b8)]   (Sid: 38) Client -> Server @ : 538 bytes (SSL)(Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 38) Server -> Client : 1323 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 38) Server -> Client : 1323 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 38) Server -> Client : 1323 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 38) Server -> Client : 1323 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 38) Server -> Client : 1323 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 38) Server -> Client : 1323 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 38) Server -> Client : 1323 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 38) Server -> Client : 1323 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 38) Server -> Client : 1323 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 38) Server -> Client : 1323 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 38) Server -> Client : 1323 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 38) Server -> Client : 1323 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 38) Server -> Client : 1323 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 38) Server -> Client : 1323 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 38) Server -> Client : 1323 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 38) Server -> Client : 1323 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 38) Server -> Client : 1323 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 38) Server -> Client : 1323 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 38) Server -> Client : 1323 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 38) Server -> Client : 1323 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 38) Server -> Client : 1323 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 38) Server -> Client : 1323 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 38) Server -> Client : 1323 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 38) Server -> Client : 1323 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 38) Server -> Client : 1323 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 38) Server -> Client : 190 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 38) Server -> Client : 1323 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 38) Server -> Client : 1323 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 38) Server -> Client : 1323 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 38) Server -> Client : 1323 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 38) Server -> Client : 1323 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 38) Server -> Client : 1323 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 38) Server -> Client : 1323 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 38) Server -> Client : 1323 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 38) Server -> Client : 1323 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 38) Server -> Client : 1323 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 38) Server -> Client : 1323 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 38) Server -> Client : 1323 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 38) Server -> Client : 1323 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 38) Server -> Client : 69 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 36) Connection Terminated (by Client)
+[Network Analyzer (3b78:1fc0)] Address lookup for 335DPC908 = 10.3.111.139
+[Network Analyzer (3b78:1fc0)] Request Connection: Remote Server @ 10.2.1.140:8002   (Service=)  (Sid= 39)  PROXIED!
+[Web Request      (3b78:47b8)] "CONNECT www.google-analytics.com:443"   
+[Network Analyzer (3b78:47b8)]   (Sid: 39) Client -> Server @ : 238 bytes (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 39) Server -> Client : 116 bytes 
+[Network Analyzer (3b78:4240)]   (Sid: 39) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.1, ciphers:AES128-SHA)
+[Network Analyzer (3b78:4240)]   (Sid: 39) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:ECDHE-RSA-AES256-SHA384)
+[Network Analyzer (438c:3728)] Address lookup for 335DPC908 = 10.3.111.139
+[Network Analyzer (438c:1c80)] Address lookup for 335DPC908 = 10.3.111.139
+[Network Analyzer (438c:3728)] Request Connection: Remote Server @ 165.155.103.32:80   (Service=)  (Sid= 12)  PROXIED!
+[Network Analyzer (438c:1c80)] Request Connection: Remote Server @ 165.155.103.32:80   (Service=)  (Sid= 13)  PROXIED!
+[Web Request      (438c: 58c)] "GET /documents/ie11/eMList.xml"   
+[Network Analyzer (438c: 58c)]   (Sid: 12) Client -> Server @ : 245 bytes (Service=HTTP)
+[Network Analyzer (438c: 58c)]   (Sid: 12) Server -> Client : 647 bytes  (Service=HTTP)
+[Web Request      (3b78:47b8)] "GET /analytics.js"   
+[Network Analyzer (3b78:47b8)]   (Sid: 39) Client -> Server @ : 480 bytes (SSL)(Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 39) Server -> Client : 1323 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 39) Server -> Client : 1323 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 39) Server -> Client : 1323 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 39) Server -> Client : 1323 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 39) Server -> Client : 1323 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 39) Server -> Client : 1323 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 39) Server -> Client : 1323 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 39) Server -> Client : 1323 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 39) Server -> Client : 1323 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 39) Server -> Client : 1323 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 39) Server -> Client : 730 bytes (SSL) (Service=HTTP)
+[Web Request      (3b78:47b8)] "GET /favicon.ico"   
+[Network Analyzer (3b78:47b8)]   (Sid: 11) Client -> Server @ : 358 bytes (SSL)(Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 11) Server -> Client : 1405 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 11) Connection Terminated (by Client)
+[Network Analyzer (3b78:47b8)]   (Sid:  2) Connection Terminated (by Client)
+[User action                 ] StartTransactionEvent Login [Network Analyzer (3b78:47b8)]   (Sid:  3) Connection Terminated (by Client)
+[Network Analyzer (3b78:47b8)]   (Sid: 13) Client -> Server @ : 803 bytes (SSL)(Service=HTTP)
+[Web Request      (3b78:47b8)] "POST /starsclassroom/Login.aspx?ReturnUrl=%2fstarsclassroom"   
+[Network Analyzer (3b78:47b8)]   (Sid: 13) Client -> Server @ : 2222 bytes (SSL)(Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 13) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 13) Server -> Client : 5544 bytes (SSL) (Service=HTTP)
+[Web Request      (3b78:47b8)] "GET /favicon.ico"   
+[Network Analyzer (3b78:47b8)]   (Sid: 13) Client -> Server @ : 1698 bytes (SSL)(Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 13) Server -> Client : 1405 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 13) Connection Terminated (by Client)
+[Network Analyzer (3b78:47b8)]   (Sid: 12) Client -> Server @ : 2143 bytes (SSL)(Service=HTTP)
+[Web Request      (3b78:47b8)] "POST /starsclassroom/Login.aspx?ReturnUrl=%2fstarsclassroom"   
+[Network Analyzer (3b78:47b8)]   (Sid: 12) Client -> Server @ : 2216 bytes (SSL)(Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 12) Server -> Client : 549 bytes (SSL) (Service=HTTP)
+[Web Request      (3b78:47b8)] "GET /starsclassroom/Default.aspx"   
+[Network Analyzer (3b78:47b8)]   (Sid: 12) Client -> Server @ : 2089 bytes (SSL)(Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 12) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 12) Server -> Client : 11368 bytes (SSL) (Service=HTTP)
+[Web Request      (3b78:47b8)] "GET /starsclassroom/WebResource.axd?d=fqCPrKvoPJVc1rV7IcjHjS7yQitrJRg2-0QSvzbhFrIEhbO2RPGSTEJHd-wYi7Xt71ziaK5LAa0IMfKJSYsAsT_cpBN_cZuw5rOk2fTWJj-cNFpXhBSqGdo5_wA_h6XzJjqNzw2&t=636360589564367603"   
+[Network Analyzer (3b78:47b8)]   (Sid: 12) Client -> Server @ : 2012 bytes (SSL)(Service=HTTP)
+[Web Request      (3b78:47b8)] "GET /starsclassroom/WebResource.axd?d=94lzd0yyvC89JsV9N54NtSPq0_uPd3ihFpZxMijbUPabB4iO-RFJjpudyX5MLUnOzE_3D_Jy7TILYmvalrgO7hDKMd-MxSocF6kkFh1avemIWqnryTNsbWwFjlgoRDMZJQG2VvymFuyk2JwbxMgD1OWR6vQ1&t=636360589559077603"   
+[Network Analyzer (3b78:47b8)]   (Sid:  8) Client -> Server @ : 2033 bytes (SSL)(Service=HTTP)
+[Web Request      (3b78:47b8)] "GET /starsclassroom/WebResource.axd?d=b8adWYak0tImLef4A3fc9YbMuHl5U24Vx_qdtgXvcS2mkCXi9XsQILRC_Mb5ICDEkth1wbGP5f8aj3Bw7vN-R47AQ6mJ0WUQw7aua42mWRjBMLCFtkZZJZVb4qjCRe5TWkWnpQ2&t=636360589564367603"   
+[Network Analyzer (3b78:47b8)]   (Sid:  9) Client -> Server @ : 2012 bytes (SSL)(Service=HTTP)
+[Web Request      (3b78:47b8)] "GET /starsclassroom/WebResource.axd?d=ky_jE1xuiI59Kb0KHVxKOpLm6rAStKPfYMyxPxGC8gPwtT-020xvreEDtuOI4-YEZ0yBwu1NMlc_w6CasJfcBv_qZSz7rg66CCaMwESV-nXxUH0ZwmG06TT6jyi18hm3L4cE7p8JgFP4nfTBZRfqgUX7WdY1&t=636360589559077603"   
+[Network Analyzer (3b78:47b8)]   (Sid: 10) Client -> Server @ : 2033 bytes (SSL)(Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 12) Server -> Client : 2488 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid:  8) Server -> Client : 3459 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid:  9) Server -> Client : 10891 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 10) Server -> Client : 1454 bytes (SSL) (Service=HTTP)
+[Web Request      (3b78:47b8)] "GET /ajaxz/2017.2.621/Common/MaterialRipple/MaterialRippleScripts.js"   
+[Network Analyzer (3b78:47b8)]   (Sid: 33) Client -> Server @ : 510 bytes (SSL)(Service=HTTP)
+[Web Request      (3b78:47b8)] "GET /ui/apps/sites/stars_classroom/images/contactus_ico.png"   
+[Network Analyzer (3b78:47b8)]   (Sid:  8) Client -> Server @ : 1877 bytes (SSL)(Service=HTTP)
+[Web Request      (3b78:47b8)] "GET /ui/doe/images/spacer.gif"   
+[Network Analyzer (3b78:47b8)]   (Sid:  9) Client -> Server @ : 1847 bytes (SSL)(Service=HTTP)
+[Web Request      (3b78:47b8)] "GET /ajaxz/2017.2.621/Common/Navigation/NavigationScripts.js"   
+[Network Analyzer (3b78:47b8)]   (Sid: 30) Client -> Server @ : 502 bytes (SSL)(Service=HTTP)
+[Web Request      (3b78:47b8)] "GET /ajaxz/2017.2.621/Common/AnimationFramework/AnimationFramework.js"   
+[Network Analyzer (3b78:47b8)]   (Sid: 31) Client -> Server @ : 511 bytes (SSL)(Service=HTTP)
+[Web Request      (3b78:47b8)] "GET /ajaxz/2017.2.621/Common/jQueryPlugins.js"   
+[Network Analyzer (3b78:47b8)]   (Sid: 32) Client -> Server @ : 487 bytes (SSL)(Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 33) Server -> Client : 4255 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:39a8)] Address lookup for 335DPC908 = 10.3.111.139
+[Network Analyzer (3b78:4364)] Address lookup for 335DPC908 = 10.3.111.139
+[Network Analyzer (3b78:47b8)]   (Sid:  8) Server -> Client : 2198 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid:  9) Server -> Client : 288 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 30) Server -> Client : 10087 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 31) Server -> Client : 2211 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 32) Server -> Client : 4714 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid:  4) Connection Terminated (by Client)
+[Web Request      (3b78:47b8)] "GET /ajaxz/2017.2.621/ComboBox/RadComboBoxScripts.js"   
+[Network Analyzer (3b78:47b8)]   (Sid: 30) Client -> Server @ : 494 bytes (SSL)(Service=HTTP)
+[Web Request      (3b78:47b8)] "GET /ajaxz/2017.2.621/Common/Navigation/OData/OData.js"   
+[Network Analyzer (3b78:47b8)]   (Sid: 33) Client -> Server @ : 496 bytes (SSL)(Service=HTTP)
+[Web Request      (3b78:47b8)] "GET /ajaxz/2017.2.621/ComboBox/Views/ClassicView.js"   
+[Network Analyzer (3b78:47b8)]   (Sid: 31) Client -> Server @ : 493 bytes (SSL)(Service=HTTP)
+[Network Analyzer (3b78:39a8)] Request Connection: Remote Server @ 54.192.37.180:443   (Service=)  (Sid= 40)  PROXIED!
+[Network Analyzer (3b78:47b8)]   (Sid: 33) Server -> Client : 2009 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:4364)] Request Connection: Remote Server @ 54.192.37.180:443   (Service=)  (Sid= 41)  PROXIED!
+[Network Analyzer (3b78:47b8)]   (Sid: 30) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 30) Server -> Client : 8563 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 31) Server -> Client : 1906 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:3ff8)]   (Sid: 40) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.1, ciphers:AES256-SHA)
+[Network Analyzer (3b78:35a8)]   (Sid: 41) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.1, ciphers:AES256-SHA)
+[Network Analyzer (3b78:3ff8)]   (Sid: 40) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:ECDHE-RSA-AES256-SHA384)
+[Network Analyzer (3b78:35a8)]   (Sid: 41) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:ECDHE-RSA-AES256-SHA384)
+[Web Request      (3b78:47b8)] "GET /ajaxz/2017.2.621/Common/TouchScrollExtender.js"   
+[Network Analyzer (3b78:47b8)]   (Sid: 40) Client -> Server @ : 493 bytes (SSL)(Service=HTTP)
+[Web Request      (3b78:47b8)] "GET /ajaxz/2017.2.621/DropDownList/RadDropDownListScripts.js"   
+[Network Analyzer (3b78:47b8)]   (Sid: 41) Client -> Server @ : 502 bytes (SSL)(Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 41) Server -> Client : 10800 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 40) Server -> Client : 3508 bytes (SSL) (Service=HTTP)
+[Web Request      (3b78:47b8)] "GET /ui/apps/sites/stars_classroom/images/help_ico.png"   
+[Network Analyzer (3b78:47b8)]   (Sid:  9) Client -> Server @ : 1872 bytes (SSL)(Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid:  9) Server -> Client : 2250 bytes (SSL) (Service=HTTP)
+[Web Request      (3b78:47b8)] "GET /starsclassroom/WebResource.axd?d=0XUhdENMh5wtLWEvr_GSVUHhPa4uApuswMtrrBgtj-UmfzSTfnOsg7wV-i58PrAr9TrC6xr2hMuUssoAPSZQXRMuwxY-xpb-7VyQeXalkcNnYE6PPmbwVDohHVKlz8DNi4Ttas3a--a_Q_26RbizS2eeOuQ1&t=636360589559077603"   
+[Network Analyzer (3b78:47b8)]   (Sid:  9) Client -> Server @ : 2033 bytes (SSL)(Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid:  9) Server -> Client : 16240 bytes (SSL) (Service=HTTP)
+[User action                 ] EndTransactionEvent Login [Network Analyzer (438c: 58c)]   (Sid:  5) Connection Terminated (by Client)
+[Network Analyzer (438c: 58c)]   (Sid:  6) Connection Terminated (by Client)
+[Network Analyzer (3b78:47b8)]   (Sid: 19) Connection Terminated (by Client)
+[Network Analyzer (3b78:47b8)]   (Sid: 20) Connection Terminated (by Client)
+[Network Analyzer (3b78:47b8)]   (Sid: 21) Connection Terminated (by Client)
+[Network Analyzer (3b78:47b8)]   (Sid: 22) Connection Terminated (by Client)
+[Network Analyzer (3b78:47b8)]   (Sid: 23) Connection Terminated (by Client)
+[Web Request      (3b78:47b8)] "GET /starsclassroom/SchoolAdmin/default.aspx"   
+[Network Analyzer (3b78:47b8)]   (Sid:  9) Client -> Server @ : 2050 bytes (SSL)(Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid:  9) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid:  9) Server -> Client : 12751 bytes (SSL) (Service=HTTP)
+[Web Request      (3b78:47b8)] "GET /starsclassroom/SchoolAdmin/ElementarySchoolProgramming.aspx"   
+[Network Analyzer (3b78:47b8)]   (Sid:  9) Client -> Server @ : 2082 bytes (SSL)(Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid:  9) Server -> Client : 13803 bytes (SSL) (Service=HTTP)
+[Web Request      (3b78:47b8)] "GET /starsclassroom/SchoolAdmin/TermModelConfirmation.aspx"   
+[Network Analyzer (3b78:47b8)]   (Sid:  9) Client -> Server @ : 2096 bytes (SSL)(Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid:  9) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid:  9) Server -> Client : 8864 bytes (SSL) (Service=HTTP)
+[Network Analyzer (438c: 58c)]   (Sid:  7) Connection Terminated (by Client)
+[Network Analyzer (438c: 58c)]   (Sid:  8) Connection Terminated (by Client)
+[Network Analyzer (3b78:47b8)]   (Sid: 24) Connection Terminated (by Client)
+[Network Analyzer (3b78:47b8)]   (Sid: 27) Connection Terminated (by Client)
+[Network Analyzer (3b78:47b8)]   (Sid: 25) Connection Terminated (by Client)
+[Network Analyzer (3b78:47b8)]   (Sid: 26) Connection Terminated (by Client)
+[Network Analyzer (3b78:47b8)]   (Sid: 28) Connection Terminated (by Client)
+[Network Analyzer (3b78:47b8)]   (Sid:  9) Client -> Server @ : 2187 bytes (SSL)(Service=HTTP)
+[Web Request      (3b78:47b8)] "POST /starsclassroom/SchoolAdmin/TermModelConfirmation.aspx"   
+[Network Analyzer (3b78:47b8)]   (Sid:  9) Client -> Server @ : 2831 bytes (SSL)(Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid:  9) Server -> Client : 545 bytes (SSL) (Service=HTTP)
+[Web Request      (3b78:47b8)] "GET /starsclassroom/SchoolAdmin/OfficialClassScheduleSelection.aspx"   
+[Network Analyzer (3b78:47b8)]   (Sid:  9) Client -> Server @ : 2124 bytes (SSL)(Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid:  9) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid:  9) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid:  9) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid:  9) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid:  9) Server -> Client : 10585 bytes (SSL) (Service=HTTP)
+[Web Request      (3b78:47b8)] "GET /starsclassroom/WebResource.axd?d=Nhf6TpUj19KZ9rhEj2xtdf8uhCnDZI3V3l5yUFSrKIr2yaQ2_X5RNErFW9yJUiTvVc4MA9QGL53-pRVQXQ_SPN394h5KwsxUpWjM1EK3Ixz5ymxF0&t=636360589564367603"   
+[Network Analyzer (3b78:47b8)]   (Sid:  9) Client -> Server @ : 2025 bytes (SSL)(Service=HTTP)
+[Web Request      (3b78:47b8)] "GET /starsclassroom/WebResource.axd?d=tAs1PzD6X_1ylbCNgK9s1aPVhlgPQ83qt13vWZ4-Fr7mmo8gTmaGMttxgcwMWFivFsb8wDL1VPbJA8EVWtBNjh1r39H5ObGeSviCzVMYlqVbD-WJfLhcyR_yip7_pCBRKuXI-g2&t=636360589559077603"   
+[Network Analyzer (3b78:47b8)]   (Sid:  8) Client -> Server @ : 2047 bytes (SSL)(Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid:  9) Server -> Client : 12901 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid:  8) Server -> Client : 14815 bytes (SSL) (Service=HTTP)
+[Web Request      (3b78:47b8)] "GET /ajaxz/2017.2.621/Grid/RadGridScripts.js"   
+[Network Analyzer (3b78:47b8)]   (Sid: 40) Client -> Server @ : 521 bytes (SSL)(Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 40) Server -> Client : 562 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 40) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 40) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 40) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 40) Server -> Client : 15258 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 40) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 40) Server -> Client : 15002 bytes (SSL) (Service=HTTP)
+[Web Request      (3b78:47b8)] "GET /starsclassroom/WebResource.axd?d=ifcjPV8aj2vMt9az-6wWm04E3ELGvkqBN_E_-uj6vwk3AguTrVulp8kFcbTARYgrOow8ujxmwI3fxTCNW3pIdp9YvtMSYj6Rse-R-vRNmzXyFDvRTXZRbRYMKxQG_RrCE1Mx5CMWHkwFtl8IZHHQrVsMXN01&t=636360589559077603"   
+[Network Analyzer (3b78:47b8)]   (Sid:  8) Client -> Server @ : 2068 bytes (SSL)(Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid:  8) Server -> Client : 3399 bytes (SSL) (Service=HTTP)
+[Web Request      (3b78:47b8)] "GET /starsclassroom/starsapi/OfficialClassSchedulingSelection/GetOfficialClasses?numericSchoolDbn=0&schoolYear=0&termId=0&gradeLevel=0&pageNumber=1&pageSize=10&_=1504105337020"   
+[Network Analyzer (3b78:47b8)]   (Sid:  8) Client -> Server @ : 2152 bytes (SSL)(Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid:  8) Server -> Client : 1144 bytes (SSL) (Service=HTTP)
+[Web Request      (3b78:47b8)] "GET /starsclassroom/starsapi/Login.aspx?ReturnUrl=%2fstarsclassroom%2fstarsapi%2fOfficialClassSchedulingSelection%2fGetOfficialClasses%3fnumericSchoolDbn%3d0%26schoolYear%3d0%26termId%3d0%26gradeLevel%3d0%26pageNumber%3d1%26pageSize%3d10%26_%3d1504105337020&numericSchoolDbn=0&schoolYear=0&termId=0&gradeLevel=0&pageNumber=1&pageSize=10&_=1504105337020"   
+[Network Analyzer (3b78:47b8)]   (Sid:  8) Client -> Server @ : 2282 bytes (SSL)(Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid:  8) Server -> Client : 3785 bytes (SSL) (Service=HTTP)
+[Web Request      (3b78:47b8)] "GET /ui/apps/sites/stars_classroom/images/grid_top_bkg.gif"   
+[Network Analyzer (3b78:47b8)]   (Sid:  9) Client -> Server @ : 1911 bytes (SSL)(Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid:  9) Server -> Client : 1459 bytes (SSL) (Service=HTTP)
+[Network Analyzer (438c: 58c)]   (Sid:  1) Connection Terminated (by Client)
+[Network Analyzer (438c: 58c)]   (Sid:  2) Connection Terminated (by Client)
+[Network Analyzer (438c: 58c)]   (Sid:  9) Connection Terminated (by Client)
+[Network Analyzer (438c: 58c)]   (Sid: 10) Connection Terminated (by Client)
+[Network Analyzer (3b78:47b8)]   (Sid: 35) Connection Terminated (by Client)
+[Network Analyzer (3b78:47b8)]   (Sid: 37) Connection Terminated (by Client)
+[Network Analyzer (3b78:47b8)]   (Sid: 29) Connection Terminated (by Client)
+[Web Request      (3b78:47b8)] "POST /starsclassroom/SchoolAdmin/OfficialClassScheduleSelection.aspx"
+[Network Analyzer (3b78:47b8)]   (Sid:  9) Client -> Server @ : 2206 bytes (SSL)(Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid:  9) Client -> Server @ : 16299 bytes (SSL)(Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid:  9) Client -> Server @ : 1753 bytes (SSL)(Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid:  9) Server -> Client : 535 bytes (SSL) (Service=HTTP)
+[Web Request      (3b78:47b8)] "GET /starsclassroom/SchoolAdmin/ElementaryOfficialClasses.aspx"   
+[Network Analyzer (3b78:47b8)]   (Sid:  9) Client -> Server @ : 2128 bytes (SSL)(Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid:  9) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid:  9) Server -> Client : 14301 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid:  9) Client -> Server @ : 2022 bytes (SSL)(Service=HTTP)
+[Web Request      (3b78:47b8)] "POST /starsclassroom/SchoolAdmin/ElementaryOfficialClasses.aspx"   
+[Network Analyzer (3b78:47b8)]   (Sid:  9) Client -> Server @ : 3378 bytes (SSL)(Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid:  9) Server -> Client : 1144 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid:  9) Client -> Server @ : 2195 bytes (SSL)(Service=HTTP)
+[Web Request      (3b78:47b8)] "POST /starsclassroom/SchoolAdmin/ElementaryOfficialClasses.aspx"   
+[Network Analyzer (3b78:47b8)]   (Sid:  9) Client -> Server @ : 3450 bytes (SSL)(Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid:  9) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid:  9) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid:  9) Server -> Client : 2683 bytes (SSL) (Service=HTTP)
+[Web Request      (3b78:47b8)] "GET /starsclassroom/SchoolAdmin/OfficialClassScheduling.aspx?OffClass=002"   
+[Network Analyzer (3b78:47b8)]   (Sid:  9) Client -> Server @ : 2109 bytes (SSL)(Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid:  9) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid:  9) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid:  9) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid:  9) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid:  9) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid:  9) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid:  9) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid:  9) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid:  9) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid:  9) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid:  9) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid:  9) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid:  9) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid:  9) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid:  9) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid:  9) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid:  9) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid:  9) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid:  9) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid:  9) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid:  9) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid:  9) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid:  9) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid:  9) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid:  9) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid:  9) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid:  9) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid:  9) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid:  9) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid:  9) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid:  9) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid:  9) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid:  9) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid:  9) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid:  9) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid:  9) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid:  9) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid:  9) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid:  9) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid:  9) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid:  9) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid:  9) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid:  9) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid:  9) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid:  9) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid:  9) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid:  9) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid:  9) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid:  9) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid:  9) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid:  9) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid:  9) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid:  9) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid:  9) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid:  9) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid:  9) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid:  9) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid:  9) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid:  9) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid:  9) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid:  9) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid:  9) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid:  9) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid:  9) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid:  9) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid:  9) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid:  9) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid:  9) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid:  9) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid:  9) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid:  9) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid:  9) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid:  9) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid:  9) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid:  9) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid:  9) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid:  9) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid:  9) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid:  9) Server -> Client : 4469 bytes (SSL) (Service=HTTP)
+[Web Request      (3b78:47b8)] "GET /starsclassroom/WebResource.axd?d=QKX1AO1vX8ebWKfbb4eOTH2EY-wagERQf7EzWdTA67FdLYaQ_7PZhCV9TQkmw1UgxjLEH7215YV9mG8h4vuzzXBQWWxSyBn8N8-fqouMio4598pI0&t=636360589564367603"   
+[Network Analyzer (3b78:47b8)]   (Sid:  9) Client -> Server @ : 2031 bytes (SSL)(Service=HTTP)
+[Web Request      (3b78:47b8)] "GET /starsclassroom/WebResource.axd?d=yENCDqG3WqRkHrihtjBSpEmC_lQLeM__CbBHJ7kzyz1maNS41fAL9f1Flg1nr30ojyQsrlExSO7_1tSn_Fw6wwwZtKqIF1KlXIt5aRKoStIetZx6m9aqNIBSAQtFntkmyxiqU5D3yQl60bf4pgMEG9ONG9w1&t=636360589559077603"   
+[Network Analyzer (3b78:47b8)]   (Sid: 12) Client -> Server @ : 2074 bytes (SSL)(Service=HTTP)
+[Web Request      (3b78:47b8)] "GET /starsclassroom/WebResource.axd?d=L0_AKNDhmYFLmFvOBCSI4SlpYg11X0-QPOg0g8FG2q7-SBSBQTNTiNW-tMnbB9ea8rxrn6qt-9XcgnR_pMZ701rIQ1Bk_KLQczKLnpzmUUqXxHA1mc7HaiGz9xAliu6CEqpyHBs4hxGCcdMc7ez0YYcPQTA1&t=636360589559077603"   
+[Network Analyzer (3b78:47b8)]   (Sid:  8) Client -> Server @ : 2074 bytes (SSL)(Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid:  9) Server -> Client : 13688 bytes (SSL) (Service=HTTP)
+[Web Request      (3b78:47b8)] "GET /starsclassroom/WebResource.axd?d=bZQu9IErOfGRZdP9C3BB5VHb5RzwE41F7rrN6pgnx51vxcRnOpGZ4YnhV5gIvI0y3lahzO3a6_2vNPTjqGWsPz431chiCgZ5fYxyp55IH-v71St80&t=636360589564367603"   
+[Network Analyzer (3b78:47b8)]   (Sid: 10) Client -> Server @ : 2031 bytes (SSL)(Service=HTTP)
+[Network Analyzer (3b78:4038)] Address lookup for 335DPC908 = 10.3.111.139
+[Network Analyzer (3b78:39a8)] Address lookup for 335DPC908 = 10.3.111.139
+[Network Analyzer (3b78:47b8)]   (Sid:  8) Server -> Client : 4486 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 12) Server -> Client : 3190 bytes (SSL) (Service=HTTP)
+[Web Request      (3b78:47b8)] "GET /starsclassroom/Scripts/starsLib.js?ver=2.31.1.2"   
+[Network Analyzer (3b78:47b8)]   (Sid:  9) Client -> Server @ : 1911 bytes (SSL)(Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 10) Server -> Client : 5885 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid:  9) Server -> Client : 14035 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:4038)] Request Connection: Remote Server @ 10.2.55.154:443   (Service=)  (Sid= 42)  PROXIED!
+[Web Request      (3b78:47b8)] "GET /ajaxz/2017.2.621/Common/Widgets/Resizable.js"   
+[Network Analyzer (3b78:47b8)]   (Sid: 30) Client -> Server @ : 532 bytes (SSL)(Service=HTTP)
+[Web Request      (3b78:47b8)] "GET /ajaxz/2017.2.621/Common/ShortCutManager/ShortCutManagerScripts.js"   
+[Network Analyzer (3b78:47b8)]   (Sid: 31) Client -> Server @ : 553 bytes (SSL)(Service=HTTP)
+[Web Request      (3b78:47b8)] "GET /ajaxz/2017.2.621/Common/Helpers/IETouchActionManager.js"   
+[Network Analyzer (3b78:47b8)]   (Sid: 40) Client -> Server @ : 543 bytes (SSL)(Service=HTTP)
+[Web Request      (3b78:47b8)] "GET /ajaxz/2017.2.621/Common/Widgets/Draggable.js"   
+[Network Analyzer (3b78:47b8)]   (Sid: 41) Client -> Server @ : 532 bytes (SSL)(Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 31) Server -> Client : 1858 bytes (SSL) (Service=HTTP)
+[Web Request      (3b78:47b8)] "GET /ajaxz/2017.2.621/Common/Animation/AnimationScripts.js"   
+[Network Analyzer (3b78:47b8)]   (Sid: 32) Client -> Server @ : 541 bytes (SSL)(Service=HTTP)
+[Web Request      (3b78:47b8)] "GET /ajaxz/2017.2.621/Common/Popup/PopupScripts.js"   
+[Network Analyzer (3b78:47b8)]   (Sid: 33) Client -> Server @ : 533 bytes (SSL)(Service=HTTP)
+[Network Analyzer (3b78:39a8)] Request Connection: Remote Server @ 10.2.55.154:443   (Service=)  (Sid= 43)  PROXIED!
+[Network Analyzer (3b78:47b8)]   (Sid: 30) Server -> Client : 4531 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 40) Server -> Client : 965 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 41) Server -> Client : 5272 bytes (SSL) (Service=HTTP)
+[Web Request      (3b78:47b8)] "GET /starsclassroom/Scripts/PageScripts/OfficialClassSchedulingLib.js?ver=2.31.1.2"   
+[Network Analyzer (3b78:47b8)]   (Sid:  9) Client -> Server @ : 1941 bytes (SSL)(Service=HTTP)
+[Web Request      (3b78:47b8)] "GET /ajaxz/2017.2.621/Window/RadWindowScripts.js"   
+[Network Analyzer (3b78:47b8)]   (Sid: 31) Client -> Server @ : 531 bytes (SSL)(Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 32) Server -> Client : 4683 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 33) Server -> Client : 10099 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid:  9) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Web Request      (3b78:47b8)] "GET /ajaxz/2017.2.621/Window/RadWindowManager.js"   
+[Network Analyzer (3b78:47b8)]   (Sid: 30) Client -> Server @ : 531 bytes (SSL)(Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 31) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Web Request      (3b78:47b8)] "GET /ajaxz/2017.2.621/Calendar/RadPickersPopupDirectionEnumeration.js"   
+[Network Analyzer (3b78:47b8)]   (Sid: 40) Client -> Server @ : 552 bytes (SSL)(Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid:  9) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 31) Server -> Client : 9150 bytes (SSL) (Service=HTTP)
+[Web Request      (3b78:47b8)] "GET /ajaxz/2017.2.621/Input/TextBox/RadInputScript.js"   
+[Network Analyzer (3b78:47b8)]   (Sid: 32) Client -> Server @ : 536 bytes (SSL)(Service=HTTP)
+[Web Request      (3b78:47b8)] "GET /ajaxz/2017.2.621/Calendar/RadDatePicker.js"   
+[Network Analyzer (3b78:47b8)]   (Sid: 41) Client -> Server @ : 530 bytes (SSL)(Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid:  9) Server -> Client : 1482 bytes (SSL) (Service=HTTP)
+[Web Request      (3b78:47b8)] "GET /ajaxz/2017.2.621/Input/DateInput/RadDateInputScript.js"   
+[Network Analyzer (3b78:47b8)]   (Sid: 33) Client -> Server @ : 542 bytes (SSL)(Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 40) Server -> Client : 796 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 30) Server -> Client : 4927 bytes (SSL) (Service=HTTP)
+[Web Request      (3b78:47b8)] "GET /ajaxz/2017.2.621/Calendar/RadCalendarCommonScript.js"   
+[Network Analyzer (3b78:47b8)]   (Sid: 31) Client -> Server @ : 540 bytes (SSL)(Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 32) Server -> Client : 11921 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 41) Server -> Client : 5793 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 31) Server -> Client : 5377 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 33) Server -> Client : 11916 bytes (SSL) (Service=HTTP)
+[Web Request      (3b78:47b8)] "GET /ajaxz/2017.2.621/Calendar/RadCalendarScript.js"   
+[Network Analyzer (3b78:47b8)]   (Sid: 40) Client -> Server @ : 534 bytes (SSL)(Service=HTTP)
+[Network Analyzer (3b78:432c)]   (Sid: 42) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.1, ciphers:AES256-SHA)
+[Network Analyzer (3b78:47b8)]   (Sid: 40) Server -> Client : 562 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 40) Server -> Client : 11584 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 40) Server -> Client : 10258 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:4458)]   (Sid: 43) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.1, ciphers:AES256-SHA)
+[Network Analyzer (3b78:432c)]   (Sid: 42) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:ECDHE-RSA-AES256-SHA384)
+[Network Analyzer (3b78:4458)]   (Sid: 43) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:ECDHE-RSA-AES256-SHA384)
+[Web Request      (3b78:47b8)] "GET /starsclassroom/WebResource.axd?d=AvBWCtbpLXYjyyNienFv2DxJxjDFtUmPyfbEyY98BX1gt4bPq94OZTh0EgH7vDEvNddE2u_z5MVXaVEIDVJDekq5YD9F5PWazyagClK5Sp7Dzq5BmqixLIEJTLXWFqPonne0sQ2&t=636360589564367603"   
+[Network Analyzer (3b78:47b8)]   (Sid: 42) Client -> Server @ : 2053 bytes (SSL)(Service=HTTP)
+[Web Request      (3b78:47b8)] "GET /starsclassroom/WebResource.axd?d=lmzsDqH_RD_LM6oMnezp5LQKmhxpVgV6i0ebpznu6u30TQu3pLQCwe7Jy1V-UMv0EqtVsi7UKkxBzuSx-kL_CbVyAQ6ICiQq87pd0BX1XiryOO77Oa7ZwfxdSYUwul1Et0Ia28QlwcR4NAR3nOxhOVv8KRI1&t=636360589559077603"   
+[Network Analyzer (3b78:47b8)]   (Sid: 43) Client -> Server @ : 2074 bytes (SSL)(Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 42) Server -> Client : 6121 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 43) Server -> Client : 7668 bytes (SSL) (Service=HTTP)
+[Web Request      (3b78:47b8)] "GET /ui/apps/sites/stars_classroom/kendo/Metro/loading.gif"   
+[Network Analyzer (3b78:47b8)]   (Sid: 43) Client -> Server @ : 1917 bytes (SSL)(Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 43) Server -> Client : 449 bytes (SSL) (Service=HTTP)
+[Web Request      (3b78:47b8)] "GET /starsclassroom/WebResource.axd?d=aOmdsCRYqqXOTDN2t6Vu31MaIMyCrXmWqStqrkaOwQ5Qd7o5X0CfTeGvaLOv6IqtzLNdGYO5msXPtfxJKYb1iagKbFBObU5kXrgSTkNEwHp7C2y9KzyLdfs4YTQNX-W71KOqKVyDjqhh-acCYAhdQqAFma41&t=636360589559077603"   
+[Network Analyzer (3b78:47b8)]   (Sid: 43) Client -> Server @ : 2074 bytes (SSL)(Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 43) Server -> Client : 1807 bytes (SSL) (Service=HTTP)
+[Web Request      (3b78:47b8)] "GET /ui/apps/sites/stars_classroom/kendo/Metro/sprite.png"   
+[Network Analyzer (3b78:47b8)]   (Sid: 43) Client -> Server @ : 1916 bytes (SSL)(Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 43) Server -> Client : 14911 bytes (SSL) (Service=HTTP)
+[Network Analyzer (438c: 58c)]   (Sid: 12) Connection Terminated (by Server)
+[Network Analyzer (438c: 58c)]   (Sid: 13) Connection Terminated (by Client)
+[Network Analyzer (438c: 58c)]   (Sid: 11) Connection Terminated (by Client)
+[User action                 ] StartTransactionEvent Turn Class On [Web Request      (3b78:47b8)] "GET /starsclassroom/WebResource.axd?d=bFBNFiZWEowGMA9gtuqnvY_Tf3-4sjwIRWeOEJeQXIEih09S18613VQFe2astpv1QVVebE49kuzN0pGEwyuXXZUt7qkW8pWTx5HE7Nnrw4orOpOL19I8nEIm2uq9whI97PB1Z6PVteIYj4O7WLTuyDZoX581&t=636360589559077603"   
+[Network Analyzer (3b78:47b8)]   (Sid: 43) Client -> Server @ : 2074 bytes (SSL)(Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 43) Server -> Client : 384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 39) Connection Terminated (by Client)
+[Network Analyzer (3b78:47b8)]   (Sid: 38) Connection Terminated (by Client)
+[Network Analyzer (3b78:47b8)]   (Sid: 40) Connection Terminated (by Client)
+[Network Analyzer (3b78:47b8)]   (Sid: 33) Connection Terminated (by Client)
+[Network Analyzer (3b78:47b8)]   (Sid: 31) Connection Terminated (by Client)
+[Network Analyzer (3b78:47b8)]   (Sid: 41) Connection Terminated (by Client)
+[Network Analyzer (3b78:47b8)]   (Sid: 32) Connection Terminated (by Client)
+[Network Analyzer (3b78:47b8)]   (Sid: 30) Connection Terminated (by Client)
+[Network Analyzer (3b78:47b8)]   (Sid: 42) Connection Terminated (by Client)
+[Network Analyzer (3b78:47b8)]   (Sid:  9) Connection Terminated (by Client)
+[Network Analyzer (3b78:47b8)]   (Sid: 10) Connection Terminated (by Client)
+[Network Analyzer (3b78:47b8)]   (Sid: 12) Connection Terminated (by Client)
+[Network Analyzer (3b78:47b8)]   (Sid:  8) Connection Terminated (by Client)
+[Network Analyzer (3b78:47b8)]   (Sid: 43) Client -> Server @ : 2112 bytes (SSL)(Service=HTTP)
+[Web Request      (3b78:47b8)] "POST /starsclassroom/starsapi/OfficialClassScheduling/UpdateOfficialClassScheduling"   
+[Network Analyzer (3b78:47b8)]   (Sid: 43) Client -> Server @ : 537 bytes (SSL)(Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 43) Server -> Client : 354 bytes (SSL) (Service=HTTP)
+[User action                 ] EndTransactionEvent Turn Class On [User action                 ] StartTransactionEvent Logout [Web Request      (3b78:47b8)] "POST /starsclassroom/SchoolAdmin/OfficialClassScheduling.aspx?OffClass=002"
+[Network Analyzer (3b78:47b8)]   (Sid: 43) Client -> Server @ : 2218 bytes (SSL)(Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 43) Client -> Server @ : 16299 bytes (SSL)(Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 43) Client -> Server @ : 16299 bytes (SSL)(Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 43) Client -> Server @ : 16299 bytes (SSL)(Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 43) Client -> Server @ : 16299 bytes (SSL)(Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 43) Client -> Server @ : 16299 bytes (SSL)(Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 43) Client -> Server @ : 16299 bytes (SSL)(Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 43) Client -> Server @ : 961 bytes (SSL)(Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 43) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 43) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 43) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 43) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 43) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 43) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 43) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 43) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 43) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 43) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 43) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 43) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 43) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 43) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 43) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 43) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 43) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 43) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 43) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 43) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 43) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 43) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 43) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 43) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 43) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 43) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 43) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 43) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 43) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 43) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 43) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 43) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 43) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 43) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 43) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 43) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 43) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 43) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 43) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 43) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 43) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 43) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 43) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 43) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 43) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 43) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 43) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 43) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 43) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 43) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 43) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 43) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 43) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 43) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 43) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 43) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 43) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 43) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 43) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 43) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 43) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 43) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 43) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 43) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 43) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 43) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 43) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 43) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 43) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 43) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 43) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 43) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 43) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 43) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 43) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 43) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 43) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 43) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 43) Server -> Client : 4894 bytes (SSL) (Service=HTTP)
+[Web Request      (3b78:47b8)] "GET /starsclassroom/Login.aspx?ReturnUrl=%2fstarsclassroom%2fSchoolAdmin%2fOfficialClassScheduling.aspx%3fOffClass%3d002"   
+[Network Analyzer (3b78:47b8)]   (Sid: 43) Client -> Server @ : 808 bytes (SSL)(Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 43) Server -> Client : 16384 bytes (SSL) (Service=HTTP)
+[Network Analyzer (3b78:47b8)]   (Sid: 43) Server -> Client : 3957 bytes (SSL) (Service=HTTP)

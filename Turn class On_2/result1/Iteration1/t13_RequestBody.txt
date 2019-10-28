@@ -1,0 +1,6 @@
+"{"jsonData":"{\"numericSchoolDbn\":1010015,\"schoolYear\":2017,\"term\":1,\"officialClass\":\""
+"002\",\"isEdit\":true,\"actions\":[{\"action\":\"ChangeSubjectStatus\",\"subjectId\":424,\"sub"
+"jectName\":\"English Language Arts (Overall)   \",\"value\":true,\"officialClassSubjectId\":\""
+"889345\",\"reqEffectiveDate\":true},{\"action\":\"AddTeacher\",\"subjectId\":424,\"subjectName"
+"\":\"English Language Arts (Overall)   \",\"teacherPid\":370053,\"officialClassSubjectId\":889"
+"345,\"reqEffectiveDate\":true}],\"effectiveDate\":\"2017/09/08\"}"}"

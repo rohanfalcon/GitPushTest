@@ -1,0 +1,13 @@
+[t27]
+FileName1=t27.html
+URL1=https://es00vqweb15.qa.appdev/starsclassroom/starsapi/OfficialClassScheduling/CreateOfficialClassScheduling
+Total=2
+RequestHeaderFile=t27_RequestHeader.txt
+RequestBodyFile=t27_RequestBody.txt
+ResponseHeaderFile=t27_ResponseHeader.txt
+ContentType=application/json
+SnapshotXmlFile=snapshot_27.xml
+FileName2=t27_sprite.png
+URL2=https://es00vqweb15.qa.appdev/ui/apps/sites/stars_classroom/kendo/Metro/sprite.png
+[ProtocolInfo]
+ProtocolId=QTWeb

@@ -1,0 +1,240 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head><title>
+	STARS Classroom login
+</title><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><link id="CheckBoxSliderCss" rel="stylesheet" type="text/css" href="/ui/apps/sites/stars_classroom/checkboxSlider.css?ver=2.31.1.2" /><link id="IvoryCss" rel="stylesheet" type="text/css" href="/ui/apps/sites/stars_classroom/ivory.css?ver=2.31.1.2" /><link id="ElementarySchoolSchedulingCss" rel="stylesheet" type="text/css" href="/ui/apps/sites/stars_classroom/elementaryschoolscheduling.css?ver=2.31.1.2" /><link id="KendoCommonCss" rel="stylesheet" href="/ui/apps/sites/stars_classroom/kendo/kendo.common.css?ver=2.31.1.2" /><link id="KendoDefaultCss" rel="stylesheet" href="/ui/apps/sites/stars_classroom/kendo/kendo.default.css?ver=2.31.1.2" /><link id="KendoMetroCss" rel="stylesheet" href="/ui/apps/sites/stars_classroom/kendo/kendo.metro.min.css?ver=2.31.1.2" /><link rel="stylesheet" type="text/css" href="../Content/toastr.css" /><link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic" /><link rel="stylesheet" href="/ui/apps/resources/font-awesome/css/font-awesome.min.css" type="text/css" /><link id="MainCss" rel="stylesheet" type="text/css" href="/ui/apps/sites/stars_classroom/main.css?ver=2.31.1.2" />
+
+    <!--[if lte IE 8]>
+    <link id="Ie8Css" rel="stylesheet" type="text/css" href="/ui/apps/sites/stars_classroom/ie8.css?ver=2.31.1.2" />    
+    <![endif]-->
+
+    <script src="/starsclassroom/Scripts/kendo/jquery.min.js?ver=2.31.1.2" type="text/javascript"></script>
+    <script src="/starsclassroom/Scripts/kendo/kendo.all.min.js?ver=2.31.1.2" type="text/javascript"></script>
+    <script src="/starsclassroom/Scripts/toastr.min.js?ver=2.31.1.2" type="text/javascript"></script>
+    <script src="/starsclassroom/Scripts/unsavedconfirmation.js?ver=2.31.1.2" type="text/javascript"></script>
+
+    <!--[if lte IE 8]>
+    <script src="/starsclassroom/Scripts/ie8Fallback.js?ver=2.31.1.2" type="text/javascript"></script>
+    <![endif]-->
+
+    <script src="/starsclassroom/Scripts/validate.min.js?ver=2.31.1.2" type="text/javascript"></script>
+
+    
+<link href="/starsclassroom/WebResource.axd?d=urCACUaUZeT6oPoIZXShbq9LQ-yh1b8NC-tNAmxvuvUdIcqG1G5NlhoWuIGHfYhg6IhYGBLUNCdZDlRs29Bl_u7K1YmY93EZGW5g4sZPSZdwtoEH0&amp;t=636360589564367603" type="text/css" rel="stylesheet" class="Telerik_stylesheet" /><link href="/starsclassroom/WebResource.axd?d=aupLorz3w8A80OJEEKIwoIYcJ2VYR7pVPrfDpRhKy7SjsVZBb19sY6rmGQMhK9sL_xRBWGAVqrhHmW-AOsxlQ8ScpDiOrC7dPSDlJBoAmdbOLXe-Lic-39qbKV4fNsnNU5WebQ2&amp;t=636360589559077603" type="text/css" rel="stylesheet" class="Telerik_stylesheet" /></head>
+<body>
+    <div id="loadingdiv">
+    </div>
+
+    <form method="post" action="./ElementarySchoolProgramming.aspx" id="ctl01">
+<div class="aspNetHidden">
+<input type="hidden" name="RadScriptManager1_TSM" id="RadScriptManager1_TSM" value="" />
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="2NBpvqUiOBqcAil1aCDDVF52zAKv99tnFrJS0jBj+SabSNeKMF/CQq5+dvoWJ532DV8zelH7nJBM7sXlXpkLwi/eQzCRvEfmVjlpDYFLVgbsh7Rxv1jdqyGqcImn0Cm/vPHAuVMfbNb/hcHTFLnQiFUV5ZBRMwEQMADY9UQZqszwf1WFjczzgMHVr3/TzpS1L5+bwG48FhTYAlt5ojPqU9H23hpVDTeImipwI1z7augTdzmPADWslzCMPntJieYlDugFfW1tuCkOdWyDWj797oBBqrcbuyJ82AtmgbdA/bdUZohqu7XCXjCu6a4b7eGJizz44yfTOa9kz9Uo7iXI/Dos9c4JfoMkP8sNA/fL7ZzH36sMtpdFBIXPm11/HSaa8QygOKIbuYokLogJdF+BrbrdL8clnGHdn+L7LjBImFFGFTVTu9FuE0bnNZ8nj7oF2YDpzRq73P+ES2K70K9a3dJYL1la/jniLhlR/Frw5kJ3e/EWSAiQd1sYBDaRLj5hIGVlffDkqr+MEBZBQXmnF/WUFmEQspoQKh0g54F8gq/shGLFsLyzqQY0rtDJZjOB0FmEXxX4O+GBbhyvh16Q4Rj8Eij2Baw0T0jY4yzjqszFUhGpGA5zRzSQikG3UNV+jJ9UU25GWu8lAVgYGx+IUqMOUQ1Xw8ecGVMeNlsrtIQJHWB3LgQJfP0qLzujEHzNhmjqLRtWYzGjymEvZUVebvuh29Ese1NfoOXMsFMMMzy9u80qfPs1t+Lf+3I1b1JoD0zTB+sEAQ18aJ1H13Q4pLpMFHmC2dIFZR7ICI9G2ilkQA93nJ9LYuarHt+C/MhKqhkPLUaXpxP1i3Xxy/7KRG8khE79OBnhRHf8O81xpE0UmsNlHBHpKAYDx1ieKmsTEHpZeky7qrZ0wgspfhVyzjdd9V6CcLyQctvhiqKtUITAM73LTmRHRssaV4AHosvZEPQtWetrhcHg2kfLxV8ezX8U/7hbuN4AOFAY+CCajWUF4pT71tdL09WHUdHw4E9I1H0Luq9lDi6qgNRtBnnE3LD30IqyMRk9x91aoK7HEjNJujaLXwPS+kX0GmhFMqL+4pPE9x8wjecIGecP7bIUDHxwiiWYpvRCklffmObFHu6L4l+nviWKzKftIEDX6wmmewhEQt3tvYN6hHe4Kc74YsNbp07TG0TeKQSoBwNT8FQCTeFvQEq5+K1znEVuAyXhvTpJX3BAhTJIsWx8LAGJpTx7SgBhoX3NZctsEjEg6Q8Kqhv9dyfXW5i+E44AmR2j8ajKV6QVnkhsl2y2BgrhHIzmE87T+VIAQGzIpxYA1KXw/0WvJ0BTSREvVTUlrs8P13u1OE6AraZ0hxSy+VjfhKa+Bujek/w2C3jWLW/CI/uyvkP7OMS+nhe2BkVPvNazMJkcJNryjazPkwXCVcwdWbeJ2pTY20P6H9DeLuENbyIFUg4aaSawC6qaCuEghwydl9CRn0L5jiYuhyadSDDdb5A1XIWtOjlvwX0UF4G/GpkUwj0QX3D20XYfUkXXYtL0ZOfrw3yz4tlfdOLWZUrGzhtUjZSZRiaMCIWF1oSDRzqvy8l9pQ9n5DIVnfuQSRuS/T4tAU7uEX4eAt4PhPvWvMW7VSw=" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['ctl01'];
+if (!theForm) {
+    theForm = document.ctl01;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/starsclassroom/WebResource.axd?d=pynGkmcFUV13He1Qd6_TZItUc7uOXVQ_JJSF3nqWHTssVf86I8T6DdUK_rt6gpBWQGLL6g2&amp;t=636160664560000000" type="text/javascript"></script>
+
+
+<script src="/starsclassroom/Telerik.Web.UI.WebResource.axd?_TSM_HiddenField_=RadScriptManager1_TSM&amp;compress=1&amp;_TSM_CombinedScripts_=%3b%3bSystem.Web.Extensions%2c+Version%3d4.0.0.0%2c+Culture%3dneutral%2c+PublicKeyToken%3d31bf3856ad364e35%3aen-US%3a4bd8faf8-554d-46be-b2ff-c9d57adb612c%3aea597d4b%3ab25378d2" type="text/javascript"></script>
+<script src="https://d2i2wahzwrm1n5.cloudfront.net/ajaxz/2017.2.621/Common/Core.js" type="text/javascript"></script>
+<script src="https://d2i2wahzwrm1n5.cloudfront.net/ajaxz/2017.2.621/Ajax/Ajax.js" type="text/javascript"></script>
+<script src="https://d2i2wahzwrm1n5.cloudfront.net/ajaxz/2017.2.621/Common/jQuery.js" type="text/javascript"></script>
+<script src="https://d2i2wahzwrm1n5.cloudfront.net/ajaxz/2017.2.621/Common/Navigation/OverlayScript.js" type="text/javascript"></script>
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="095016D4" />
+</div>
+        <script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ctl00$RadScriptManager1', 'ctl01', ['tctl00$RadAjaxManager1SU','RadAjaxManager1SU'], [], [], 90, 'ctl00');
+//]]>
+</script>
+
+
+        <!-- 2017.2.621.45 --><div id="RadAjaxManager1SU">
+	<span id="ctl00_RadAjaxManager1" style="display:none;"></span>
+</div>
+
+        <div id="RadAjaxLoadingPanel1" class="RadAjax RadAjax_Metro" style="display:none;">
+	<div class="raDiv">
+
+	</div><div class="raColor raTransp">
+
+	</div>
+</div>
+
+        <!-- Begin Container -->
+        <div id="container">
+            <!-- Begin Header -->
+            <div id="header">
+                <div class="left">
+                </div>
+                <div class="right">
+                </div>
+            </div>
+            <!-- End Header -->
+            <!-- Begin Header Nav -->
+            <div id="headernav">
+                <!-- Begin Header Nav-right -->
+                <div class="right">
+                    <!-- Begin Userlogin -->
+                    <div id="userroles">
+                        &nbsp;<a id="LogOffLinkButton" href="javascript:__doPostBack(&#39;ctl00$LogOffLinkButton&#39;,&#39;&#39;)">Log Off</a>
+                    </div>
+                    <div id="userstatus">
+                        <span id="LoginName1">Welcome, cmsuser1</span>
+                    </div>
+                    <!-- End Userlogin -->
+                </div>
+            </div>
+            <!-- End Header Nav -->
+            <!-- Begin Application Area -->
+            <div id="apparea">
+                
+    
+                    <div class="breadcrumbs top">
+                        <a id="MainContent_LoginViewTop_HomeLinkTop" href="../default.aspx">Home</a>
+                        <a id="MainContent_LoginViewTop_AdminLinkTop" href="default.aspx">> School Administrator</a>
+                        <span>&gt; Elementary School Programming</span>
+                    </div>
+                
+    
+
+<h2 class="help">
+    <a href='https://wiki.nycenet.edu/display/HSST/STARS+Classroom+Elementary+School+Programming' target="_blank">
+        <img src="/ui/doe/images/spacer.gif" width="24" height="23" alt="" />
+    </a>
+</h2>
+<h2 class="contact">
+    <a href="#" onclick="return openWindow('/starsclassroom/ContactUs.aspx');">
+        <img src="/ui/apps/sites/stars_classroom/images/contactus_ico.png" />
+    </a>
+</h2>
+
+    <div class="clear">
+    </div>
+    <div>
+        <h1>Elementary School Programming</h1>
+    </div>
+    <div class="sa_menu">
+        <div class="option">
+            <a href="TermModelConfirmation.aspx" id="MainContent_NetworkClassHistoryLink">
+                <div class="btn">
+                    Step 1: Select Official Classes
+                </div>
+            </a>
+            <div class="details">
+                Confirm your term model and, for each, grade level, select all official classes in elementary grades.
+            </div>
+        </div>
+        <div class="option">
+            <a href="ElementaryOfficialClasses.aspx" id="MainContent_A1">
+                <div class="btn">
+                    Step 2: Set Class Subjects
+                </div>
+            </a>
+            <div class="details">
+                Provide program information for each official class including subjects, teachers, instructional time, and other properties. 
+            </div>
+        </div>
+        <div class="option">
+            <a href="IndividualProgramming.aspx" id="MainContent_A2">
+                <div class="btn">
+                    Step 3: Program Students Individually
+                </div>
+            </a>
+            <div class="details">
+                Use when a students receive a particular subject separately from the rest of the class. 
+            </div>
+        </div>
+        <div class="option">
+            <a href="PIPOList.aspx" id="MainContent_A3">
+                <div class="btn">
+                    Step 4: Push-in/Pull-Out Instruction
+                </div>
+            </a>
+            <div class="details">
+                Provides administrators with the ability to program a variety of instructional needs.
+            </div>
+        </div>
+    </div>
+    
+                    <div class="breadcrumbs top">
+                        <a id="MainContent_LoginViewBottom_HomeLinkBottom" href="../default.aspx">Home</a>
+                        <a id="MainContent_LoginViewBottom_AdminLinkBottom" href="default.aspx">> School Administrator</a>
+                        <span>&gt; Elementary School Programming</span>
+                    </div>
+                
+
+            </div>
+
+            <!-- End Application Area -->
+            <!-- Begin Footer -->
+            <div id="footer">
+                <div class="left">
+                    &copy; 2013 The New York City Department of Education
+                </div>
+                <div class="right">
+                    Privacy Policy and Terms of Use
+                </div>
+            </div>
+
+            <div class="clear space-bot">&nbsp;</div>
+            <!-- End Footer -->
+        </div>
+        <!-- End Container -->
+
+        
+            <script src="/starsclassroom/Scripts/MasterPageFunctions.js" type="text/javascript">        
+            </script>
+        
+
+        <script type="text/javascript">
+           
+            // Web API URL part 
+            $service_url = '/starsclassroom/starsapi';
+           
+            (function (i, s, o, g, r, a, m) {
+                i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                    (i[r].q = i[r].q || []).push(arguments)
+                }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+            })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+            ga('create', 'UA-40262604-1', 'nycenet.edu');
+            ga('send', 'pageview');
+        </script>
+    
+
+<script type="text/javascript">
+//<![CDATA[
+Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.RadAjaxManager, {"_updatePanels":"","ajaxSettings":[],"clientEvents":{OnRequestStart:"",OnResponseEnd:""},"defaultLoadingPanelID":"RadAjaxLoadingPanel1","enableAJAX":true,"enableHistory":false,"links":[],"styles":[],"uniqueID":"ctl00$RadAjaxManager1","updatePanelsRenderMode":0}, null, null, $get("ctl00_RadAjaxManager1"));
+});
+Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.RadAjaxLoadingPanel, {"initialDelayTime":0,"isSticky":false,"minDisplayTime":0,"skin":"Metro","uniqueID":"ctl00$RadAjaxLoadingPanel1","zIndex":90000}, null, null, $get("RadAjaxLoadingPanel1"));
+});
+//]]>
+</script>
+</form>
+</body>
+</html>

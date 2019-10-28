@@ -1,0 +1,13 @@
+[t38]
+FileName1=t38_eMList.xml
+URL1=http://schools.nyc.gov/documents/ie11/eMList.xml
+Total=2
+ContentType=text/xml
+SnapshotXmlFile=snapshot_38.xml
+RequestHeaderFile=t38_RequestHeader.txt
+RequestBodyFile=NONE
+ResponseHeaderFile=t38_ResponseHeader.txt
+FileName2=t38_analytics.html
+URL2=https://www.google-analytics.com/analytics.js
+[ProtocolInfo]
+ProtocolId=QTWeb

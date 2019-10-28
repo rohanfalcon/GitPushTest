@@ -1,0 +1,309 @@
+﻿var stars = stars || {};
+
+(function (lib, $, $telerik) {
+    var SubjectProperties, Term;
+
+    Term = function(numericSchoolDbn, schoolYear, term, startDate, endDate) {
+        this.numericSchoolDbn = numericSchoolDbn;
+        this.schoolYear = schoolYear;
+        this.term = term;
+        this.startDate = startDate;
+        this.endDate = endDate;
+    };
+
+    Term.prototype.getNumericSchoolDbn = function () {
+        return this.numericSchoolDbn;
+
+    };
+
+    Term.prototype.getSchoolYear = function() {
+        return this.schoolYear;
+    };
+
+    Term.prototype.getTerm = function() {
+        return this.term;
+    };
+
+    Term.prototype.getDates = function() {
+        return [this.startDate, this.endDate];
+    };
+
+    SubjectProperties = function (associatedId) {
+
+        this.associatedId = associatedId;
+    };
+
+    SubjectProperties.prototype.getProperties = function () {
+        var properties, propertyNode, eslLanguagesRadComboBox, specialEdRadComboBox,csForAllInstTimeRadComboBox;
+
+        properties = {
+            associatedId: this.associatedId,
+            ell: {},
+            otherProperties: {
+                selection: []
+            },
+            csForAll: {
+                selection: []
+            },
+            mti: {},
+            arts: {}
+        };
+        
+        propertyNode = $("div[associatedid='" + this.associatedId + "']").get(0);          
+        $("div[associatedid=" + this.associatedId + "] input, div[associatedid=" + this.associatedId + "] select, div[associatedid=" + this.associatedId + "] textarea").each(function (index, elem) {
+            if (elem.id.indexOf("EslCheckbox") >= 0) {
+                properties.ell.esl = $(elem).is(":checked");
+            } else if (elem.id.indexOf("TargetLangTimeDropDownList") >= 0) {
+                properties.ell.percentage = elem.value;
+            } else if (elem.id.indexOf("AidsTextBox") >= 0) {
+                properties.otherProperties.aidsCount = elem.value;
+            } else if (elem.id.indexOf("EslLanguagesDropDownList") >= 0) {
+                properties.ell.language = elem.value;
+            } else if (elem.id.indexOf("SpecialEdDropDownList") >= 0) {
+                properties.specialEd = elem.value;
+            } else if (elem.id.indexOf("OtherCSText") >= 0) {
+                properties.csForAll.otherValue = elem.value;
+            } else if (elem.id.indexOf("CSInstTimeDropDownList") >= 0) {
+                properties.csForAll.csInsTime = elem.value;
+            } else if (elem.id.indexOf("MtiCheckBox") >= 0) {
+                properties.mti.ismti = $(elem).is(":checked");
+            } else if (elem.id.indexOf("MtiMinutesTextBox") >= 0) {
+                properties.mti.mtiminutes = elem.value;
+            } else if (elem.id.indexOf("ArtsCheckBox") >= 0) {
+                properties.arts.isarts = $(elem).is(":checked");
+            } else if (elem.id.indexOf("ArtsMinutesTextBox") >= 0) {
+                properties.arts.artsminutes = elem.value;
+            }
+        });
+
+        // gets all checked other properties checkboxes in the subjectDiv
+        $("input[subjectPropertiesGroup=" + this.associatedId + "]:checked").each(function (index, elem) {
+            properties.otherProperties.selection.push(parseInt(elem.value));
+        });
+
+        // gets all checked csForAll course checkboxes in the subjectDiv
+        $("input[subjectCSforAllCoursesGroup=" + this.associatedId + "]:checked").each(function (index, elem) {
+            properties.csForAll.selection.push(parseInt(elem.value));
+        });
+
+        return properties;
+    };
+
+    /*
+    properties: See the properties format below.
+        properties = {
+            associatedId: data.IndividualScheduleId,
+            ell: {
+                esl: data.EnglishAsSecondLanguage,
+                percentage: data.EnglishLanguagePercentage,
+                language: data.LanguageId
+            },
+            specialEd: data.SpecialEducationModelId, 
+            otherProperties: {
+                selection: data.OtherProperties,
+                aidsCount: data.HivCount
+            },
+            csForAll: {
+                selection: data.CSForAll,
+                otherValue : data.CSForAllOtherTopic,
+                csInsTime  : data.CSForAllInstTimeId
+            },
+            mti: {
+            ismti: data.IsMTI,
+            mtiminutes: data.MTIMinutes
+            },
+            arts: {
+                isarts: data.IsARTS,
+                artsminutes: data.ARTSMinutes
+            }
+        };
+    */
+    SubjectProperties.prototype.setProperties = function (properties) {
+        var propertyNode, languageDropdown, specialEdDropdown, otherPropertyValue, intArray, csForAllCourseValue, csForAllOtherValue, csInstTimeDropdown;             
+        propertyNode = $("div[associatedid='" + this.associatedId + "']").get(0);        
+
+        if (properties.ell) {
+            if (properties.ell.esl !== undefined) {
+                $(propertyNode).find("input[name*='EslCheckbox']").prop('checked', properties.ell.esl);
+            }
+                        
+            languageDropdown = $(propertyNode).find("select[name*='EslLanguagesDropDownList']");
+            targetLangDropdown = $(propertyNode).find("select[name*='TargetLangTimeDropDownList']");
+
+            if (properties.ell.language !== undefined) {
+                languageDropdown.val(properties.ell.language);
+            } else {
+                languageDropdown.val("1");
+            }
+            if ((properties.ell.language !== undefined) && (properties.ell.language != 1))
+            {
+                targetLangDropdown.prop("disabled", false)
+                targetLangDropdown.removeClass("disableDropdown");
+            } else {
+                targetLangDropdown.prop("disabled", true)
+                targetLangDropdown.addClass("disableDropdown");
+            }
+            
+            if (properties.ell.percentage !== undefined) {
+                targetLangDropdown.val(properties.ell.percentage);
+            } else {
+                targetLangDropdown.val("0");
+            }
+        }
+                
+        specialEdDropdown = $(propertyNode).find("select[name*='SpecialEdDropDownList']");
+        if (properties.specialEd) {
+            specialEdDropdown.val(properties.specialEd);
+        } else {
+            specialEdDropdown.val("0");
+        }
+
+        if (properties.otherProperties) {
+            if (properties.otherProperties.aidsCount !== undefined) {
+                $(propertyNode).find("input[name*='AidsTextBox']").val(properties.otherProperties.aidsCount);
+            }
+
+            if (properties.otherProperties.selection !== undefined && properties.otherProperties.selection.length > 0) {
+                intArray = [];
+                
+                $.each(properties.otherProperties.selection, function (index, value) {
+                    intArray.push(parseInt(value));
+                });
+
+                $(propertyNode).find("input[name*='OtherProperties']").each(function (index, elem) {
+                    otherPropertyValue = $(elem).val();
+                    index = $.inArray(parseInt(otherPropertyValue), intArray);
+                    if (index > -1) {
+                        $(elem).prop("checked", true);
+                    } else {
+                        $(elem).prop("checked", false);
+                    }
+                });
+            } else {
+                $(propertyNode).find("input[name*='OtherProperties']").each(function (index, elem) {
+                    $(elem).prop("checked", false);
+                });
+            }
+        }
+
+        if (properties.csForAll) {
+            if (properties.csForAll.otherValue !== undefined) {
+                csForAllOtherValue = $(propertyNode).find("textarea[name*='OtherCSText']");
+                csForAllOtherValue.val((properties.csForAll.otherValue == 0) ? "": properties.csForAll.otherValue);
+            }
+
+            csInstTimeDropdown = $(propertyNode).find("select[name*='CSInstTimeDropDownList']");
+            if (properties.csForAll.csInsTime) {
+                csInstTimeDropdown.val(properties.csForAll.csInsTime);
+            } else {
+                csInstTimeDropdown.val("0");
+            }
+
+            if (properties.csForAll.selection !== undefined && properties.csForAll.selection.length > 0) {
+                intcsForAllArray = [];
+
+                $.each(properties.csForAll.selection, function (index, value) {
+                    intcsForAllArray.push(parseInt(value));
+                });
+
+                $(propertyNode).find("input[name*='CSforAll']").each(function (index, elem) {
+                    csForAllCourseValue = $(elem).val();
+                    index = $.inArray(parseInt(csForAllCourseValue), intcsForAllArray);
+                    if (index > -1) {
+                        $(elem).prop("checked", true);
+                        if (($(elem)).attr('value') == 9) {
+                            $(propertyNode).find("textarea[name*='OtherCSText']").attr('disabled', false);
+                        } else {
+                            $(propertyNode).find("textarea[name*='OtherCSText']").attr('disabled', true);
+                        }
+                    } else {
+                        $(elem).prop("checked", false);
+                    }
+                });
+            } else {
+                $(propertyNode).find("input[name*='CSforAll']").each(function (index, elem) {
+                    $(elem).prop("checked", false);
+                });
+            }
+        }
+
+        if (properties.mti) {
+            $(propertyNode).find("span[id*='msg']").html("");
+            if (properties.mti.ismti !== undefined) {
+                $(propertyNode).find("input[name*='MtiCheckBox']").prop('checked', properties.mti.ismti);
+                if(properties.mti.ismti)
+                {
+                    $(propertyNode).find("input[name*='MtiMinutesTextBox']").attr('disabled', false);
+                    $(propertyNode).find("label[id*='MtiMinutesPerWeekLbl']").addClass("required-field");
+                } else {
+                    $(propertyNode).find("input[name*='MtiMinutesTextBox']").attr('disabled', true);
+                    $(propertyNode).find("label[id*='MtiMinutesPerWeekLbl']").removeClass("required-field");
+                }
+            }
+            
+            if (properties.mti.mtiminutes !== undefined) {
+                if (properties.mti.mtiminutes > 0){
+                    $(propertyNode).find("input[name*='MtiMinutesTextBox']").val(properties.mti.mtiminutes);
+                }else{
+                    $(propertyNode).find("input[name*='MtiMinutesTextBox']").val("");
+                }
+            }
+        }
+
+        if (properties.arts) {
+            $(propertyNode).find("span[id*='msg1']").html("");
+            if (properties.arts.isarts !== undefined) {
+                $(propertyNode).find("input[name*='ArtsCheckBox']").prop('checked', properties.arts.isarts);
+                if (properties.arts.isarts) {
+                    $(propertyNode).find("input[name*='ArtsMinutesTextBox']").attr('disabled', false);
+                    $(propertyNode).find("label[id*='ArtsMinutesLbl']").addClass("required-field");
+                } else {
+                    $(propertyNode).find("input[name*='ArtsMinutesTextBox']").attr('disabled', true);
+                    $(propertyNode).find("label[id*='ArtsMinutesLbl']").removeClass("required-field");
+                }
+            }
+
+            if (properties.arts.artsminutes !== undefined) {
+                if (properties.arts.artsminutes > 0) {
+                    $(propertyNode).find("input[name*='ArtsMinutesTextBox']").val(properties.arts.artsminutes);
+                } else {
+                    $(propertyNode).find("input[name*='ArtsMinutesTextBox']").val("");
+                }
+            }
+        }
+    };
+
+    SubjectProperties.prototype.disableMTI = function () {      
+        var propertyNode;
+        propertyNode = $("div[associatedid='" + this.associatedId + "']").get(0);
+
+        $(propertyNode).find("input[name*='MtiCheckBox']").prop('checked', false);
+        $(propertyNode).find("input[name*='MtiMinutesTextBox']").attr('disabled', true);
+        $(propertyNode).find("input[name*='MtiMinutesTextBox']").val("");
+        $(propertyNode).find("label[id*='MtiMinutesPerWeekLbl']").removeClass("required-field");
+        $(propertyNode).find("span[id*='msg']").html("");
+
+        $(".subject-mti").hide();
+    };
+    SubjectProperties.prototype.enableMTI = function () {
+        $(".subject-mti").show();
+    };
+
+    SubjectProperties.prototype.disableARTS = function () {      
+        var propertyNode;
+        propertyNode = $("div[associatedid='" + this.associatedId + "']").get(0);
+        $(propertyNode).find("input[name*='ArtsCheckBox']").prop('checked', false);
+        $(propertyNode).find("input[name*='ArtsMinutesTextBox']").attr('disabled', true);
+        $(propertyNode).find("input[name*='ArtsMinutesTextBox']").val("");
+        $(propertyNode).find("label[id*='ArtsMinutesLbl']").removeClass("required-field");
+        $(propertyNode).find("span[id*='msg1']").html("");
+
+        $(".subject-arts").hide();
+    };
+    SubjectProperties.prototype.enableARTS = function () {
+        $(".subject-arts").show();
+    };
+
+    lib.SubjectProperties = SubjectProperties;
+    lib.Term = Term;
+} (stars, jQuery, $telerik));

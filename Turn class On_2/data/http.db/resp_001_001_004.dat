@@ -1,0 +1,82 @@
+function FindProxyForURL(url,host) {
+	{
+// Localhost, Intranet, DMZ and Private networks
+     if ( isInNet(host, "127.0.0.0", "255.0.0.0") )					{ return "DIRECT"; }
+     if ( isInNet(host, "10.0.0.0", "255.0.0.0") )					{ return "DIRECT"; }
+     if ( isInNet(host, "192.168.0.0", "255.255.0.0") )					{ return "DIRECT"; }
+     if ( isInNet(host, "165.155.0.0", "255.255.0.0") )					{ return "DIRECT"; }
+//   if ( isInNet(host, "70.42.40.27", "255.255.255.255") )				{ return "DIRECT"; }
+
+// External Hosts with Internal Names
+
+// Traffic to SESIS can go direct except for the remote Helpdesk, to support them the rule below only exists on 00 and not 03
+     if ( shExpMatch(host, "sesis.nycenet.edu") )					{ return "PROXY 00proxy.central.nyced.org:8002; PROXY 03proxy.central.nyced.org:8002"; }
+
+// Intranet and DMZ hosts
+     if ( shExpMatch(url, "ftp:*") )							{ return "DIRECT"; }
+//   if ( shExpMatch(host, "nycdoe.cybershift.net") )					{ return "DIRECT"; }
+     if ( shExpMatch(host, "schools.nyc.gov") ) 					{ return "DIRECT"; }
+     if ( shExpMatch(host, "*.NYCED.ORG") ) 						{ return "DIRECT"; }
+     if ( shExpMatch(host, "*.nycboe.org") ) 						{ return "DIRECT"; }
+     if ( shExpMatch(host, "*.nycboe.net") )						{ return "DIRECT"; }
+     if ( shExpMatch(host, "*.nycenet.edu") ) 						{ return "DIRECT"; }
+     if ( shExpMatch(host, "*.nycedext.org") ) 						{ return "DIRECT"; }
+
+// Troubleshoot learn-uat.nycboe.net
+
+// DMZ and Extranet Partners   
+
+// rango.comptroller.nycnet uses IP for keepalive so we need to specify the IP 161.185.185.208
+     if ( shExpMatch(host, "*.nycnet") ) 						{ return "DIRECT"; }
+     if ( shExpMatch(host, "*.opt-osfns.org") ) 					{ return "DIRECT"; }
+     if ( shExpMatch(host, "*.psal.org") ) 						{ return "DIRECT"; }
+     if ( shExpMatch(host, "161.185.185.208") ) 					{ return "DIRECT"; }
+
+// APPLE
+     if ( shExpMatch(host, "guzzoni.apple.com") )					{ return "DIRECT"; }
+
+// Office365
+     if ( shExpMatch(url, "https://*.aadrm.com*") )					{ return "DIRECT"; }
+     if ( shExpMatch(url, "https://*.activedirectory.windowsazure.com*") ) 		{ return "DIRECT"; }
+     if ( shExpMatch(url, "https://*.appex.bing.com*") ) 				{ return "DIRECT"; }
+     if ( shExpMatch(url, "https://*.appex-rf.msn.com*") )				{ return "DIRECT"; }
+     if ( shExpMatch(url, "https://*.assets-yammer.com*") ) 				{ return "DIRECT"; }
+     if ( shExpMatch(url, "https://*.azurerms.com*") ) 					{ return "DIRECT"; }
+     if ( shExpMatch(url, "https://*.cloudapp.net*") ) 					{ return "DIRECT"; }
+     if ( shExpMatch(url, "https://*.cloudfront.net*") ) 				{ return "DIRECT"; }
+     if ( shExpMatch(url, "https://*.crocodoc.com*") ) 					{ return "DIRECT"; }
+     if ( shExpMatch(url, "https://*.entrust.net*") ) 					{ return "DIRECT"; }
+     if ( shExpMatch(url, "https://*.geotrust.com*") )					{ return "DIRECT"; }
+     if ( shExpMatch(url, "https://*auth.gfx.ms*") ) 					{ return "DIRECT"; }
+     if ( shExpMatch(url, "https://*ajax.googleapis.com*") ) 				{ return "DIRECT"; }
+     if ( shExpMatch(url, "https://*.live.com*") ) 					{ return "DIRECT"; }
+     if ( shExpMatch(url, "https://*.d.docs.live.net*") ) 				{ return "DIRECT"; }
+     if ( shExpMatch(url, "https://*.Lync.com*") ) 					{ return "DIRECT"; }
+     if ( shExpMatch(url, "https://*.microsoft.com*") ) 				{ return "DIRECT"; }
+     if ( shExpMatch(url, "https://*.microsoftonline.com*") ) 				{ return "DIRECT"; }
+     if ( shExpMatch(url, "https://*.microsoftonlineimages.com*") ) 			{ return "DIRECT"; }
+     if ( shExpMatch(url, "https://*.microsoftonline-p.com*") ) 			{ return "DIRECT"; }
+     if ( shExpMatch(url, "https://*.msecnd.net*") ) 					{ return "DIRECT"; }
+     if ( shExpMatch(url, "https://*.msocdn.com*") ) 					{ return "DIRECT"; }
+     if ( shExpMatch(url, "https://*.office.com*") )					{ return "DIRECT"; }
+     if ( shExpMatch(url, "https://*.office.net*") ) 					{ return "DIRECT"; }
+     if ( shExpMatch(url, "https://*.office365.com*") ) 				{ return "DIRECT"; }
+     if ( shExpMatch(url, "https://*.omniroot.com*") )					{ return "DIRECT"; }
+     if ( shExpMatch(url, "https://*.onenote.com*") ) 					{ return "DIRECT"; }
+     if ( shExpMatch(url, "https://*.onmicrosoft.com*") )				{ return "DIRECT"; }
+     if ( shExpMatch(url, "https://*.outlook.com*") ) 					{ return "DIRECT"; }
+     if ( shExpMatch(url, "https://*.phonefactor.net*") ) 				{ return "DIRECT"; }
+     if ( shExpMatch(url, "https://*.public-trust.com*") ) 				{ return "DIRECT"; }
+     if ( shExpMatch(url, "https://*appexsin.stb.s-msn.com*") ) 			{ return "DIRECT"; }
+     if ( shExpMatch(url, "https://*.sharepoint.com*") ) 				{ return "DIRECT"; }
+     if ( shExpMatch(url, "https://*.sharepointonline.com*") ) 				{ return "DIRECT"; }
+     if ( shExpMatch(url, "https://*.symcb.com*") ) 					{ return "DIRECT"; }
+     if ( shExpMatch(url, "https://*ms.tific.com*") ) 					{ return "DIRECT"; }
+     if ( shExpMatch(url, "https://*.verisign.com*") ) 					{ return "DIRECT"; }
+     if ( shExpMatch(url, "https://*m.webtrends.com*") )				{ return "DIRECT"; }
+     if ( shExpMatch(url, "https://*.windows.net*") ) 					{ return "DIRECT"; }
+     if ( shExpMatch(url, "https://*.yammer.com**") ) 					{ return "DIRECT"; }
+     if ( shExpMatch(url, "https://*.yammerusercontent.com*") ) 			{ return "DIRECT"; }
+
+// Everything else (default)
+     return "PROXY 00proxy.central.nyced.org:8002; PROXY 03proxy.central.nyced.org:8002"; } }

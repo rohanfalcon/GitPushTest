@@ -1,0 +1,13 @@
+[t12]
+FileName1=t12.html
+URL1=https://es00vqweb15.qa.appdev/starsclassroom/starsapi/PipoAssignment/CreateMeetingTimes
+Total=2
+RequestHeaderFile=t12_RequestHeader.txt
+RequestBodyFile=t12_RequestBody.txt
+ResponseHeaderFile=t12_ResponseHeader.txt
+ContentType=application/json
+SnapshotXmlFile=snapshot_12.xml
+FileName2=t12_GetMeetingTimes.html
+URL2=https://es00vqweb15.qa.appdev/starsclassroom/starsapi/PipoAssignment/GetMeetingTimes?_=1504039870810
+[ProtocolInfo]
+ProtocolId=QTWeb

@@ -1,0 +1,13 @@
+HTTP/1.1 200 OK
+Content-Length: 337
+Content-Type: text/xml
+Last-Modified: Thu, 31 Aug 2017 19:23:12 GMT
+Accept-Ranges: bytes
+ETag: "050ee958e22d31:4563"
+Server: Microsoft-IIS/6.0
+X-Powered-By: ASP.NET
+Date: Wed, 06 Sep 2017 14:17:43 GMT
+Vary: Accept-Encoding
+Content-Encoding: gzip
+Connection: Keep-Alive
+

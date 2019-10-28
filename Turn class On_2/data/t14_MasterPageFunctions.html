@@ -1,0 +1,60 @@
+﻿function showLoad() {
+    $("#loadingdiv").show();
+}
+
+function hideLoad() {
+    $("#loadingdiv").fadeOut(400);
+}
+
+function toggleLoad() {
+    $("#loadingdiv").toggle();
+}
+
+function openWindow(url) {
+    var w = 560;
+    var h = 480;
+    var left = Number((screen.width / 2) - (w / 2));
+    var tops = Number((screen.height / 2) - (h / 2));
+
+    window.open(url, '', 'toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no, width=' + w + ', height=' + h + ', top=' + tops + ', left=' + left);
+    return false;
+}
+
+function toastmessage(type, msg) {
+    if (!msg)
+        return false;
+
+    toastr.options.positionClass = "toast-top-right";
+    toastr.options.fadeIn = 300;
+    toastr.options.fadeOut = 1000;
+    toastr.options.timeOut = 3000;
+    toastr.options.extendedTimeOut = 1000;
+    switch (type) {
+        case "warning":
+            toastr.warning(msg);
+            break;
+        case "success":
+            toastr.success(msg);
+            break;
+        case "error":
+            toastr.error(msg);
+            break;
+        case "info":
+        default:
+            toastr.info(msg);
+            break;
+    }
+}
+
+(function ($) {
+    $.QueryString = (function (a) {
+        if (a == "") return {};
+        var b = {};
+        for (var i = 0; i < a.length; ++i) {
+            var p = a[i].split('=');
+            if (p.length != 2) continue;
+            b[p[0]] = decodeURIComponent(p[1].replace(/\+/g, " "));
+        }
+        return b;
+    })(window.location.search.substr(1).split('&'))
+})(jQuery);
